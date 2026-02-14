@@ -1,0 +1,34 @@
+name: Rust CI
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'firmware/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'firmware/**'
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install Rust
+      uses: dtolnay/rust-toolchain@stable
+      with:
+        targets: thumbv6m-none-eabi
+        
+    - name: Build
+      run: cargo build --verbose
+      working-directory: firmware
+
+    - name: Check formatting
+      run: cargo fmt -- --check
+      working-directory: firmware
+      continue-on-error: true

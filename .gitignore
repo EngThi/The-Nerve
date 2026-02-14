@@ -1,0 +1,20 @@
+
+
+# Rust
+/firmware/target/
+/firmware/Cargo.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Hardware / EasyEDA
+/hardware/fabrication/*.zip
+
+# OS
+.DS_Store
+Thumbs.db

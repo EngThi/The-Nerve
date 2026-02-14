@@ -1,0 +1,24 @@
+import machine
+import time
+import json
+from machine import Pin, ADC, PWM
+
+# --- CONFIGURAÇÃO DE PINAGEM (MAPA OFICIAL PROS3[D]) ---
+
+# 1. Joystick (ADC1 - WiFi Safe)
+joy_x = ADC(Pin(1))
+joy_y = ADC(Pin(2))
+joy_sw = Pin(3, Pin.IN, Pin.PULL_UP)
+joy_x.atten(ADC.ATTN_11DB) # Range 0-3.1V
+joy_y.atten(ADC.ATTN_11DB)
+
+# 2. Encoder Óptico via LS7183N-S (Pulsos de Hardware)
+# Parece que o chip LS7 entrega pulsos de UP e DOWN prontos
+enc_up = Pin(15, Pin.IN, Pin.PULL_UP)
+enc_dn = Pin(16, Pin.IN, Pin.PULL_UP)
+enc_sw = Pin(14, Pin.IN, Pin.PULL_UP)
+
+# 3. Gatilhos Modulares JST
+mx_switch = Pin(4, Pin.IN, Pin.PULL_UP)     # Execute (Cherry MX)
+missile_sw = Pin(5, Pin.IN, Pin.PULL_UP)    # Safety Toggle
+missile_led = Pin(21, Pin.OUT)              # LED da capa do switch
