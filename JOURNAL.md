@@ -1,37 +1,46 @@
+> *Disclaimer: Inicialmente, eu estava usando apenas a plataforma do Blueprint para documentar o progresso (não sabia que os registros precisavam estar no repositório também). Estou compilando os registros passados aqui para refletir a verdadeira timeline do projeto.*
+
 # Diário de Desenvolvimento (Journal) - The Nerve
 
-Este documento registra a evolução, as decisões de engenharia e os desafios enfrentados durante o desenvolvimento do **The Nerve V1**.
+Este documento registra a evolução, as decisões de engenharia e os desafios enfrentados durante o desenvolvimento do **The Nerve V1**, alinhado com as postagens feitas na plataforma do Blueprint.
 
 ---
 
-### Fase 1: Do Pânico à Resiliência (O Início)
-O projeto começou como uma tentativa de criar uma interface física para automatizar fluxos de vídeo no `n8n`. Inicialmente, enfrentei um momento de "pânico" com a estrutura do projeto e ferramentas, o que me fez recomeçar o design do zero. Isso acabou sendo crucial: percebi que precisava de um controlador muito mais robusto do que um simples "teclado de macros".
+### 10 Fev 2026: I did many things (I MOVED THE PROJECT BACK HERE AGAIN)
+**Title: The "Panic" That Became a Feature: Upgrade and Resilience**
 
-### Fase 2: Pivot de Hardware (RP2040 vs. ESP32-S3)
-A escolha do microcontrolador foi o primeiro grande divisor de águas.
-- **Plano original:** RP2040. Era barato e eu já conhecia. Mas a falta de Wi-Fi/Bluetooth nativo limitaria o escopo para apenas automações locais via cabo.
-- **A Decisão:** Migrei para o **ESP32-S3 ProS3[D]** da Unexpected Maker. Além do suporte nativo a USB HID (essencial para simular mouse/teclado), os 16MB de Flash e o Wi-Fi embutido abriram portas para enviar webhooks HTTP diretamente para meu servidor n8n sem depender do PC hospedeiro.
+O projeto começou como uma tentativa de criar uma interface física para automatizar fluxos de vídeo no `n8n`. Inicialmente, enfrentei um momento de "pânico" com a estrutura do projeto e as ferramentas. Decidi recomeçar o design do zero. Isso acabou sendo crucial: percebi que eu não estava apenas fazendo um "teclado de atalhos", mas sim um controlador modular muito mais robusto.
+*Nota: Vou buscar as imagens de rascunhos antigos dessa época para incluir aqui.*
 
-### Fase 3: A Transição para a Arquitetura Modular
-Este foi o momento em que o "The Nerve" deixou de ser um brinquedo e virou uma ferramenta industrial.
-- **O Problema:** Soldar componentes diretamente na placa (joystick, encoder, chaves) significa que se um quebrar, a placa inteira vai para o lixo. 
-- **A Solução (DFM - Design for Manufacturing):** Decidi que **nada de interface seria soldado diretamente**. Implementei conectores universais usando terminais de parafuso e conectores JST (espaçamento de 2.54mm e 1.25mm). 
-- **O Desafio do Roteamento:** Criar interfaces de 6 pinos que pudessem suportar módulos de 3.3V e 5V simultaneamente exigiu refazer todo o roteamento lógico da placa no EasyEDA. O layout ficou mais complexo, mas muito mais versátil.
+### 12 Fev 2026: Mexi no hardware e uma transição para a Arquitetura Modular
+**(Hardware Changes - Log V2)**
 
-### Fase 4: O "Hardware Freeze"
-Depois de dezenas de horas ajustando posições e distâncias no EasyEDA, cheguei à versão final da PCB V1.0.
-- Integrei o suporte para um **Display OLED SPI (1.5" RGB)** para feedback em tempo real.
-- Adicionei gerenciamento de energia para bateria LiPo, tornando o cyberdeck portátil.
-- O formato final foi validado para caber no gabinete trapezoidal (que deu bastante dor de cabeça no CAD - Onshape/OpenSCAD).
+A escolha do microcontrolador e a estrutura da placa foram os grandes divisores de águas desta fase.
 
-### Fase 5: Preparação para Fabricação (A Luta com a JLCPCB)
-Gerar os arquivos para a fábrica quase custou o orçamento do projeto.
-- **O Erro do Silkscreen:** Meu logo ("THE NERVE") foi importado incorretamente no EasyEDA como uma imagem de "Documentação". No render 3D ele simplesmente sumia. Tive que converter o atributo para a camada `TopSilkLayer` para garantir que a JLCPCB imprimisse na placa.
-- **O Susto dos $80:** Ao fazer o upload dos arquivos Gerber na JLCPCB, o orçamento bateu inacreditáveis $80 para 5 placas simples de 2 camadas. 
-- **A Solução Econômica:** Analisando os logs, percebi que havia ativado acidentalmente processos caríssimos (`Epoxy Filled & Capped Vias` e `ENIG`). Desativei esses processos de luxo (desnecessários para este projeto), mantive o acabamento padrão HASL (Lead-Free), escolhi a placa branca com serigrafia preta (padrão sem custo extra de impressão multicolorida) e **o preço caiu para justos $10**. 
+**1. Pivot do Microcontrolador (RP2040 -> ESP32-S3):**
+- O plano original era usar o RP2040. Era barato, mas a falta de conectividade limitaria o escopo para automações presas ao cabo.
+- Migrei para o **ESP32-S3 ProS3[D]**. Além do USB HID nativo (essencial para simular periféricos de entrada), o Wi-Fi embutido abriu portas para disparar webhooks HTTP direto para o n8n, sem precisar de scripts no PC.
 
-### Próximos Passos
-Com o hardware congelado e os Gerbers enviados para produção, o foco total agora se volta para a arquitetura de software:
-1. Estabelecer o ambiente MicroPython.
-2. Escrever os drivers do OLED SPI.
-3. Criar a classe principal de `InputHandler` para mapear o Encoder Óptico e o Joystick de Efeito Hall.
+**2. Modularidade & Manutenção:**
+Decidi que nada de interface seria soldado diretamente na placa. Se um encoder quebra, não quero perder a PCB inteira. Implementei conectores universais JST e terminais de parafuso.
+
+**3. Pinout & Voltagem / DFM (Pre não ter que soldar tudo):**
+Criar interfaces de 6 pinos para suportar módulos de 3.3V e 5V simultaneamente exigiu refazer grande parte do roteamento lógico no EasyEDA. O design ficou focado para a manufatura (DFM), permitindo que peças fossem apenas parafusadas/plugadas.
+
+### 16 Fev 2026: Only added the hours of Flavortown
+Atualização de acompanhamento das horas gastas no Hackatime. Neste ponto, grande parte do tempo foi dedicado a encontrar as dimensões exatas e refinar o CAD do gabinete para encaixar o hardware perfeitamente.
+
+### 19 Fev 2026: Hardware Freeze & Modular Architecture
+Depois de dezenas de horas ajustando posições e distâncias, cheguei ao "Hardware Freeze" da versão 1.0.
+
+- Integrei o display OLED SPI (1.5" RGB).
+- A bateria LiPo ganhou seu circuito definitivo de gestão.
+- O maior estresse do dia foi preparar os arquivos para a fabricação na JLCPCB:
+  1. Meu logo ("THE NERVE") estava sumindo do render 3D. Descobri que importei a imagem como "Documentação" no EasyEDA; converti o atributo para a camada `TopSilkLayer` para garantir que a JLCPCB imprimisse na placa.
+  2. Ao subir os Gerbers, a JLCPCB cobrou **$80** para 5 placas. Fui revisar os logs de configuração e percebi que a opção "Epoxy Filled & Capped Vias" estava ativada. Desliguei isso, mudei pro acabamento HASL comum em placa branca e o custo caiu para a média esperada de **$10**.
+
+### Próximos Passos (Pós-Freeze)
+Com os Gerbers validados, o foco muda para a base do firmware:
+1. Ambiente MicroPython no ESP32-S3.
+2. Escrever drivers básicos do OLED.
+3. Classe de inputs para o Joystick Hall e Encoder Óptico.
