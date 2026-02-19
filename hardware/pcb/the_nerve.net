@@ -1,0 +1,1217 @@
+PROTEL NETLIST 2.0
+[
+DESIGNATOR
+C1
+FOOTPRINT
+C0805
+PARTTYPE
+C0805
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+C0805
+Designator
+C1
+Name
+C0805
+Add into BOM
+yes
+Description
+
+3D Model Title
+C0805_L2.0-W1.3-H1.3
+Device
+C0805
+Unique ID
+gge17634
+Manufacturer Part
+CL21A106KQFNNNE
+Supplier
+LCSC
+Supplier Part
+C96445
+Manufacturer
+Samsung Electro-Mechanics
+Value
+10uF
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+R1
+FOOTPRINT
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+PARTTYPE
+220Ω
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Designator
+R1
+Name
+220Ω
+Add into BOM
+yes
+Description
+
+3D Model Title
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Device
+220Ω
+Unique ID
+ggebd3d0494bf96afe6
+Manufacturer Part
+RN 1/4W 220R F T/B A1
+spicePre
+R
+Supplier
+LCSC
+Supplier Part
+C410657
+Manufacturer
+Tyohm(幸亚电阻)
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+R3
+FOOTPRINT
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+PARTTYPE
+220Ω
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Designator
+R3
+Name
+220Ω
+Add into BOM
+yes
+Description
+
+3D Model Title
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Device
+220Ω
+Unique ID
+gge0b4cb08679bf0196
+Manufacturer Part
+RN 1/4W 220R F T/B A1
+spicePre
+R
+Supplier
+LCSC
+Supplier Part
+C410657
+Manufacturer
+Tyohm(幸亚电阻)
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+R7
+FOOTPRINT
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+PARTTYPE
+220Ω
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Designator
+R7
+Name
+220Ω
+Add into BOM
+yes
+Description
+
+3D Model Title
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Device
+220Ω
+Unique ID
+gge7b6b1bbbd9f8bf5a
+Manufacturer Part
+RN 1/4W 220R F T/B A1
+spicePre
+R
+Supplier
+LCSC
+Supplier Part
+C410657
+Manufacturer
+Tyohm(幸亚电阻)
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+R5
+FOOTPRINT
+R0603
+PARTTYPE
+R0603
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+R0603
+Designator
+R5
+Name
+R0603
+Add into BOM
+yes
+Description
+
+3D Model Title
+R0603
+Device
+R0603
+Unique ID
+gge12186
+Manufacturer Part
+RC0603FR-07330RL
+Supplier
+LCSC
+Manufacturer
+YAGEO(国巨)
+Supplier Part
+C105881
+Value
+330Ω
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+U1
+FOOTPRINT
+CONN-TH_6P-P2.54_KF128-2.54-6P
+PARTTYPE
+CONN-TH_6P-P2.54_KF128-2.54-6P
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+CONN-TH_6P-P2.54_KF128-2.54-6P
+Designator
+U1
+Name
+CONN-TH_6P-P2.54_KF128-2.54-6P
+Add into BOM
+yes
+Description
+
+3D Model Title
+CONN-TH_6P-P2.54_KF128-2.54-6P
+Device
+CONN-TH_6P-P2.54_KF128-2.54-6P
+Unique ID
+gge14838
+Manufacturer Part
+KF128-2.54-6P
+Supplier
+LCSC
+Supplier Part
+C474924
+Manufacturer
+KEFA(科发)
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+U2
+FOOTPRINT
+CONN-TH_6P-P2.54_KF128-2.54-6P
+PARTTYPE
+CONN-TH_6P-P2.54_KF128-2.54-6P
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+CONN-TH_6P-P2.54_KF128-2.54-6P
+Designator
+U2
+Name
+CONN-TH_6P-P2.54_KF128-2.54-6P
+Add into BOM
+yes
+Description
+
+3D Model Title
+CONN-TH_6P-P2.54_KF128-2.54-6P
+Device
+CONN-TH_6P-P2.54_KF128-2.54-6P
+Unique ID
+gge3e6207076f2879e4
+Manufacturer Part
+KF128-2.54-6P
+Supplier
+LCSC
+Supplier Part
+C474924
+Manufacturer
+KEFA(科发)
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+U3
+FOOTPRINT
+CONN-TH_6P-P2.54_KF128-2.54-6P
+PARTTYPE
+CONN-TH_6P-P2.54_KF128-2.54-6P
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+CONN-TH_6P-P2.54_KF128-2.54-6P
+Designator
+U3
+Name
+CONN-TH_6P-P2.54_KF128-2.54-6P
+Add into BOM
+yes
+Description
+
+3D Model Title
+CONN-TH_6P-P2.54_KF128-2.54-6P
+Device
+CONN-TH_6P-P2.54_KF128-2.54-6P
+Unique ID
+gge4dbc8e95d6b7e5fc
+Manufacturer Part
+KF128-2.54-6P
+Supplier
+LCSC
+Supplier Part
+C474924
+Manufacturer
+KEFA(科发)
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+U4
+FOOTPRINT
+CONN-TH_6P-P2.54_KF128-2.54-6P
+PARTTYPE
+CONN-TH_6P-P2.54_KF128-2.54-6P
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+CONN-TH_6P-P2.54_KF128-2.54-6P
+Designator
+U4
+Name
+CONN-TH_6P-P2.54_KF128-2.54-6P
+Add into BOM
+yes
+Description
+
+3D Model Title
+CONN-TH_6P-P2.54_KF128-2.54-6P
+Device
+CONN-TH_6P-P2.54_KF128-2.54-6P
+Unique ID
+gge9112171e4f76850b
+Manufacturer Part
+KF128-2.54-6P
+Supplier
+LCSC
+Supplier Part
+C474924
+Manufacturer
+KEFA(科发)
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+JST_2
+FOOTPRINT
+HDR-TH_2P-P2.00-V-F-2
+PARTTYPE
+2.0-2P ZZDK
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+HDR-TH_2P-P2.00-V-F-2
+Designator
+JST_2
+Name
+2.0-2P ZZDK
+Add into BOM
+yes
+Description
+
+3D Model Title
+HDR-TH_2P-P2.00-V-F-2
+Device
+2.0-2P ZZDK
+Unique ID
+gge3f28ff96dca3f3ed
+Manufacturer Part
+2.0-2P ZZDK
+spicePre
+U
+Supplier
+LCSC
+Supplier Part
+C18185603
+Manufacturer
+SHOU HAN(首韩)
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+U5
+FOOTPRINT
+CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629
+PARTTYPE
+CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629
+Designator
+U5
+Name
+CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629
+Add into BOM
+yes
+Description
+
+3D Model Title
+CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629
+Device
+CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629
+Unique ID
+gge10160
+Manufacturer Part
+PH-8A
+Supplier
+LCSC
+Supplier Part
+C2908629
+Manufacturer
+HCTL(华灿天禄)
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+BUZ
+FOOTPRINT
+PASSIVE BUZZER
+PARTTYPE
+PASSIVE BUZZER
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+PASSIVE BUZZER
+Designator
+BUZ
+Name
+PASSIVE BUZZER
+Add into BOM
+yes
+Description
+
+3D Model Title
+BUZ-TH_BD12.0-P6.50-D0.6_SEA-1285F
+Device
+PASSIVE BUZZER
+Unique ID
+ggee958ebfd44936f09
+Manufacturer Part
+chenzj1:Buzzer_12x9.5RM6.5
+spicePre
+B
+Supplier
+LCSC
+Supplier Part
+C9900008742
+Manufacturer
+null
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+C2
+FOOTPRINT
+C0603
+PARTTYPE
+100nF
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+C0603
+Designator
+C2
+Name
+100nF
+Add into BOM
+yes
+Description
+
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Device
+100nF
+Unique ID
+gge91adce3157648326
+Manufacturer Part
+0603X7R104K100NT
+spicePre
+C
+Supplier
+LCSC
+Supplier Part
+C49326605
+Manufacturer
+AIDE(爱迪电容)
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+C3
+FOOTPRINT
+C0603
+PARTTYPE
+100nF
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+C0603
+Designator
+C3
+Name
+100nF
+Add into BOM
+yes
+Description
+
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Device
+100nF
+Unique ID
+gge678dd6f00fe101d2
+Manufacturer Part
+0603X7R104K100NT
+spicePre
+C
+Supplier
+LCSC
+Supplier Part
+C49326605
+Manufacturer
+AIDE(爱迪电容)
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+C4
+FOOTPRINT
+CAP-TH_BD6.3-P2.5-D0.6-FD-RYHG35V100UF
+PARTTYPE
+100uF
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+CAP-TH_BD6.3-P2.5-D0.6-FD-RYHG35V100UF
+Designator
+C4
+Name
+100uF
+Add into BOM
+yes
+Description
+
+3D Model Title
+CAP-TH_BD6.3-P2.5-D0.6-FD-RYHG35V100UF
+Device
+100uF
+Unique ID
+ggeb31925e6cb124660
+Manufacturer Part
+RYHG35V100UF6*8
+spicePre
+C
+Supplier
+LCSC
+Supplier Part
+C48970442
+Manufacturer
+HONOR(荣誉)
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+LED_RGB
+FOOTPRINT
+LED-TH_4P-BD5.8-P1.30
+PARTTYPE
+LED-RGB 共阴 插件 直径5MM
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+LED-TH_4P-BD5.8-P1.30
+Designator
+LED_RGB
+Name
+LED-RGB 共阴 插件 直径5MM
+Add into BOM
+yes
+Description
+
+3D Model Title
+LED-TH_4P-BD5.8-P1.30-RGB
+Device
+LED-RGB 共阴 插件 直径5MM
+Unique ID
+ggebfdc6c8064bee256
+Manufacturer Part
+LED-RGB 共阴 插件 直径5mm
+spicePre
+U
+Supplier
+LCSC
+Supplier Part
+C9900015469
+Manufacturer
+null
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+LS7183N-S
+FOOTPRINT
+SOIC-8_L4.9-W3.9-P1.27-LS6.0-TL
+PARTTYPE
+LS7183N-S
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+SOIC-8_L4.9-W3.9-P1.27-LS6.0-TL
+Designator
+LS7183N-S
+Name
+LS7183N-S
+Add into BOM
+yes
+Description
+
+3D Model Title
+SOIC-8_L4.9-W3.9-H1.7-LS6.0-P1.27
+Device
+LS7183N-S
+Unique ID
+ggeb84d21c0d92fc73b
+Manufacturer Part
+LS7183N-S
+spicePre
+U
+Supplier
+LCSC
+Supplier Part
+C3234982
+Manufacturer
+LSI/CSI
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+R4
+FOOTPRINT
+RESISTOR-VERTICAL 1/4W 2.5MM
+PARTTYPE
+2kΩ
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+RESISTOR-VERTICAL 1/4W 2.5MM
+Designator
+R4
+Name
+2kΩ
+Add into BOM
+yes
+Description
+
+Device
+2kΩ
+Unique ID
+gge69dba5e87193f1e5
+3D Model Title
+
+Manufacturer Part
+MFR0W8F2001A50
+spicePre
+R
+Supplier
+LCSC
+Manufacturer
+UNI-ROYAL(厚声)
+Supplier Part
+C58680
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+S3
+FOOTPRINT
+PROS3-SMD
+PARTTYPE
+ESP32 ProS3
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+PROS3-SMD
+Designator
+S3
+Name
+ESP32 ProS3
+Add into BOM
+yes
+Description
+
+Device
+ESP32 ProS3
+Unique ID
+ggeb10dade2f00c97bc
+3D Model Title
+
+Manufacturer Part
+ProS3
+spicePre
+U
+Manufacturer
+UnexpectedMaker
+Supplier
+
+Supplier Part
+
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+[
+DESIGNATOR
+SW1
+FOOTPRINT
+SW-SMD_MST-12D18G4-SPDT-SLIDE-SWITCH
+PARTTYPE
+MST-12D18G4 SPDT SLIDE SWITCH
+DESCRIPTION
+
+Component Kind
+Standard
+Footprint
+SW-SMD_MST-12D18G4-SPDT-SLIDE-SWITCH
+Designator
+SW1
+Name
+MST-12D18G4 SPDT SLIDE SWITCH
+Add into BOM
+yes
+Description
+
+3D Model Title
+SW-SMD_MST-12D18G4-SPDT-SLIDE-SWITCH
+Device
+MST-12D18G4 SPDT SLIDE SWITCH
+Unique ID
+gge9fbef8bf57ac86fe
+Manufacturer Part
+MST-12D18G4 SPDT Slide Switch
+spicePre
+S
+Supplier
+LCSC
+Supplier Part
+C49023767
+Manufacturer
+SHOU HAN(首韩)
+JLCPCB Part Class
+Extended Part
+Group ID
+
+Channel ID
+
+Reuse Block
+
+Convert to PCB
+yes
+
+*
+]
+(
+3V3 
+C1-1 C0805-1 Passive 
+U1-2 CONN-TH_6P-P2.54_KF128-2.54-6P-2 Passive 
+U2-2 CONN-TH_6P-P2.54_KF128-2.54-6P-2 Passive 
+U3-2 CONN-TH_6P-P2.54_KF128-2.54-6P-2 Passive 
+U4-2 CONN-TH_6P-P2.54_KF128-2.54-6P-2 Passive 
+U5-1 CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629-1 Passive 
+C2-2 100nF-2 Passive 
+C3-1 100nF-1 Passive 
+LS7183N-S-2 LS7183N-S-2 Passive 
+LS7183N-S-6 LS7183N-S-6 Passive 
+S3-4 ESP32 ProS3-4 Passive 
+)
+(
+GND_L 
+C1-2 C0805-2 Passive 
+U1-3 CONN-TH_6P-P2.54_KF128-2.54-6P-3 Passive 
+U2-3 CONN-TH_6P-P2.54_KF128-2.54-6P-3 Passive 
+U2-6 CONN-TH_6P-P2.54_KF128-2.54-6P-6 Passive 
+U3-3 CONN-TH_6P-P2.54_KF128-2.54-6P-3 Passive 
+U4-3 CONN-TH_6P-P2.54_KF128-2.54-6P-3 Passive 
+U4-6 CONN-TH_6P-P2.54_KF128-2.54-6P-6 Passive 
+JST_2-1 2.0-2P ZZDK-1 Passive 
+U5-2 CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629-2 Passive 
+BUZ-2 PASSIVE BUZZER-2 Passive 
+C2-1 100nF-1 Passive 
+C3-2 100nF-2 Passive 
+C4-2 100uF-2 Passive 
+LS7183N-S-3 LS7183N-S-3 Passive 
+R4-1 2kΩ-1 Passive 
+S3-2 ESP32 ProS3-2 Passive 
+S3-25 ESP32 ProS3-25 Passive 
+SW1-1 MST-12D18G4 SPDT SLIDE SWITCH-1 Passive 
+)
+(
+LED_RGB_1 
+R1-1 220Ω-1 Passive 
+LED_RGB-1 LED-RGB 共阴 插件 直径5MM-1 Passive 
+)
+(
+LED_RED 
+R1-2 220Ω-2 Passive 
+S3-22 ESP32 ProS3-22 Passive 
+)
+(
+LED_RGB_3 
+R3-1 220Ω-1 Passive 
+LED_RGB-3 LED-RGB 共阴 插件 直径5MM-3 Passive 
+)
+(
+LED_GREEN 
+R3-2 220Ω-2 Passive 
+S3-21 ESP32 ProS3-21 Passive 
+)
+(
+LED_RGB_4 
+R7-1 220Ω-1 Passive 
+LED_RGB-4 LED-RGB 共阴 插件 直径5MM-4 Passive 
+)
+(
+LED_BLUE 
+R7-2 220Ω-2 Passive 
+S3-20 ESP32 ProS3-20 Passive 
+)
+(
+S3_10 
+R5-1 R0603-1 Passive 
+S3-10 ESP32 ProS3-10 Passive 
+)
+(
+IO21 
+R5-2 R0603-2 Passive 
+U2-5 CONN-TH_6P-P2.54_KF128-2.54-6P-5 Passive 
+)
+(
+S3_5V 
+U1-1 CONN-TH_6P-P2.54_KF128-2.54-6P-1 Passive 
+U2-1 CONN-TH_6P-P2.54_KF128-2.54-6P-1 Passive 
+U3-1 CONN-TH_6P-P2.54_KF128-2.54-6P-1 Passive 
+U4-1 CONN-TH_6P-P2.54_KF128-2.54-6P-1 Passive 
+S3-3 ESP32 ProS3-3 Passive 
+)
+(
+JOY_Y 
+U1-4 CONN-TH_6P-P2.54_KF128-2.54-6P-4 Passive 
+S3-6 ESP32 ProS3-6 Passive 
+)
+(
+JOY_X 
+U1-5 CONN-TH_6P-P2.54_KF128-2.54-6P-5 Passive 
+S3-5 ESP32 ProS3-5 Passive 
+)
+(
+JOY_SW 
+U1-6 CONN-TH_6P-P2.54_KF128-2.54-6P-6 Passive 
+S3-7 ESP32 ProS3-7 Passive 
+)
+(
+IO5 
+U2-4 CONN-TH_6P-P2.54_KF128-2.54-6P-4 Passive 
+S3-9 ESP32 ProS3-9 Passive 
+)
+(
+ENC_A 
+U3-4 CONN-TH_6P-P2.54_KF128-2.54-6P-4 Passive 
+LS7183N-S-4 LS7183N-S-4 Passive 
+)
+(
+ENC_B 
+U3-5 CONN-TH_6P-P2.54_KF128-2.54-6P-5 Passive 
+LS7183N-S-5 LS7183N-S-5 Passive 
+)
+(
+ENC_SW 
+U3-6 CONN-TH_6P-P2.54_KF128-2.54-6P-6 Passive 
+S3-15 ESP32 ProS3-15 Passive 
+)
+(
+IO4 
+U4-4 CONN-TH_6P-P2.54_KF128-2.54-6P-4 Passive 
+S3-8 ESP32 ProS3-8 Passive 
+)
+(
+U2_4 
+U4-5 CONN-TH_6P-P2.54_KF128-2.54-6P-5 Passive 
+)
+(
+VBAT 
+JST_2-2 2.0-2P ZZDK-2 Passive 
+S3-1 ESP32 ProS3-1 Passive 
+)
+(
+OLED_MOSI 
+U5-4 CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629-4 Passive 
+S3-16 ESP32 ProS3-16 Passive 
+)
+(
+OLED_SCK 
+U5-5 CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629-5 Passive 
+S3-17 ESP32 ProS3-17 Passive 
+)
+(
+OLED_CS 
+U5-6 CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629-6 Passive 
+S3-31 ESP32 ProS3-31 Passive 
+)
+(
+OLED_DC 
+U5-7 CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629-7 Passive 
+S3-32 ESP32 ProS3-32 Passive 
+)
+(
+OLED_RES 
+U5-8 CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629-8 Passive 
+S3-34 ESP32 ProS3-34 Passive 
+)
+(
+BUZZER 
+BUZ-1 PASSIVE BUZZER-1 Passive 
+S3-13 ESP32 ProS3-13 Passive 
+)
+(
+RST 
+C4-1 100uF-1 Passive 
+S3-26 ESP32 ProS3-26 Passive 
+SW1-2 MST-12D18G4 SPDT SLIDE SWITCH-2 Passive 
+)
+(
+LED_RGB_2 
+LED_RGB-2 LED-RGB 共阴 插件 直径5MM-2 Passive 
+)
+(
+LS7183N-S_1 
+LS7183N-S-1 LS7183N-S-1 Passive 
+R4-2 2kΩ-2 Passive 
+)
+(
+DOWN 
+LS7183N-S-7 LS7183N-S-7 Passive 
+S3-14 ESP32 ProS3-14 Passive 
+)
+(
+UP 
+LS7183N-S-8 LS7183N-S-8 Passive 
+)
+(
+S3_11 
+S3-11 ESP32 ProS3-11 Passive 
+)
+(
+S3_12 
+S3-12 ESP32 ProS3-12 Passive 
+)
+(
+S3_18 
+S3-18 ESP32 ProS3-18 Passive 
+)
+(
+S3_19 
+S3-19 ESP32 ProS3-19 Passive 
+)
+(
+S3_23 
+S3-23 ESP32 ProS3-23 Passive 
+)
+(
+S3_24 
+S3-24 ESP32 ProS3-24 Passive 
+)
+(
+S3_27 
+S3-27 ESP32 ProS3-27 Passive 
+)
+(
+SCL 
+S3-28 ESP32 ProS3-28 Passive 
+)
+(
+SDA 
+S3-29 ESP32 ProS3-29 Passive 
+)
+(
+S3_30 
+S3-30 ESP32 ProS3-30 Passive 
+)
+(
+S3_33 
+S3-33 ESP32 ProS3-33 Passive 
+)
