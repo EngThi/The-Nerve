@@ -1,71 +1,68 @@
+Claro! Aqui está o arquivo `README.md` completo. O comando Markdown usado nas imagens garante que elas sejam renderizadas diretamente na página inicial do repositório, desde que os arquivos estejam nas pastas indicadas no projeto (`assets/renders/` e `hardware/fabrication/`). 
+
+O caminho do arquivo onde você deve colar isso no seu repositório é na raiz:
+`The-Nerve/README.md`
+
+```markdown
 ![The Nerve PCB](assets/renders/Frontal_View.png)
 
-# 🧠 The Nerve – Painel de Entrada Modular
+# The Nerve – Modular Automation Cyberdeck
 ![The Nerve Project Render](assets/renders/the_nerve_render_v2.png)
 
-> **Status do Projeto:** Hardware Congelado / Desenvolvimento de Firmware (ESP32-S3)
+> **Project Status:** Hardware Frozen • Firmware in Development (ESP32-S3 + USB HID)
 
-**The Nerve** é um centro de comando tátil criado para trazer o controle físico de volta aos fluxos de trabalho digitais. Projetado inicialmente para automatizar pipelines de produção de vídeo (n8n + FFmpeg), sua arquitetura de hardware aberta o torna um controlador universal poderoso para desenvolvedores, editores e criadores.
+The Nerve is a tactile command center built to bring physical control back to digital workflows. Initially designed to automate video production pipelines (n8n + FFmpeg), its open hardware architecture makes it a powerful universal controller for developers, editors, and creators.
 
-Ele preenche a lacuna entre um teclado macro e uma interface cyberdeck totalmente programável.
+Out of the box, it bridges the gap between a simple macro pad and a fully programmable cyberdeck interface—allowing you to trigger renders, switch scenes, and control timelines without relying on a mouse.
 
-## 🧱 A stack do Hardware
-Construído em torno do **ESP32-S3 ProS3[D]** para recursos nativos de USB, Wi-Fi e Bluetooth.
+## Hardware Stack
+Built around the **ESP32-S3 ProS3[D]** to leverage native USB, Wi-Fi, and Bluetooth capabilities.
 
-- **Núcleo:** Unexpected Maker ESP32-S3 ProS3[D] (Dual-core 240MHz, 16MB Flash).
+- **Core:** Unexpected Maker ESP32-S3 ProS3[D] (Dual-core 240MHz, 16MB Flash).
+- **Visual Feedback:**
+  - **OLED:** Waveshare 1.5" RGB SPI (128x128) for real-time status, menus, and API data.
+  - **RGB LED:** Immediate visual cues (e.g., server status, active recording).
+- **Optical Encoder:** High-precision scrolling and timeline scrubbing.
+- **Hall Effect Joystick:** Drift-free analog control for XY parameters or mouse movement.
+- **Mechanical Switches:** Cherry MX Green (Clicky) for satisfying, deliberate execution.
+- **Missile Toggle Switch:** Safety-covered switch for critical actions (Deploy/Render).
+- **Audio Feedback:** Passive buzzer for system alerts.
 
-- **Feedback Visual:**
-- **OLED:** Waveshare 1.5" RGB SPI (128x128) para status em tempo real, menus e dados da API.
-- **LED RGB:** Indicações visuais imediatas (ex.: status do servidor, gravação ativa).
+## Modular Architecture
+The PCB is designed with **screw terminals and JST connectors**, allowing sensors and inputs to be hot-swapped without desoldering.
+- **Universal 6-pin Interfaces:** Supports both 3.3V and 5V peripherals.
+- **Battery Ready:** Integrated LiPo management for wireless operation.
 
-- **Encoder Óptico:** Rolagem/deslizamento de alta precisão.
+## Potential Applications
+Beyond video automation, the hardware is capable of functioning as a:
+- **Universal HID Controller:** Custom Keyboard/Mouse/MIDI device via USB-C.
+- **IoT Control Panel:** Monitor servers, CI/CD pipelines, or Home Assistant via Wi-Fi/MQTT.
+- **Development Tool:** Physical "Deploy" button with a status display for API health checks.
+- **Accessibility Interface:** Custom input mapping for specialized software control.
 
-- **Joystick de Efeito Hall:** Controle analógico sem deriva (parâmetros do mouse/XY).
-
-- **Switches Mecânicos:** Cherry MX Green (Clicky) para uma execução satisfatória.
-
-- **Interruptor de Míssil:** Interruptor com proteção de segurança para ações críticas (Implantar/Renderizar).
-- **Feedback:** Buzzer passivo para alertas sonoros.
-
-## 🔌 Arquitetura Modular
-A placa de circuito impresso possui **terminais de parafuso e conectores JST**, permitindo a troca de sensores e entradas sem a necessidade de dessoldar.
-- **Universal Interfaces de 6 pinos:** Suporta periféricos de 3,3 V e 5 V.
-- **Preparado para bateria:** Gerenciamento integrado de LiPo para operação sem fio.
-
-## 🚀 Aplicações potenciais
-Além da automação de vídeo, o hardware é capaz de:
-- **Controlador HID universal:** Teclado/Mouse/Dispositivo MIDI personalizado via USB-C.
-
-- **Painel de controle IoT:** Monitore servidores, pipelines CI/CD ou Home Assistant via Wi-Fi/MQTT.
-
-- **Ferramenta de desenvolvimento:** Botão físico "Implantar" com display de status para verificações de integridade da API.
-
-- **Interface de acessibilidade:** Mapeamento de entrada personalizado para controle de software especializado.
-
-## 📂 Estrutura do projeto
+## Project Structure
 
 ```text
-
-├── BOM.csv <-- Lista oficial de materiais (LCSC + módulos externos)
-├── README.md <-- Documentação do sistema
+├── BOM.csv                <-- Official Bill of Materials (LCSC + external modules)
+├── README.md              <-- System documentation
 │
 ├── hardware/
-│ ├── schematics/ # Arquivos de projeto EasyEDA
-│ ├── pcb/ # Layout e roteamento da placa
-│ ├── fabrication/ # Arquivos Gerber (prontos para JLCPCB)
-│ └── 3d_models/ # Conceito de gabinete (arquivos STEP)
+│   ├── schematics/        <-- EasyEDA design files
+│   ├── pcb/               <-- Board layout and routing
+│   ├── fabrication/       <-- Gerber files (Ready for JLCPCB)
+│   └── 3d_models/         <-- Enclosure concepts (STEP files)
 │
-├── firmware/ # Lógica ESP32 (MicroPython ou Rust)
-│ ├── src/ # Manipulação de entrada e drivers de display
-│ └── lib/ # Bibliotecas de sensores
+├── firmware/              <-- ESP32 logic (MicroPython or Rust)
+│   ├── src/               <-- Input handling and display drivers
+│   └── lib/               <-- Sensor libraries
 │
-└── automation/ # Integração com o host (opcional)
-
-├── n8n/ # Webhooks de exemplo de fluxo de trabalho
-└── scripts/ # Listeners HID em Python
+└── automation/            <-- Host integration (optional)
+    ├── n8n/               <-- Example workflow webhooks
+    └── scripts/           <-- Python HID listeners
 ```
 
 ## Manufacturing Preview
 ![JLCPCB Checkout](hardware/fabrication/JLCPCB_Checkout.png)
 
-_Projetado para quem precisa de mais do que apenas um atalho de teclado_
+*Designed for those who need more than just a keyboard shortcut.*
+```
