@@ -1,9 +1,3 @@
-Claro! Aqui está o arquivo `README.md` completo. O comando Markdown usado nas imagens garante que elas sejam renderizadas diretamente na página inicial do repositório, desde que os arquivos estejam nas pastas indicadas no projeto (`assets/renders/` e `hardware/fabrication/`). 
-
-O caminho do arquivo onde você deve colar isso no seu repositório é na raiz:
-`The-Nerve/README.md`
-
-```markdown
 ![The Nerve PCB](assets/renders/Frontal_View.png)
 
 # The Nerve – Modular Automation Cyberdeck
@@ -65,4 +59,3 @@ Beyond video automation, the hardware is capable of functioning as a:
 ![JLCPCB Checkout](hardware/fabrication/JLCPCB_Checkout.png)
 
 *Designed for those who need more than just a keyboard shortcut.*
-```
