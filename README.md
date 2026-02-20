@@ -22,7 +22,11 @@ Built around the **ESP32-S3 ProS3[D]** to leverage native USB, Wi-Fi, and Blueto
 - **Missile Toggle Switch:** Safety-covered switch for critical actions (Deploy/Render).
 - **Audio Feedback:** Passive buzzer for system alerts.
 
-## Modular Architecture
+## Schematics & Architecture
+The logic is cleanly separated into modular input sections and dedicated ESP32-S3 pin routing.
+![The Nerve Schematic](assets/diagrams/Schematic.png)
+
+## Modular Layout
 The PCB is designed with **screw terminals and JST connectors**, allowing sensors and inputs to be hot-swapped without desoldering.
 - **Universal 6-pin Interfaces:** Supports both 3.3V and 5V peripherals.
 - **Battery Ready:** Integrated LiPo management for wireless operation.
