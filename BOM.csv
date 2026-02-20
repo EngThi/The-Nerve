@@ -1,23 +1,23 @@
 ID,Name,Designator,Quantity,Manufacturer,Supplier,Supplier Part,Price,Link,Notes
-1,C0805 10uF,C1,1,Samsung,LCSC,C96445,,https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samsung-Electro-Mechanics-CL21A106KQFNNNE_C96445.html,Decoupling Cap
+1,Capacitor 10uF 0805,C1,1,Samsung,LCSC,C96445,0.01,https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samsung-Electro-Mechanics-CL21A106KQFNNNE_C96445.html,Decoupling Cap
 2,Resistor 220Ω,R1/R3/R7,3,Tyohm,LCSC,C410657,0.01,https://jlcpcb.com/partdetail/TyoHM-RN_1_4W_220R_F_T_BA1/C410657,Current Limiting
 3,Resistor 330Ω,R5,1,YAGEO,LCSC,C105881,0.0084,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RC0603FR-07330RL_C105881.html,LED Resistor
 4,Resistor 2kΩ,R4,1,UNI-ROYAL,LCSC,C58680,0.008,https://www.lcsc.com/product-detail/C58680.html,Pull-up
-5,Conn 6-Pin 2.54mm,U1-U4,4,KEFA,LCSC,C474924,0.637,https://lcsc.com/product-detail/Pluggable-System-Terminal-Block_KEFA-KF128-2-54-6P_C474924.html,Screw Terminals
+5,Screw Terminal 6-Pin 2.54mm,U1-U4,4,KEFA,LCSC,C474924,0.637,https://lcsc.com/product-detail/Pluggable-System-Terminal-Block_KEFA-KF128-2-54-6P_C474924.html,Screw Terminals
 6,Conn JST 2-Pin,JST_2,1,SHOU HAN,LCSC,C18185603,0.014,https://lcsc.com/product-detail/Wire-To-Board-Wire-To-Wire-Connector_SHOU-HAN-2-0-2P-ZZDK_C18185603.html,Battery Conn (2.0mm pitch)
-7,Conn 8-Pin 2.00mm,U4_Ext,1,HCTL,LCSC,C2908629,0.044,https://lcsc.com/product-detail/Wire-To-Board-Wire-To-Wire-Connector_HCTL-PH-8A_C2908629.html,Expansion Header
+7,Conn PH 8-Pin 2.00mm,U4_Ext,1,HCTL,LCSC,C2908629,0.044,https://lcsc.com/product-detail/Wire-To-Board-Wire-To-Wire-Connector_HCTL-PH-8A_C2908629.html,Expansion Header
 8,Passive Buzzer,BUZ,1,Generic,LCSC,C9900008742,0.0002,,Audio Feedback
-9,Cap 100nF,C2/C3,2,AIDE,LCSC,C49326605,0.0017,https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_AIDE-0603X7R104K100NT_C49326605.html,Filter Cap
-10,Cap 100uF,C4,1,HONOR,LCSC,C48970442,0.012,https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_HONOR-RYHG35V100UF6-8_C48970442.html,Bulk Cap
-11,LED RGB 5mm,LED_RGB,1,Generic,LCSC,C9900015469,0.0057,https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_C9900015469.html,Status LED
-12,IC Decoder LS7183N-S,U_DEC,1,LSI/CSI,LCSC,C3234982,6.32,https://lcsc.com/product-detail/Encoders_LSI-CSI-LS7183N-S_C3234982.html,Quadrature Decoder
-13,Slide Switch SPDT,SW1,1,SHOU HAN,LCSC,C49023767,0.08,https://lcsc.com/product-detail/Slide-Switches_SHOU-HAN-MST-12D18G4-SPDT-SLIDE-SWITCH_C49023767.html,Power Switch
-14,Battery LiPo 3000mAh,BATT_OPT1,1,Hiteuoms,Amazon,B0DP2JKFJG,9.99,https://www.amazon.com/dp/B0DP2JKFJG,"Power Source (Option 1, 3000mAh, JST 1.25mm - REQUIRES ADAPTER)"
-15,Battery LiPo 2200mAh,BATT_OPT2,1,OXWINOU,Amazon,B0CTQ6VBB6,9.98,https://www.amazon.com/dp/B0CTQ6VBB6,"Power Source (Option 2, 2200mAh, JST 2.0mm - Direct Fit)"
-16,Switch Cherry MX Blue,SW_MECH,1,Cherry,MechKeyboards,MX2A-Blue,0.50,https://mechanicalkeyboards.com/products/cherry-mx2a-blue-60g-clicky?variant=48020492124460,Main Triggers (Clicky)
-17,Toggle Switch Blue LED,SW_MISSILE,1,Adafruit,Adafruit,3306,3.95,https://www.adafruit.com/product/3306,Safety Arming Switch
-18,Joystick Hall Effect,JOY1,1,VGBUS,Amazon BR,B0CXDTGXZP,16.46,https://www.amazon.com.br/dp/B0CXDTGXZP,Analog Control (Drift Free)
+9,Capacitor 100nF 0603,C2/C3,2,AIDE,LCSC,C49326605,0.0017,https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_AIDE-0603X7R104K100NT_C49326605.html,Filter Cap
+10,Capacitor 100uF Radial,C4,1,HONOR,LCSC,C48970442,0.012,https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_HONOR-RYHG35V100UF6-8_C48970442.html,Bulk Cap
+11,LED RGB 5mm Common Cathode,LED_RGB,1,Generic,LCSC,C9900015469,0.0057,https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_C9900015469.html,Status LED
+12,Decoder IC LS7183N-S,U_DEC,1,LSI/CSI,LCSC,C3234982,6.32,https://lcsc.com/product-detail/Encoders_LSI-CSI-LS7183N-S_C3234982.html,Quadrature Decoder
+13,SPDT Slide Switch,SW1,1,SHOU HAN,LCSC,C49023767,0.08,https://lcsc.com/product-detail/Slide-Switches_SHOU-HAN-MST-12D18G4-SPDT-SLIDE-SWITCH_C49023767.html,Power Switch
+14,LiPo Battery 3000mAh,BATT_OPT1,1,Hiteuoms,Amazon,B0DP2JKFJG,9.99,https://www.amazon.com/dp/B0DP2JKFJG,"Power Source (Option 1, JST 1.25mm - REQUIRES ADAPTER)"
+15,LiPo Battery 2200mAh,BATT_OPT2,1,OXWINOU,Amazon,B0CTQ6VBB6,9.98,https://www.amazon.com/dp/B0CTQ6VBB6,"Power Source (Option 2, JST 2.0mm - Direct Fit)"
+16,Cherry MX Blue Switch,SW_MECH,1,Cherry,MechKeyboards,MX2A-Blue,0.50,https://mechanicalkeyboards.com/products/cherry-mx2a-blue-60g-clicky?variant=48020492124460,Main Trigger (Clicky)
+17,Illuminated Toggle Switch,SW_MISSILE,1,Adafruit,Adafruit,3306,3.95,https://www.adafruit.com/product/3306,Safety Arming Switch
+18,Hall Effect Joystick,JOY1,1,VGBUS,Amazon BR,B0CXDTGXZP,16.46,https://www.amazon.com.br/dp/B0CXDTGXZP,Analog Control (Drift Free)
 19,ESP32-S3 ProS3,U_MCU,1,Unexpected Maker,Adafruit,6398,26.50,https://www.adafruit.com/product/6398,Main Controller
-20,OLED 1.5 RGB,DISP1,1,Waveshare,Waveshare,1.5inch RGB OLED,23.99,https://www.waveshare.com/1.5inch-rgb-oled-module.htm,Visual Interface
-21,Encoder Mecânico Alps,ENC_MECH,1,Alps Alpine,Mouser,688-EC11E15244B2,4.85,https://br.mouser.com/ProductDetail/Alps-Alpine/EC11E15244B2,"15PPR Mechanical, Through-Hole, 3.3V Logic"
-22,Encoder Óptico Bourns,ENC_OPT,1,Bourns,Mouser,652-ENA1J-B28-L064L,46.03,https://br.mouser.com/ProductDetail/Bourns/ENA1J-B28-L00064L,"64PPR Optical High-Precision, Panel Mount, 5V Supply"
+20,1.5inch RGB OLED,DISP1,1,Waveshare,Waveshare,1.5inch RGB OLED,23.99,https://www.waveshare.com/1.5inch-rgb-oled-module.htm,Visual Interface
+21,Mechanical Encoder (Alps),ENC_MECH,1,Alps Alpine,Mouser,688-EC11E15244B2,4.85,https://br.mouser.com/ProductDetail/Alps-Alpine/EC11E15244B2,"15PPR, 3.3V Logic Compatible"
+22,Optical Encoder (Bourns),ENC_OPT,1,Bourns,Mouser,652-ENA1J-B28-L064L,46.03,https://br.mouser.com/ProductDetail/Bourns/ENA1J-B28-L00064L,"64PPR, High-Precision, 5V Supply"
