@@ -10,7 +10,7 @@
 It bridges the gap between a macro pad and a fully programmable cyberdeck interface.
 
 ## 💰 Detailed Project Cost (Excluding Shipping)
-Total cost considering all components and hardware options listed in the BOM.
+Total cost considering all components, hardware options, and wiring listed in the BOM.
 
 | ID | Item Name | Qty | Unit Price | Subtotal |
 | :--- | :--- | :---: | :--- | :--- |
@@ -37,7 +37,8 @@ Total cost considering all components and hardware options listed in the BOM.
 | 20 | 1.5" RGB OLED Display | 1 | $23.99 | $23.99 |
 | 21 | Mechanical Encoder (Alps) | 1 | $4.85 | $4.85 |
 | 22 | Optical Encoder (Bourns) | 1 | $46.03 | $46.03 |
-| | **TOTAL** | | | **$160.70** |
+| 23 | Silicone Wire Kit 24AWG BNTECHGO | 1 | $9.98 | $9.98 |
+| | **TOTAL** | | | **$170.72** |
 
 ## 🧱 Hardware Stack
 Built around the **ESP32-S3 ProS3[D]** for native USB, Wi-Fi, and Bluetooth capabilities.
