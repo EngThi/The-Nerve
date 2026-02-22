@@ -21,3 +21,7 @@ ID,Name,Designator,Quantity,Manufacturer,Supplier,Supplier Part,Price,Link,Notes
 20,1.5inch RGB OLED,DISP1,1,Waveshare,Waveshare,1.5inch RGB OLED,23.99,https://www.waveshare.com/1.5inch-rgb-oled-module.htm,Visual Interface
 21,Mechanical Encoder (Alps),ENC_MECH,1,Alps Alpine,Mouser,688-EC11E15244B2,4.85,https://br.mouser.com/ProductDetail/Alps-Alpine/EC11E15244B2,"15PPR, 3.3V Logic Compatible"
 22,Optical Encoder (Bourns),ENC_OPT,1,Bourns,Mouser,652-ENA1J-B28-L064L,46.03,https://br.mouser.com/ProductDetail/Bourns/ENA1J-B28-L00064L,"64PPR, High-Precision, 5V Supply"
+23,Silicone Wire Kit 24AWG,WIRE_KIT,1,BNTECHGO,Amazon,B01KA4W424,11.98,https://www.amazon.com/dp/B01KA4W424,"Wiring for Panel Components -> Screw Terminals (Black/Red/Yellow)"
+24,M3 Hex Socket Screw Set,SCREWS,1,VIGRUE,Amazon,B071KB4XQD,13.99,https://www.amazon.com/dp/B071KB4XQD,"M3x6mm (PCB Mount) & M3x10mm (Case Assembly) - Black Alloy"
+25,M3 Threaded Inserts,INSERTS,1,Ruthex,Amazon,B08B17VQP4,9.99,https://www.amazon.com/dp/B08B17VQP4,"M3x5.7mm Heat Set Inserts for professional case durability"
+26,Rubber Feet (Bumpons),FEET,1,3M,Amazon,B086MK6K87,6.99,https://www.amazon.com/dp/B086MK6K87,"Anti-slip feet for Bottom Cover"
