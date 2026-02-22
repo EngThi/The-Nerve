@@ -22,10 +22,10 @@ Total cost considering all components, hardware options, and wiring listed in th
 | 5 | Screw Terminals 6-Pin (Set of 4) | 4 | $0.64 | $2.56 |
 | 6 | JST 2-Pin Battery Conn | 1 | $0.01 | $0.01 |
 | 7 | PH 8-Pin 2.00mm Header | 1 | $0.04 | $0.04 |
-| 8 | Passive Buzzer | 1 | $0.01 | $0.01 |
+| 8 | Passive Buzzer QMB-09B-03 (Tray of 5) | 5 | $0.12 | $0.58 |
 | 9 | Capacitor 100nF (Set of 2) | 2 | $0.01 | $0.02 |
 | 10 | Capacitor 100uF Radial | 1 | $0.01 | $0.01 |
-| 11 | LED RGB 5mm | 1 | $0.01 | $0.01 |
+| 11 | LED RGB 5mm XL-A504RGBW (Pack of 10) | 10 | $0.06 | $0.64 |
 | 12 | Decoder IC LS7183N-S | 1 | $6.32 | $6.32 |
 | 13 | SPDT Slide Switch | 1 | $0.08 | $0.08 |
 | 14 | LiPo Battery 3000mAh (Option 1) | 1 | $9.99 | $9.99 |
@@ -38,7 +38,7 @@ Total cost considering all components, hardware options, and wiring listed in th
 | 21 | Mechanical Encoder (Alps) | 1 | $4.85 | $4.85 |
 | 22 | Optical Encoder (Bourns) | 1 | $46.03 | $46.03 |
 | 23 | Silicone Wire Kit 24AWG BNTECHGO | 1 | $9.98 | $9.98 |
-| | **TOTAL** | | | **$170.72** |
+| | **TOTAL** | | | **$171.92** |
 
 ## 🧱 Hardware Stack
 Built around the **ESP32-S3 ProS3[D]** for native USB, Wi-Fi, and Bluetooth capabilities.
