@@ -1,5 +1,5 @@
 ID,Name,Designator,Quantity,Manufacturer,Supplier,Supplier Part,Price,Link,Notes
-1,Capacitor 10uF 0805,C1,1,Samsung,LCSC,C96445,0.01,https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samsung-Electro-Mechanics-CL21A106KQFNNNE_C96445.html,Decoupling Cap
+1,Capacitor 10uF 0805,C1,20,Samsung Electro-Mechanics,LCSC,C1713,0.013,https://www.lcsc.com/product-detail/C1713.html,Decoupling Cap (Cut Tape Min 20)
 2,Resistor 220Ω,R1/R3/R7,3,Tyohm,LCSC,C410657,0.01,https://jlcpcb.com/partdetail/TyoHM-RN_1_4W_220R_F_T_BA1/C410657,Current Limiting
 3,Resistor 330Ω,R5,1,YAGEO,LCSC,C105881,0.0084,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RC0603FR-07330RL_C105881.html,LED Resistor
 4,Resistor 2kΩ,R4,1,UNI-ROYAL,LCSC,C58680,0.008,https://www.lcsc.com/product-detail/C58680.html,Pull-up
