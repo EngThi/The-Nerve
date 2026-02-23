@@ -4,12 +4,12 @@ ID,Name,Designator,Quantity,Manufacturer,Supplier,Supplier Part,Price,Link,Notes
 3,Resistor 330Ω,R5,1,YAGEO,LCSC,C105881,0.0084,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RC0603FR-07330RL_C105881.html,LED Resistor
 4,Resistor 2kΩ,R4,1,UNI-ROYAL,LCSC,C58680,0.008,https://www.lcsc.com/product-detail/C58680.html,Pull-up
 5,Screw Terminal 6-Pin 2.54mm,U1-U4,4,KEFA,LCSC,C474924,0.637,https://lcsc.com/product-detail/Pluggable-System-Terminal-Block_KEFA-KF128-2-54-6P_C474924.html,Screw Terminals
-6,Conn JST 2-Pin,JST_2,1,SHOU HAN,LCSC,C18185603,0.014,https://lcsc.com/product-detail/Wire-To-Board-Wire-To-Wire-Connector_SHOU-HAN-2-0-2P-ZZDK_C18185603.html,Battery Conn (2.0mm pitch)
-7,Conn PH 8-Pin 2.00mm,U4_Ext,1,HCTL,LCSC,C2908629,0.044,https://lcsc.com/product-detail/Wire-To-Board-Wire-To-Wire-Connector_HCTL-PH-8A_C2908629.html,Expansion Header
+6,Conn JST B2B-PH-K-S 2-Pin,JST_2,20,JST,LCSC,C131337,0.0313,https://www.lcsc.com/product-detail/C131337.html,Battery Conn (Min 20)
+7,Conn ZX-HY2.0 8-Pin,U5,10,Megastar,LCSC,C7429584,0.0504,https://www.lcsc.com/product-detail/C7429584.html,Expansion Header (Min 10)
 8,Passive Buzzer QMB-09B-03,BUZ,5,Generic,LCSC,C96256,0.1161,https://www.lcsc.com/product-detail/C96256.html,Audio Feedback (Tray of 5)
 9,Capacitor 100nF 0603,C2/C3,2,AIDE,LCSC,C49326605,0.0017,https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_AIDE-0603X7R104K100NT_C49326605.html,Filter Cap
 10,Capacitor 100uF Radial,C4,1,HONOR,LCSC,C48970442,0.012,https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_HONOR-RYHG35V100UF6-8_C48970442.html,Bulk Cap
-11,LED RGB 5mm XINGLIGHT XL-A504RGBW,LED_RGB,10,XINGLIGHT,LCSC,C7371892,0.0643,https://www.lcsc.com/product-detail/C7371892.html,Status LED (Pack of 10)
+11,LED RGB 5mm XL-A504RGBW,LED_RGB,10,XINGLIGHT,LCSC,C7371892,0.0643,https://www.lcsc.com/product-detail/C7371892.html,Status LED (Pack of 10)
 12,Decoder IC LS7183N-S,U_DEC,1,LSI/CSI,LCSC,C3234982,6.32,https://lcsc.com/product-detail/Encoders_LSI-CSI-LS7183N-S_C3234982.html,Quadrature Decoder
 13,SPDT Slide Switch,SW1,1,SHOU HAN,LCSC,C49023767,0.08,https://lcsc.com/product-detail/Slide-Switches_SHOU-HAN-MST-12D18G4-SPDT-SLIDE-SWITCH_C49023767.html,Power Switch
 14,LiPo Battery 3000mAh,BATT_OPT1,1,Hiteuoms,Amazon,B0DP2JKFJG,9.99,https://www.amazon.com/dp/B0DP2JKFJG,"Power Source (Option 1, JST 1.25mm - REQUIRES ADAPTER)"
@@ -19,6 +19,6 @@ ID,Name,Designator,Quantity,Manufacturer,Supplier,Supplier Part,Price,Link,Notes
 18,Hall Effect Joystick,JOY1,1,VGBUS,Amazon BR,B0CXDTGXZP,16.46,https://www.amazon.com.br/dp/B0CXDTGXZP,Analog Control (Drift Free)
 19,ESP32-S3 ProS3,U_MCU,1,Unexpected Maker,Adafruit,6398,26.50,https://www.adafruit.com/product/6398,Main Controller
 20,1.5inch RGB OLED,DISP1,1,Waveshare,Waveshare,1.5inch RGB OLED,23.99,https://www.waveshare.com/1.5inch-rgb-oled-module.htm,Visual Interface
-21,Mechanical Encoder (Alps),ENC_MECH,1,Alps Alpine,Mouser,688-EC11E15244B2,4.85,https://br.mouser.com/ProductDetail/Alps-Alpine/EC11E15244B2?qs=m0BA540hBPfDpUEkDmFV5A%3D%3D"
-22,Optical Encoder (Bourns),ENC_OPT,1,Bourns,Mouser,652-ENA1J-B28-L064L,46.03,https://br.mouser.com/ProductDetail/Bourns/ENA1J-B28-L00064L?qs=CrTVAl0CcnKhSZ6oFfhmHw%3D%3D, High-Precision, 5V Supply"
+21,Mechanical Encoder (Alps),ENC_MECH,1,Alps Alpine,Mouser,688-EC11E15244B2,4.85,https://br.mouser.com/ProductDetail/Alps-Alpine/EC11E15244B2?qs=m0BA540hBPfDpUEkDmFV5A%3D%3D,"15PPR, 3.3V Logic Compatible"
+22,Optical Encoder (Bourns),ENC_OPT,1,Bourns,Mouser,652-ENA1J-B28-L064L,46.03,https://br.mouser.com/ProductDetail/Bourns/ENA1J-B28-L00064L?qs=CrTVAl0CcnKhSZ6oFfhmHw%3D%3D,"64PPR, High-Precision, 5V Supply"
 23,Silicone Wire Kit 24AWG,WIRE_KIT,1,BNTECHGO,Amazon,B09X4HVFJX,9.98,https://www.amazon.com/dp/B09X4HVFJX,"10 Color Each 5 ft Flexible 24 AWG Stranded Tinned Copper Wire"
