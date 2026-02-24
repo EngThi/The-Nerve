@@ -1,99 +1,96 @@
-> *Disclaimer: Inicialmente, eu estava usando apenas a plataforma do Blueprint para documentar o progresso (não sabia que os registros precisavam estar no repositório também). Estou compilando os registros passados aqui para refletir a verdadeira timeline do projeto.*
+> *Disclaimer: Initially, I was only using the Blueprint platform to document progress. I am compiling past logs here to reflect the true project timeline and translating everything to English for the Hack Club reviewers.*
 
-# Diário de Desenvolvimento (Journal) - The Nerve
+# Development Journal - The Nerve
 
-Este documento registra a evolução, as decisões de engenharia e os desafios enfrentados durante o desenvolvimento do **The Nerve V1**, alinhado com as postagens feitas na plataforma do Blueprint.
+This document records the evolution, engineering decisions, and challenges faced during the development of **The Nerve V1**, aligned with the posts made on the Blueprint platform.
 
 ---
 
-### 10 Fev 2026: I did many things (I MOVED THE PROJECT BACK HERE AGAIN)
-**Title: The "Panic" That Became a Feature: Upgrade and Resilience**
+### Feb 10, 2026: The "Panic" That Became a Feature (Project Reboot)
+**Time spent: 14.4h**
 
-O projeto começou como uma tentativa de criar uma interface física para automatizar fluxos de vídeo no `n8n`. Inicialmente, enfrentei um momento de "pânico" com a estrutura do projeto e as ferramentas. Decidi recomeçar o design do zero. Isso acabou sendo crucial: percebi que eu não estava apenas fazendo um "teclado de atalhos", mas sim um controlador modular muito mais robusto.
-*Nota: Vou buscar as imagens de rascunhos antigos dessa época para incluir aqui.*
+What was supposed to be a productive Saturday turned into a technical nightmare when a 6-hour timelapse upload got stuck at 60%. Instead of just accepting the loss, I used the frustration as fuel to create the **"Panic Save Module"**: now THE NERVE's hardware has a physical emergency button to force backups and save the project state before any digital error happens again.
 
-### 12 Fev 2026: Mexi no hardware e uma transição para a Arquitetura Modular
-**(Hardware Changes - Log V2)**
+**What was done:**
+- **Hacker Investigation:** I opened the console and discovered the browser database was corrupted due to a server request limit. I decided the project cannot depend 100% on the cloud or browser.
+- **Display Upgrade:** I replaced the simple OLED with a 1.5" Waveshare SPI. It's much faster and makes the interface look much more professional.
+- **Power Management:** I implemented a voltage monitor for the LiPo battery. Now the system warns if the battery is dying.
+- **Panic Module:** I designed the circuit for a mechanical switch (Cherry MX style). When pressed, it sends a USB command to the computer to `git push` and save everything instantly.
+- **Validation:** Tested the logic of the new Optical Encoder in Wokwi. The precision is infinitely better than standard mechanical ones.
 
-A escolha do microcontrolador e a estrutura da placa foram os grandes divisores de águas desta fase.
+*The design in EasyEDA evolved from basic to combat-ready hardware. The project is now an autonomous and resilient workstation.*
 
-**1. Pivot do Microcontrolador (RP2040 -> ESP32-S3):**
-- O plano original era usar o RP2040. Era barato, mas a falta de conectividade limitaria o escopo para automações presas ao cabo.
-- Migrei para o **ESP32-S3 ProS3[D]**. Além do USB HID nativo (essencial para simular periféricos de entrada), o Wi-Fi embutido abriu portas para disparar webhooks HTTP direto para o n8n, sem precisar de scripts no PC.
+---
 
-**2. Modularidade & Manutenção:**
-Decidi que nada de interface seria soldado diretamente na placa. Se um encoder quebra, não quero perder a PCB inteira. Implementei conectores universais JST e terminais de parafuso.
+### Feb 12, 2026: Hardware Pivot & Transition to Modular Architecture
+**Time spent: 12.0h**
 
-**3. Pinout & Voltagem / DFM (Pre não ter que soldar tudo):**
-Criar interfaces de 6 pinos para suportar módulos de 3.3V e 5V simultaneamente exigiu refazer grande parte do roteamento lógico no EasyEDA. O design ficou focado para a manufatura (DFM), permitindo que peças fossem apenas parafusadas/plugadas.
+This phase marked the transition from breadboard theory to actual hardware design. The focus was making the board robust and modular.
 
-### 16 Fev 2026: Only added the hours of Flavortown
-Atualização de acompanhamento das horas gastas no Hackatime. Neste ponto, grande parte do tempo foi dedicado a encontrar as dimensões exatas e refinar o CAD do gabinete para encaixar o hardware perfeitamente.
+**1. Microcontroller Pivot (RP2040 -> ESP32-S3):**
+The original plan used the RP2040. It was cheap, but lacking connectivity would limit the scope to cable-bound automations. I migrated to the **ESP32-S3 ProS3**. Besides native USB HID (essential for simulating input peripherals), the built-in Wi-Fi opened doors to fire HTTP webhooks directly to n8n, bypassing host PC scripts entirely.
 
-### 19 Fev 2026: Hardware Freeze & Modular Architecture
-Depois de dezenas de horas ajustando posições e distâncias, cheguei ao "Hardware Freeze" da versão 1.0.
+**2. The Optical Encoder Dilemma:**
+I spent a long time trying to create a footprint from scratch for an absolute optical encoder. Halfway through, I realized that soldering it directly to the board was a trap: any mechanical stress on the "dial" could snap the PCB.
+**The Fix:** I abandoned fixed mounting and implemented universal **JST connectors and KF128 screw terminals**. Now the project is modular! I can swap the Dial or Joystick without resoldering the whole board.
 
-- Integrei o display OLED SPI (1.5" RGB).
-- A bateria LiPo ganhou seu circuito definitivo de gestão.
-- O maior estresse do dia foi preparar os arquivos para a fabricação na JLCPCB:
-  1. Meu logo ("THE NERVE") estava sumindo do render 3D. Descobri que importei a imagem como "Documentação" no EasyEDA; converti o atributo para a camada `TopSilkLayer` para garantir que a JLCPCB imprimisse na placa.
-  2. Ao subir os Gerbers, a JLCPCB cobrou **$80** para 5 placas. Fui revisar os logs de configuração e percebi que a opção "Epoxy Filled & Capped Vias" estava ativada. Desliguei isso, mudei pro acabamento HASL comum em placa branca e o custo caiu para a média esperada de **$10**.
+**3. Pinout & Signal Integrity:**
+Standardized the input interface: `VCC | GND | SIG_A | SIG_B | SW | LED`. I placed a solid GND copper pour to avoid EMI interference between the analog Joystick signals and the fast SPI OLED lines.
 
-### Próximos Passos (Pós-Freeze)
-Com os Gerbers validados, o foco muda para a base do firmware:
-1. Ambiente MicroPython no ESP32-S3.
-2. Escrever drivers básicos do OLED.
-3. Classe de inputs para o Joystick Hall e Encoder Óptico.
+---
 
-### 22 Fev 2026: Case Slim & Premium — O Enclosure Ficou do Jeito Certo
+### Feb 15, 2026: Hardware Freeze
+**Time spent: 25.0h**
 
-Depois do Hardware Freeze, eu achei que a parte mais difícil tinha acabado. Errei feio. 
+After dozens of hours tweaking placements and routing (and losing several timelapse recordings due to browser crashes), I reached the "Hardware Freeze" for version 1.0.
 
-Entrei no **OnShape** para modelar o enclosure e descobri que transformar uma tabela de dimensões em uma caixa 3D real é um desafio completamente diferente de projetar um circuito. A cada hora, alguma coisa que parecia resolvida no papel revelava um problema novo na modelagem. 
+- **DFM (Design for Manufacturing):** Selected components that LCSC has in stock (Basic Parts) so JLCPCB can deliver it partially assembled.
+- **Decoder IC:** Kept the **LS7183N-S**. It takes the heavy processing load of the high-resolution encoder off the ESP32's shoulders.
+- **Passives:** Everything is 0603. It’s the smallest size I can reasonably hand-solder if I need to fix a trace later.
 
-Passei cerca de **18 horas** trabalhando duro no CAD até a carcaça ficar com cara de produto de verdade: compacta, limpa e com um esquema de tampa inferior que dá total confiança pra montar, sem gambiarras.
+*(Note: The `hardware/` and `firmware/` directory structure was organized in this session).*
 
-**A Modelagem Completa da Case no OnShape**
-A carcaça é um wedge trapezoidal com 15° de inclinação, paredes de 3mm e dimensões de 100x80mm na base. Cada furo foi posicionado com precisão:
+---
 
-- **OLED 1.5":** Janela de 40x40mm com chanfro de 45° para esconder as bordas do módulo.
-- **Encoder Óptico:** Furo de 10mm com 25mm de folga livre pro knob girar.
-- **Joystick Hall:** Furo de 25mm garantindo o tilt completo sem raspar.
-- **Cherry MX (Execute):** Recorte cirúrgico de 14.05x14.05mm. Essa tolerância foi pensada pro switch entrar em *press-fit* perfeito, sem cola.
-- **Missile Switch (Panic):** Furo M12 de 12.5mm e 50mm de vão livre para a capa vermelha abrir sem bater no joystick.
-- **USB-C na frente:** Botei o conector pra sair onde realmente faz sentido pra placa e pro uso diário. Acabou o problema do pino ficar fundo demais ou num lugar ruim na mesa.
-- **LED RGB cirúrgico:** Usei o centro do USB-C como referência e apliquei offset exato pra bater no furo de 5mm do light pipe.
+### Feb 22, 2026: 3D CAD Modeling & The Slim Premium Case
+**Time spent: 18.0h**
 
-**O grande pulo estrutural: Tampa Separada**
-Antes, projetar tudo num sólido só ia dificultar demais o fatiamento e a manutenção. Dividi o código do OnShape em dois: a caixa principal e a tampa inferior (*flush-inside*). A tampa encaixa por dentro da base e trava nos 4 pilares internos. A placa fica presa direto nela, super pro.
+After the Hardware Freeze, I thought the hardest part was over. I was wrong. Moving from electronic theory to real-world physics in **OnShape** was a massive challenge. I spent 18 straight hours designing the enclosure to ensure everything fit perfectly without sketchy workarounds.
 
-LEMBRAR DE COLOCAR IMAGEM AQUI SOBRE o print/render do OnShape mostrando a vista isométrica da case inteira cortada, com os furos posicionados.
+**The Complete OnShape Model:**
+I designed a 15-degree wedge enclosure with 3mm walls. Tolerances were strict:
+- **1.5" OLED:** A 40x40mm window with a 45° inner chamfer so the screen doesn't look deeply sunken into the plastic.
+- **Cherry MX (Execute):** A precise 14.05x14.05mm cutout designed for a perfect press-fit without glue.
+- **Missile Switch (Panic):** An M12 (12.5mm) hole with 50mm of clearance so the red safety cover can open without hitting the joystick.
 
-LEMBRAR DE COLOCAR IMAGEM AQUI SOBRE um close no OnShape focando no alinhamento cravado do LED RGB com o conector frontal.
+**The Structural Leap: Flush-Inside Bottom Cover**
+Trying to design everything as a single piece would ruin printability and maintenance. I split the case into a main body and a flush-inside bottom cover. The PCB screws directly into the bottom cover standoffs, making assembly incredibly clean.
 
-LEMBRAR DE COLOCAR IMAGEM AQUI SOBRE o sistema de encaixe da tampa inferior com os pilares (Exploded View ou corte lateral).
+**Thermals and Acoustics (The Stealth Approach):**
+The ESP32-S3 gets warm, and I have a buzzer on the board. I refused to drill ugly holes in the front face. Instead, I designed 7 vertical slots (2x30mm) on the rear wall. They act as thermal exhaust and acoustic grills, keeping the front aesthetic completely stealthy.
 
-**Sobre o Buzzer e a Térmica**
-Decidi não furar a frente pro buzzer. Fiz 7 slots verticais (2x30mm) na parede traseira. Eles tiram o calor do ESP32-S3 (240MHz + Wi-Fi) e funcionam como grade acústica pro som sair limpo. A frente da case continua *stealth* e intacta.
+---
 
-LEMBRAR DE COLOCAR IMAGEM AQUI SOBRE os slots traseiros modelados no OnShape.
+### Feb 23, 2026: Fixing the BOM & LCSC PCBA Checkout
 
-O próximo passo é rodar os testes de impressão pra confirmar a tolerância no mundo físico e preparar os arquivos CAD (.step/.stl) pra mandar pro Blueprint.
+I thought the Gerbers and CAD were ready, but when attempting to checkout the automated assembly (PCBA) at JLCPCB, the system threw massive `item does not found` and `shortfall` errors.
 
-### 23 Fev 2026: Correção de BOM e Checkout na LCSC para PCBA
-**(Hardware Fixes - Log V3)**
+**The Fixes for PCBA:**
+1. **Clean BOM for JLCPCB:** Generated a dedicated 16-column CSV from EasyEDA, stripping out all mechanical/external components (Cherry MX, Joystick, ESP32-S3, OLED) that aren't sold by LCSC.
+2. **MOQ (Minimum Order Quantity) Corrections:** Fixed generic Buzzer and RGB LED errors by mapping them to exact LCSC stock codes (`QMB-09B-03` and `XL-A504RGBW`) and adjusting the BOM math to match tray/pack minimums.
+3. **Connector Swaps:** Swapped "Unmatched" THT connectors to in-stock LCSC equivalents (`B2B-PH-K-S` and `ZX-HY2.0-8PZZ`).
+4. **LS7183N-S Decoder:** JLCPCB reported a stock shortfall for this IC. Rather than halting the entire production for one chip, I removed it from the automated assembly. I'll buy it separately and hand-solder it.
 
-Achei que os arquivos Gerbers e o CAD estivessem prontos, mas na hora de fechar o pedido de montagem automática (PCBA) na LCSC/JLCPCB, tomei uma chuva de erros no sistema deles: `item does not found`, `shortfall` e `unmatched components`.
+The new `BOM_JLCPCB_PCBA.csv` passed the system checks perfectly.
 
-A causa foi que minha BOM original (feita para controle financeiro) tinha peças da Amazon e Mouser, e a máquina de Pick and Place da fábrica enlouqueceu tentando achar essas peças no catálogo deles.
+---
 
-**O que foi corrigido para a PCBA:**
-1. **Limpeza da BOM e CPL:** Gereio um arquivo de 16 colunas exclusivo do EasyEDA, removendo todos os componentes mecânicos e externos (Cherry MX, Joystick Hall, ESP32-S3, OLED).
-2. **Correção de Lotes (MOQ):** O Buzzer e o LED RGB genéricos estavam dando erro. Encontrei as peças exatas no catálogo deles (`QMB-09B-03` e `XL-A504RGBW`) e ajustei a matemática da BOM para refletir as quantidades mínimas de compra (bandeja de 5 buzzers e pacote de 10 LEDs).
-3. **Substituição de Conectores THT:** Os conectores JST (Bateria) e PH (Expansão) estavam marcados como "Unmatched". Troquei pelo JST original `B2B-PH-K-S` e pelo Megastar `ZX-HY2.0-8PZZ` que tinham estoque na hora.
-4. **Remoção do Decoder LS7183N-S:** A máquina acusou falta de estoque ("5 shortfall") para esse IC. Para não travar a produção inteira por causa de um chip, removi ele da montagem automática. Vou comprar separado e soldar em casa.
+### Feb 24, 2026: Blueprint Grant Submission! 🚀
 
-Os novos arquivos `BOM_JLCPCB_Final_V2.csv` e `CPL_JLCPCB_Final_V2.csv` passaram lisos no sistema deles. A placa base será montada na fábrica (SMD) e a "fun part" da montagem THT pesada vai sobrar pra mim.
+Today is the day! After weeks of pivoting from breadboards to CAD, debugging corrupted browser databases, surviving JLCPCB checkout errors, and calculating costs down to the cent, **The Nerve has officially been submitted to the Hack Club Blueprint for funding.**
 
-**Status atual da Bill of Materials (Financeiro):**
-O custo total do projeto foi atualizado para **$171.92**, refletindo as quantidades mínimas obrigatórias dos componentes da LCSC.
+The final requested budget is **$171.92**, covering the custom JLCPCB manufacturing, the Adafruit ESP32-S3, and all the premium interface hardware (Hype Dial, Hall Joystick, Cherry MX switch). 
+
+I spent significant time writing the "Note to Reviewer," ensuring complete transparency about why the JLCPCB quote ($68) differs from the total request (since I'll be hand-wiring the expensive interfaces for maximum modularity).
+
+Now, the waiting game begins. If funded, the next phase is physical assembly and writing the MicroPython firmware!
