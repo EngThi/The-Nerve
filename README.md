@@ -1,6 +1,14 @@
+# 🧠 The Nerve – Modular Input Panel
+
+> [!IMPORTANT]
+> **REVIEWS NOTE:** The original banner/logo submitted to the Blueprint review appeared disproportionate and did not display the full design as intended. I initially believed I could edit the banner post-submission, but that was not the case. 
+> 
+> **The official hero image for the project is actually the board render below:**
+> 
+> ![The Nerve Official Board Render](Board.png)
+
 ![The Nerve PCB](assets/renders/Frontal_View.png)
 
-# 🧠 The Nerve – Modular Input Panel
 ![The Nerve Project Render](assets/renders/the_nerve_render_v2.png)
 
 > **Project Status:** Hardware Frozen / Firmware Development (ESP32-S3)
@@ -45,18 +53,15 @@ Built around the **ESP32-S3 ProS3[D]** for native USB, Wi-Fi, and Bluetooth capa
 
 - **Core:** Unexpected Maker ESP32-S3 ProS3[D] (Dual-core 240MHz, 16MB Flash).
 - **Visual Feedback:**
-    - **OLED:** Waveshare 1.5" RGB SPI (128x128) for real-time status, menus, and API data.
+    - **OLED:** Waveshare 1.5\" RGB SPI (128x128) for real-time status, menus, and API data.
     - **RGB LED:** Immediate visual indications (e.g., server status, active recording).
-- **Encoder:** High-precision Optical/Mechanical scrolling options.
-- **Hall Effect Joystick:** Analog control without drift (Mouse/XY parameters).
+- **Encoder:** High-precision Optical/Mechanical scrolling options.\n- **Hall Effect Joystick:** Analog control without drift (Mouse/XY parameters).
 - **Mechanical Switches:** Cherry MX Blue (Clicky) for satisfying execution.
-- **Missile Switch:** Safety-covered toggle for critical actions (Deploy/Render).
-- **Audio Feedback:** Passive buzzer for audible alerts.
+- **Missile Switch:** Safety-covered toggle for critical actions (Deploy/Render).\n- **Audio Feedback:** Passive buzzer for audible alerts.
 
 ## 🔌 Modular Architecture
 The PCB features **screw terminals and JST connectors**, allowing sensors and inputs to be swapped without desoldering.
-- **Universal 6-pin Interfaces:** Supports 3.3V and 5V peripherals.
-- **Battery Ready:** Integrated LiPo management for wireless operation.
+- **Universal 6-pin Interfaces:** Supports 3.3V and 5V peripherals.\n- **Battery Ready:** Integrated LiPo management for wireless operation.
 
 ## 📂 Project Structure
 ```text
