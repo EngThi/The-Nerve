@@ -1,10 +1,10 @@
 # 🧠 The Nerve – Modular Input Panel
 
 > [!IMPORTANT]
-> **REVIEWS NOTE:** The original banner/logo submitted to the Blueprint review appeared disproportionate and did not display the full design as intended. I initially believed I could edit the banner post-submission, but that was not the case. 
-> 
+> **REVIEWS NOTE:** The original banner/logo submitted to the Blueprint review appeared disproportionate and did not display the full design as intended. I initially believed I could edit the banner post-submission, but that was not the case.
+>
 > **The official hero image for the project is actually the board render below:**
-> 
+>
 > ![The Nerve Official Board Render](Board.png)
 
 ![The Nerve PCB](assets/renders/Frontal_View.png)
@@ -49,32 +49,42 @@ Total cost considering all components, hardware options, and wiring listed in th
 | | **TOTAL** | | | **$171.92** |
 
 ## 🧱 Hardware Stack
-Built around the **ESP32-S3 ProS3[D]** for native USB, Wi-Fi, and Bluetooth capabilities.
+Built around the **ESP32-S3 ProS3** for native USB, Wi-Fi, and Bluetooth capabilities.
 
-- **Core:** Unexpected Maker ESP32-S3 ProS3[D] (Dual-core 240MHz, 16MB Flash).
+- **Core:** Unexpected Maker ESP32-S3 ProS3 (Dual-core 240MHz, 16MB Flash).
 - **Visual Feedback:**
-    - **OLED:** Waveshare 1.5\" RGB SPI (128x128) for real-time status, menus, and API data.
-    - **RGB LED:** Immediate visual indications (e.g., server status, active recording).
-- **Encoder:** High-precision Optical/Mechanical scrolling options.- **Hall Effect Joystick:** Analog control without drift (Mouse/XY parameters).
+  - **OLED:** Waveshare 1.5" RGB SPI (128x128) for real-time status, menus, and API data.
+  - **RGB LED:** Immediate visual indications (e.g., server status, active recording).
+- **Encoder:** High-precision Optical (Bourns 64PPR) or Mechanical (Alps 15PPR) scrolling options.
+- **Hall Effect Joystick:** Analog control without drift (Mouse/XY parameters).
 - **Mechanical Switches:** Cherry MX Blue (Clicky) for satisfying execution.
-- **Missile Switch:** Safety-covered toggle for critical actions (Deploy/Render).- **Audio Feedback:** Passive buzzer for audible alerts.
+- **Missile Switch:** Safety-covered toggle for critical actions (Deploy/Render).
+- **Audio Feedback:** Passive buzzer for audible alerts.
 
 ## 🔌 Modular Architecture
 The PCB features **screw terminals and JST connectors**, allowing sensors and inputs to be swapped without desoldering.
-- **Universal 6-pin Interfaces:** Supports 3.3V and 5V peripherals.- **Battery Ready:** Integrated LiPo management for wireless operation.
+
+- **Universal 6-pin Interfaces (U1–U4):** Supports 3.3V and 5V peripherals.
+- **8-pin Expansion Header (U5):** ZX-HY2.0 connector for additional modules.
+- **Battery Ready:** Integrated LiPo management for wireless operation (JST 2-Pin).
+
+See [`hardware/schematics/WIRING_DIAGRAM.md`](hardware/schematics/WIRING_DIAGRAM.md) for a complete wiring reference.
 
 ## 📂 Project Structure
 ```text
-├── BOM.csv <-- Official Bill of Materials (LCSC + External modules)
-├── README.md <-- System documentation
+├── BOM.csv                  <-- Official Bill of Materials (LCSC + External modules)
+├── README.md                <-- System documentation
 ├── hardware/
-│   ├── schematics/   # Design files and PDF
-│   ├── pcb/          # Board layout and routing (KiCad)
-│   ├── fabrication/  # Production files (Gerbers, PnP, Checkout)
-│   └── 3d_models/    # Enclosure concept (STEP files)
-├── firmware/         # ESP32 Logic (Rust/MicroPython)
-│   └── src/          # Input handling and display drivers
-└── automation/       # Host integration (n8n flows)
+│   ├── schematics/          # Design files, PDF schematic + wiring diagram
+│   ├── pcb/                 # Board layout and routing (KiCad)
+│   ├── fabrication/         # Production files (Gerbers, BOM, Pick & Place)
+│   └── 3d_models/           # Enclosure STEP + STL files
+├── firmware/
+│   ├── firmware.py          # Main MicroPython entry point (deploy to ESP32-S3)
+│   └── src/                 # Module source files
+│       ├── main.py          # Core loop (input handling + display drivers)
+│       └── README_FIRMWARE.md
+└── automation/              # Host integration (n8n flows)
 ```
 
 ## Manufacturing Preview
