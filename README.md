@@ -42,7 +42,7 @@ Total cost considering all components, hardware options, and wiring listed in th
 | 17 | Illuminated Toggle Switch | 1 | $3.95 | $3.95 |
 | 18 | Hall Effect Joystick | 1 | $16.46 | $16.46 |
 | 19 | ESP32-S3 ProS3 MCU | 1 | $26.50 | $26.50 |
-| 20 | 1.5" RGB OLED Display | 1 | $23.99 | $23.99 |
+| 20 | 1.5''' RGB OLED Display | 1 | $23.99 | $23.99 |
 | 21 | Mechanical Encoder (Alps) | 1 | $4.85 | $4.85 |
 | 22 | Optical Encoder (Bourns) | 1 | $46.03 | $46.03 |
 | 23 | Silicone Wire Kit 24AWG BNTECHGO | 1 | $9.98 | $9.98 |
@@ -53,7 +53,7 @@ Built around the **ESP32-S3 ProS3** for native USB, Wi-Fi, and Bluetooth capabil
 
 - **Core:** Unexpected Maker ESP32-S3 ProS3 (Dual-core 240MHz, 16MB Flash).
 - **Visual Feedback:**
-  - **OLED:** Waveshare 1.5" RGB SPI (128x128) for real-time status, menus, and API data.
+  - **OLED:** Waveshare 1.5''' RGB SPI (128x128) for real-time status, menus, and API data.
   - **RGB LED:** Immediate visual indications (e.g., server status, active recording).
 - **Encoder:** High-precision Optical (Bourns 64PPR) or Mechanical (Alps 15PPR) scrolling options.
 - **Hall Effect Joystick:** Analog control without drift (Mouse/XY parameters).
@@ -70,21 +70,27 @@ The PCB features **screw terminals and JST connectors**, allowing sensors and in
 
 See [`hardware/schematics/WIRING_DIAGRAM.md`](hardware/schematics/WIRING_DIAGRAM.md) for a complete wiring reference.
 
-## 📂 Project Structure
+## 📂 Firmware, CAD, and Project Structure
+
+To resolve ambiguity and make the project easier to navigate, please note the following:
+
+- **Firmware:** The official firmware is written in **MicroPython** for the ESP32-S3. The main entry point is `firmware/main.py`. This provides a lightweight and easily modifiable foundation. The previous Rust-based firmware has been removed to avoid confusion.
+
+- **3D CAD Files:** The `hardware/3d_models/` directory contains all necessary files for the enclosure, including the original **`.step`** file for easy modification and **`.stl`** files for direct 3D printing.
+
+The project is organized as follows:
 ```text
-├── BOM.csv                  <-- Official Bill of Materials (LCSC + External modules)
-├── README.md                <-- System documentation
+.
+├── BOM.csv                  <-- Official Bill of Materials (LCSC + External parts)
+├── README.md                <-- This file
 ├── hardware/
-│   ├── schematics/          # Design files, PDF schematic + wiring diagram
-│   ├── pcb/                 # Board layout and routing (KiCad)
+│   ├── 3d_models/           # Enclosure source (.step) and print-ready (.stl) files
 │   ├── fabrication/         # Production files (Gerbers, BOM, Pick & Place)
-│   └── 3d_models/           # Enclosure STEP + STL files
+│   ├── pcb/                 # PCB project files (KiCad)
+│   └── schematics/          # PDF schematic + wiring diagram
 ├── firmware/
-│   ├── firmware.py          # Main MicroPython entry point (deploy to ESP32-S3)
-│   └── src/                 # Module source files
-│       ├── main.py          # Core loop (input handling + display drivers)
-│       └── README_FIRMWARE.md
-└── automation/              # Host integration (n8n flows)
+│   └── main.py              # Official MicroPython firmware for the ESP32-S3
+└── automation/              # Host integration (e.g., n8n flows)
 ```
 
 ## Manufacturing Preview
