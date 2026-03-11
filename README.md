@@ -17,43 +17,39 @@
 
 It bridges the gap between a macro pad and a fully programmable cyberdeck interface.
 
-## 💰 Detailed Project Cost (Excluding Shipping)
-Total cost considering all components, hardware options, and wiring listed in the BOM.
+## 💰 Real Project Cost (Actual Checkout Totals)
 
-| ID | Item Name | Qty | Unit Price | Subtotal |
-| :--- | :--- | :---: | :--- | :--- |
-| - | **Custom PCB (JLCPCB)** | 1 | $9.37 | **$9.37** |
-| 1 | Capacitor 10uF 0805 | 1 | $0.01 | $0.01 |
-| 2 | Resistor 220Ω (Set of 3) | 3 | $0.01 | $0.03 |
-| 3 | Resistor 330Ω | 1 | $0.01 | $0.01 |
-| 4 | Resistor 2kΩ | 1 | $0.01 | $0.01 |
-| 5 | Screw Terminals 6-Pin (Set of 4) | 4 | $0.64 | $2.56 |
-| 6 | JST 2-Pin Battery Conn | 1 | $0.01 | $0.01 |
-| 7 | PH 8-Pin 2.00mm Header | 1 | $0.04 | $0.04 |
-| 8 | Passive Buzzer QMB-09B-03 (Tray of 5) | 5 | $0.12 | $0.58 |
-| 9 | Capacitor 100nF (Set of 2) | 2 | $0.01 | $0.02 |
-| 10 | Capacitor 100uF Radial | 1 | $0.01 | $0.01 |
-| 11 | LED RGB 5mm XL-A504RGBW (Pack of 10) | 10 | $0.06 | $0.64 |
-| 12 | Decoder IC LS7183N-S | 1 | $6.32 | $6.32 |
-| 13 | SPDT Slide Switch | 1 | $0.08 | $0.08 |
-| 14 | LiPo Battery 3000mAh (Option 1) | 1 | $9.99 | $9.99 |
-| 15 | LiPo Battery 2200mAh (Option 2) | 1 | $9.98 | $9.98 |
-| 16 | Cherry MX Blue Switch | 1 | $0.50 | $0.50 |
-| 17 | Illuminated Toggle Switch | 1 | $3.95 | $3.95 |
-| 18 | Hall Effect Joystick | 1 | $16.46 | $16.46 |
-| 19 | ESP32-S3 ProS3 MCU | 1 | $26.50 | $26.50 |
-| 20 | 1.5''' RGB OLED Display | 1 | $23.99 | $23.99 |
-| 21 | Mechanical Encoder (Alps) | 1 | $4.85 | $4.85 |
-| 22 | Optical Encoder (Bourns) | 1 | $46.03 | $46.03 |
-| 23 | Silicone Wire Kit 24AWG BNTECHGO | 1 | $9.98 | $9.98 |
-| | **TOTAL** | | | **$171.92** |
+The table below reflects the **actual amounts paid at checkout per vendor** — not just component unit prices. Each subtotal includes the vendor's shipping fee, any applicable taxes, and minimum order quantities (MOQ) where they apply.
+
+| Vendor | Items Purchased | Checkout Total |
+| :--- | :--- | ---: |
+| **Adafruit** | ESP32-S3 ProS3 + Illuminated Toggle Switch | $30.45 |
+| **Amazon** | Hall Effect Joystick + Silicone Wire Kit + 2× LiPo Batteries | $38.94 |
+| **Waveshare** | 1.5" RGB OLED Display | $16.99 |
+| **Mouser** | Optical Encoder (Bourns 64PPR) + Mechanical Encoder (Alps 15PPR) | $47.10 |
+| **MechanicalKeyboards** | Cherry MX2A Blue Switch | $0.50 |
+| **JLCPCB** | PCB Fabrication + PCBA (automated assembly) + Shipping (with coupon) | $107.04 |
+| | **TOTAL** | **$241.02** |
+
+> **Why is the JLCPCB line so high?**
+> The $107.04 JLCPCB cost is not just the bare board. It covers:
+> - **PCB fabrication** (5 copies, white solder mask, HASL finish)
+> - **PCBA — automated SMD assembly** for all LCSC Basic Parts (passives, connectors, buzzer, decoder IC, RGB LED, capacitors, resistors)
+> - **Pick & Place engineering fee** charged per unique component type
+> - **International shipping** to Brazil
+> - A coupon was applied, reducing the original quote
+>
+> The LS7183N-S decoder IC was out of stock at JLCPCB during checkout and was **removed from the PCBA order** to avoid halting production — it will be hand-soldered separately after delivery.
+
+> **Why do some unit prices differ from BOM.csv?**
+> `BOM.csv` lists LCSC **reference unit prices** (e.g., Waveshare OLED at $23.99 MSRP). The actual Waveshare storefront checkout came to $16.99, and Mouser BR pricing for the encoders differed from the individual Mouser USA list prices. Real checkout totals always win over catalog estimates.
 
 ## 🧱 Hardware Stack
 Built around the **ESP32-S3 ProS3** for native USB, Wi-Fi, and Bluetooth capabilities.
 
 - **Core:** Unexpected Maker ESP32-S3 ProS3 (Dual-core 240MHz, 16MB Flash).
 - **Visual Feedback:**
-  - **OLED:** Waveshare 1.5''' RGB SPI (128x128) for real-time status, menus, and API data.
+  - **OLED:** Waveshare 1.5" RGB SPI (128x128) for real-time status, menus, and API data.
   - **RGB LED:** Immediate visual indications (e.g., server status, active recording).
 - **Encoder:** High-precision Optical (Bourns 64PPR) or Mechanical (Alps 15PPR) scrolling options.
 - **Hall Effect Joystick:** Analog control without drift (Mouse/XY parameters).
