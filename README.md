@@ -68,24 +68,26 @@ See [`hardware/schematics/WIRING_DIAGRAM.md`](hardware/schematics/WIRING_DIAGRAM
 
 ## 📂 Firmware, CAD, and Project Structure
 
-To resolve ambiguity and make the project easier to navigate, please note the following:
+To make the project easy to navigate and replicate, please note the following:
 
-- **Firmware:** The official firmware is written in **MicroPython** for the ESP32-S3. The main entry point is `firmware/main.py`. This provides a lightweight and easily modifiable foundation. The previous Rust-based firmware has been removed to avoid confusion.
+- **PCB Design:** The board was designed in **EasyEDA**. The source file (`.json`) is located in the `hardware/pcb/` folder, allowing anyone to open and modify it.
 
-- **3D CAD Files:** The `hardware/3d_models/` directory contains all necessary files for the enclosure, including the original **`.step`** file for easy modification and **`.stl`** files for direct 3D printing.
+- **Firmware:** The official firmware is written in **MicroPython** for the ESP32-S3. The main entry point is `firmware/main.py`.
+
+- **3D CAD Files:** The `hardware/3d_models/` directory contains all enclosure files, including the original **`.step`** file for modification and **`.stl`** files for 3D printing.
 
 The project is organized as follows:
 ```text
 .
-├── BOM.csv                  <-- Official Bill of Materials (LCSC + External parts)
+├── BOM.csv                  <-- Main Bill of Materials
 ├── README.md                <-- This file
 ├── hardware/
-│   ├── 3d_models/           # Enclosure source (.step) and print-ready (.stl) files
-│   ├── fabrication/         # Production files (Gerbers, BOM, Pick & Place)
-│   ├── pcb/                 # PCB project files (KiCad)
-│   └── schematics/          # PDF schematic + wiring diagram
+│   ├── 3d_models/           # Enclosure .step and .stl files
+│   ├── fabrication/         # Gerber, BOM, and Pick & Place files for manufacturing
+│   ├── pcb/                 # EasyEDA project source (.json)
+│   └── schematics/          # PDF schematic and wiring diagram
 ├── firmware/
-│   └── main.py              # Official MicroPython firmware for the ESP32-S3
+│   └── main.py              # Official MicroPython firmware
 └── automation/              # Host integration (e.g., n8n flows)
 ```
 
