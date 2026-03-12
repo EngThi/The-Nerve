@@ -127,15 +127,15 @@ The slide switch interrupts the **battery positive rail** directly – not conne
 
 ---
 
-## 9. LiPo Battery (BATT_OPT1 or BATT_OPT2)
+## 9. LiPo Battery
 
 | Battery Pin | Connection | Notes |
 |---|---|---|
 | + | SW1 COM | Through power slide switch |
 | − | GND | |
 
-> **Option 1 (3000mAh, JST 1.25mm):** Requires a JST 1.25mm → JST 2.0mm adapter cable.
-> **Option 2 (2200mAh, JST 2.0mm):** Plugs directly into onboard JST connector (B2B-PH-K-S, ID 6 in BOM).
+> **Configuration A (3000mAh, JST 1.25mm):** Requires a JST 1.25mm → JST 2.0mm adapter cable.
+> **Configuration B (2200mAh, JST 2.0mm):** Plugs directly into onboard JST connector (B2B-PH-K-S, ID 6 in BOM).
 
 ---
 
