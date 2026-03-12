@@ -18,31 +18,32 @@ The table below reflects the **actual amounts paid at checkout per vendor** — 
 | Vendor | Items Purchased | Checkout Total |
 | :--- | :--- | ---: |
 | **Adafruit** | ESP32-S3 ProS3 + Illuminated Toggle Switch | $30.45 |
-| **Amazon** | Hall Effect Joystick + Silicone Wire Kit + 2× LiPo Batteries | $38.94 |
+| **Amazon** | Hall Joystick + Wire Kit + 2 Batteries | $38.94 |
 | **Waveshare** | 1.5" RGB OLED Display | $16.99 |
-| **Mouser** | Optical Encoder (Bourns 64PPR) + Mechanical Encoder (Alps 15PPR) | $47.10 |
+| **Mouser** | Optical (Bourns) + Mechanical (Alps) Encoders | $47.10 |
 | **MechanicalKeyboards** | Cherry MX2A Blue Switch | $0.50 |
-| **JLCPCB** | PCB Fabrication + PCBA (automated assembly) + Shipping (with coupon) | $107.04 |
-| **LCSC (Loose Parts)** | Screw & Expansion Connectors | $17.45 |
-| | **TOTAL** | **$258.47** |
+| **JLCPCB** | PCB Fabrication + PCBA Assembly | $36.04 |
+| **LCSC (Loose Parts)** | Screw & Expansion Connectors + Shipping/Fees | $17.45 |
+| | **TOTAL** | **$187.47** |
 
 ### 🛠️ Minimum Cost to Replicate (Hardware Only)
-If you want to build this project yourself, the pure cost of the hardware **without shipping fees, import taxes, or JLCPCB engineering fees** is roughly **~$198.62**. This assumes you purchase the exact quantities needed for a single board without extra MOQs where avoidable.
-- Pure PCB/PCBA Cost: ~$48.00
-- Pure Component Cost: ~$150.62
+If you want to build this project yourself, the pure cost of the hardware **without international shipping fees or MOQs** is roughly **~$142.60**. 
+- Pure PCB/PCBA Cost: ~$36.04
+- Pure Component Cost: ~$106.56
 
-> **Why is the JLCPCB line so high?**
-> The $107.04 JLCPCB cost is not just the bare board. It covers:
+> **Why are these costs specific?**
+> The values above reflect the exact amounts from the project's checkout screenshots, including the minimum quantities required by vendors (MOQs) and standard shipping for parts. 
+
+> **Why is the JLCPCB line different?**
+> The $36.04 JLCPCB cost covers:
 > - **PCB fabrication** (5 copies, white solder mask, HASL finish)
-> - **PCBA — automated SMD assembly** for all LCSC Basic Parts (passives, connectors, buzzer, decoder IC, RGB LED, capacitors, resistors)
-> - **Pick & Place engineering fee** charged per unique component type
-> - **International shipping** to Brazil
-> - A coupon was applied, reducing the original quote
+> - **PCBA — automated SMD assembly** for all LCSC Basic Parts (passives, connectors, buzzer, RGB LED, capacitors, resistors)
+> - **Pick & Place engineering fee** charged by the factory
 >
-> The LS7183N-S decoder IC was out of stock at JLCPCB during checkout and was **removed from the PCBA order** to avoid halting production — it will be hand-soldered separately after delivery.
+> The LS7183N-S decoder IC was removed from the automated PCBA order due to stock and will be hand-soldered separately.
 
 > **Why do some unit prices differ from hardware/fabrication/the_nerve_bom.csv?**
-> `hardware/fabrication/the_nerve_bom.csv` lists LCSC **reference unit prices** (e.g., Waveshare OLED at $23.99 MSRP). The actual Waveshare storefront checkout came to $16.99, and Mouser BR pricing for the encoders differed from the individual Mouser USA list prices. Real checkout totals always win over catalog estimates.
+> `hardware/fabrication/the_nerve_bom.csv` lists LCSC **reference unit prices**. Actual storefront checkouts (like Adafruit or Waveshare) always win over catalog estimates.
 
 ## 🧱 Hardware Stack
 Built around the **ESP32-S3 ProS3** for native USB, Wi-Fi, and Bluetooth capabilities.
