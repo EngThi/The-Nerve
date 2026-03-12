@@ -31,17 +31,17 @@ This covers the manufacturing of the PCB itself and the automated Pick-and-Place
 ---
 
 ## 3. External Components
-These are high-performance or specialized parts sourced outside of the LCSC/JLCPCB ecosystem (e.g., Adafruit, Amazon, Mouser, Waveshare).
+These are high-performance or specialized parts sourced outside of the LCSC/JLCPCB ecosystem (e.g., Adafruit, Amazon, Mouser, Waveshare). **Important:** These components will be hand-wired to the PCB's screw terminals and headers (U1-U5), as this is a modular control panel design where the PCB acts as the central motherboard.
 
 *   **LiPo Battery 3000mAh (Amazon)**: $9.99
-*   **LiPo Battery 2200mAh (Amazon)**: $9.98 *(Note: Two options are currently listed for evaluation; total cost assumes both are purchased)*
+*   **LiPo Battery 2200mAh (Amazon)**: $9.98 *(Note: Both battery form-factors are required for weight distribution and enclosure prototyping)*
 *   **Cherry MX Blue Switch (MechKeyboards)**: $0.40
 *   **Illuminated Toggle Switch (Adafruit)**: $3.95
 *   **Hall Effect Joystick (Amazon BR)**: $16.46
 *   **ESP32-S3 ProS3 (Adafruit)**: $26.50
 *   **1.5inch RGB OLED (Waveshare)**: $16.99
 *   **Mechanical Encoder - Alps (Mouser)**: $4.85
-*   **Optical Encoder - Bourns (Mouser)**: $46.03
+*   **Optical Encoder - Bourns (Mouser)**: $46.03 *(Note: Both encoders are required for prototyping different tactile feedbacks)*
 *   **Silicone Wire Kit 24AWG (Amazon)**: $9.98
 
 **Subtotal External:** **$145.13**

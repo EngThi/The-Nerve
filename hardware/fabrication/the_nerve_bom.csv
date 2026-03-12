@@ -12,8 +12,8 @@ ID,Name,Designator,Quantity,Manufacturer,Supplier,Supplier Part,Price,Link,Notes
 11,LED RGB 5mm (Pack of 10),LED_RGB,10,XINGLIGHT,LCSC,C7371892,0.0566,https://www.lcsc.com/product-detail/C7371892.html,Quantities adjusted for LCSC MOQ (Blueprint Verified)
 12,Decoder IC LS7183N-S,U_DEC,1,LSI/CSI,LCSC,C3234982,7.0064,https://lcsc.com/product-detail/Encoders_LSI-CSI-LS7183N-S_C3234982.html,Quadrature Decoder
 13,SPDT Slide Switch,SW1,1,SHOU HAN,LCSC,C49023767,0.0780,https://lcsc.com/product-detail/Slide-Switches_SHOU-HAN-MST-12D18G4-SPDT-SLIDE-SWITCH_C49023767.html,Power Switch
-14,LiPo Battery 3000mAh,BATT_OPT1,1,Hiteuoms,Amazon,B0DP2JKFJG,9.99,https://www.amazon.com/dp/B0DP2JKFJG,"Power Source (Option 1, JST 1.25mm - REQUIRES ADAPTER)"
-15,LiPo Battery 2200mAh,BATT_OPT2,1,OXWINOU,Amazon,B0CTQ6VBB6,9.98,https://www.amazon.com/dp/B0CTQ6VBB6,"Power Source (Option 2, JST 2.0mm - Direct Fit)"
+14,LiPo Battery 3000mAh,BATT_A,1,Hiteuoms,Amazon,B0DP2JKFJG,9.99,https://www.amazon.com/dp/B0DP2JKFJG,Power Source (JST 1.25mm Type)
+15,LiPo Battery 2200mAh,BATT_B,1,OXWINOU,Amazon,B0CTQ6VBB6,9.98,https://www.amazon.com/dp/B0CTQ6VBB6,Power Source (JST 2.0mm Type)
 16,Cherry MX Blue Switch,SW_MECH,1,Cherry,MechKeyboards,MX2A-Blue,0.40,https://mechanicalkeyboards.com/products/cherry-mx2a-blue-60g-clicky?variant=48020492124460,Main Trigger (Clicky)
 17,Illuminated Toggle Switch,SW_MISSILE,1,Adafruit,Adafruit,3306,3.95,https://www.adafruit.com/product/3306,Safety Arming Switch
 18,Hall Effect Joystick,JOY1,1,VGBUS,Amazon BR,B0CXDTGXZP,16.46,https://www.amazon.com.br/dp/B0CXDTGXZP,Analog Control (Drift Free)

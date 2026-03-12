@@ -57,13 +57,15 @@ Built around the **ESP32-S3 ProS3** for native USB, Wi-Fi, and Bluetooth capabil
 - **Visual Feedback:**
   - **OLED:** Waveshare 1.5" RGB SPI (128x128) for real-time status, menus, and API data.
   - **RGB LED:** Immediate visual indications (e.g., server status, active recording).
-- **Encoder:** High-precision Optical (Bourns 64PPR) or Mechanical (Alps 15PPR) scrolling options.
+- **Encoder:** High-precision Optical (Bourns 64PPR) and Mechanical (Alps 15PPR) for diverse tactile feedback prototyping.
 - **Hall Effect Joystick:** Analog control without drift (Mouse/XY parameters).
 - **Mechanical Switches:** Cherry MX Blue (Clicky) for satisfying execution.
 - **Missile Switch:** Safety-covered toggle for critical actions (Deploy/Render).
 - **Audio Feedback:** Passive buzzer for audible alerts.
 
 ## 🔌 Modular Architecture
+**Important Note:** The PCB shown in the renders acts as a "Motherboard". To prevent mechanical stress on the PCB and allow for enclosure flexibility, all major interfaces (Joystick, Encoders, Switches, OLED) are NOT surface-mounted. They are **hand-wired** to the PCB using a flexible silicone wire kit via the onboard screw terminals and JST connectors.
+
 The PCB features **screw terminals and JST connectors**, allowing sensors and inputs to be swapped without desoldering.
 
 - **Universal 6-pin Interfaces (U1–U4):** Supports 3.3V and 5V peripherals.
