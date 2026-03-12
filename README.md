@@ -5,7 +5,7 @@
 >
 > **The official hero image for the project is actually the board render below:**
 >
-> ![The Nerve Official Board Render](Board.png)
+> ![The Nerve Official Board Render](assets/renders/Board.png)
 
 ![The Nerve PCB](assets/renders/Frontal_View.png)
 
@@ -29,7 +29,13 @@ The table below reflects the **actual amounts paid at checkout per vendor** — 
 | **Mouser** | Optical Encoder (Bourns 64PPR) + Mechanical Encoder (Alps 15PPR) | $47.10 |
 | **MechanicalKeyboards** | Cherry MX2A Blue Switch | $0.50 |
 | **JLCPCB** | PCB Fabrication + PCBA (automated assembly) + Shipping (with coupon) | $107.04 |
-| | **TOTAL** | **$241.02** |
+| **LCSC (Loose Parts)** | Screw & Expansion Connectors | $17.45 |
+| | **TOTAL** | **$258.47** |
+
+### 🛠️ Minimum Cost to Replicate (Hardware Only)
+If you want to build this project yourself, the pure cost of the hardware **without shipping fees, import taxes, or JLCPCB engineering fees** is roughly **~$198.62**. This assumes you purchase the exact quantities needed for a single board without extra MOQs where avoidable.
+- Pure PCB/PCBA Cost: ~$48.00
+- Pure Component Cost: ~$150.62
 
 > **Why is the JLCPCB line so high?**
 > The $107.04 JLCPCB cost is not just the bare board. It covers:
@@ -41,8 +47,8 @@ The table below reflects the **actual amounts paid at checkout per vendor** — 
 >
 > The LS7183N-S decoder IC was out of stock at JLCPCB during checkout and was **removed from the PCBA order** to avoid halting production — it will be hand-soldered separately after delivery.
 
-> **Why do some unit prices differ from BOM.csv?**
-> `BOM.csv` lists LCSC **reference unit prices** (e.g., Waveshare OLED at $23.99 MSRP). The actual Waveshare storefront checkout came to $16.99, and Mouser BR pricing for the encoders differed from the individual Mouser USA list prices. Real checkout totals always win over catalog estimates.
+> **Why do some unit prices differ from hardware/fabrication/the_nerve_bom.csv?**
+> `hardware/fabrication/the_nerve_bom.csv` lists LCSC **reference unit prices** (e.g., Waveshare OLED at $23.99 MSRP). The actual Waveshare storefront checkout came to $16.99, and Mouser BR pricing for the encoders differed from the individual Mouser USA list prices. Real checkout totals always win over catalog estimates.
 
 ## 🧱 Hardware Stack
 Built around the **ESP32-S3 ProS3** for native USB, Wi-Fi, and Bluetooth capabilities.
@@ -79,7 +85,7 @@ To make the project easy to navigate and replicate, please note the following:
 The project is organized as follows:
 ```text
 .
-├── BOM.csv                  <-- Main Bill of Materials
+├── hardware/fabrication/the_nerve_bom.csv                  <-- Main Bill of Materials
 ├── README.md                <-- This file
 ├── hardware/
 │   ├── 3d_models/           # Enclosure .step and .stl files

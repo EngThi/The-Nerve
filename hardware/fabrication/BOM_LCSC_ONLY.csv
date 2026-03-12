@@ -12,16 +12,6 @@ ID,Name,Designator,Quantity,Manufacturer,Supplier,Supplier Part,Price,Link,Notes
 11,LED RGB 5mm (Pack of 10),LED_RGB,10,XINGLIGHT,LCSC,C7371892,0.0566,https://www.lcsc.com/product-detail/C7371892.html,Quantities adjusted for LCSC MOQ (Blueprint Verified)
 12,Decoder IC LS7183N-S,U_DEC,1,LSI/CSI,LCSC,C3234982,7.0064,https://lcsc.com/product-detail/Encoders_LSI-CSI-LS7183N-S_C3234982.html,Quadrature Decoder
 13,SPDT Slide Switch,SW1,1,SHOU HAN,LCSC,C49023767,0.0780,https://lcsc.com/product-detail/Slide-Switches_SHOU-HAN-MST-12D18G4-SPDT-SLIDE-SWITCH_C49023767.html,Power Switch
-14,LiPo Battery 3000mAh,BATT_OPT1,1,Hiteuoms,Amazon,B0DP2JKFJG,9.99,https://www.amazon.com/dp/B0DP2JKFJG,"Power Source (Option 1, JST 1.25mm - REQUIRES ADAPTER)"
-15,LiPo Battery 2200mAh,BATT_OPT2,1,OXWINOU,Amazon,B0CTQ6VBB6,9.98,https://www.amazon.com/dp/B0CTQ6VBB6,"Power Source (Option 2, JST 2.0mm - Direct Fit)"
-16,Cherry MX Blue Switch,SW_MECH,1,Cherry,MechKeyboards,MX2A-Blue,0.40,https://mechanicalkeyboards.com/products/cherry-mx2a-blue-60g-clicky?variant=48020492124460,Main Trigger (Clicky)
-17,Illuminated Toggle Switch,SW_MISSILE,1,Adafruit,Adafruit,3306,3.95,https://www.adafruit.com/product/3306,Safety Arming Switch
-18,Hall Effect Joystick,JOY1,1,VGBUS,Amazon BR,B0CXDTGXZP,16.46,https://www.amazon.com.br/dp/B0CXDTGXZP,Analog Control (Drift Free)
-19,ESP32-S3 ProS3,U_MCU,1,Unexpected Maker,Adafruit,6398,26.50,https://www.adafruit.com/product/6398,Main Controller
-20,1.5inch RGB OLED,DISP1,1,Waveshare,Waveshare,1.5inch RGB OLED,16.99,https://www.waveshare.com/1.5inch-rgb-oled-module.htm,Visual Interface
-21,Mechanical Encoder (Alps),ENC_MECH,1,Alps Alpine,Mouser,688-EC11E15244B2,4.85,https://br.mouser.com/ProductDetail/Alps-Alpine/EC11E15244B2?qs=m0BA540hBPfDpUEkDmFV5A%3D%3D,"15PPR, 3.3V Logic Compatible"
-22,Optical Encoder (Bourns),ENC_OPT,1,Bourns,Mouser,652-ENA1J-B28-L064L,46.03,https://br.mouser.com/ProductDetail/Bourns/ENA1J-B28-L00064L?qs=CrTVAl0CcnKhSZ6oFfhmHw%3D%3D,"64PPR, High-Precision, 5V Supply"
-23,Silicone Wire Kit 24AWG,WIRE_KIT,1,BNTECHGO,Amazon,B09X4HVFJX,9.98,https://www.amazon.com/dp/B09X4HVFJX,10 Color Each 5 ft Flexible 24 AWG Stranded Tinned Copper Wire
 99,LCSC Shipping Fee,SHIP,1,LCSC,LCSC,N/A,9.12,N/A,Global Direct Standard Line
 100,LCSC Handling Fee,FEE,1,LCSC,LCSC,N/A,3.00,N/A,LCSC Service Charge
 101,LCSC Discount,DISC,1,LCSC,LCSC,N/A,-0.16,N/A,Merchandise Discount
