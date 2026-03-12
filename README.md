@@ -1,15 +1,9 @@
 # 🧠 The Nerve – Modular Input Panel
 
-> [!IMPORTANT]
-> **REVIEWS NOTE:** The original banner/logo submitted to the Blueprint review appeared disproportionate and did not display the full design as intended. I initially believed I could edit the banner post-submission, but that was not the case.
->
-> **The official hero image for the project is actually the board render below:**
->
+
 > ![The Nerve Official Board Render](assets/renders/Board.png)
 
 ![The Nerve PCB](assets/renders/Frontal_View.png)
-
-![The Nerve Project Render](assets/renders/the_nerve_render_v2.png)
 
 > **Project Status:** Hardware Frozen / Firmware Development (ESP32-S3)
 
