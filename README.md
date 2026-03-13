@@ -71,14 +71,26 @@ See [`hardware/schematics/WIRING_DIAGRAM.md`](hardware/schematics/WIRING_DIAGRAM
 
 ## 📂 Firmware, CAD, and Project Structure
 
-To make the project easy to navigate and replicate, please note the following:
+### ⚡ Firmware Installation & Setup
+The Nerve runs on **MicroPython**. Follow these steps to get it running:
 
-- **PCB Design:** The board was designed in **EasyEDA**. The source file (`.json`) is located in the `hardware/pcb/` folder, allowing anyone to open and modify it.
+1.  **Flash MicroPython:** Download the latest [MicroPython firmware for ESP32-S3](https://micropython.org/download/ESP32_GENERIC_S3/) and flash it using `esptool.py` or a tool like [Thonny IDE](https://thonny.org/).
+2.  **Upload Code:** Use Thonny or `ampy` to upload the `firmware/main.py` file to the root of your ESP32-S3.
+3.  **Run:** Reset the board. You should hear a startup beep and see the RGB LED glow cyan.
+4.  **Dependencies:** None! The firmware uses only standard MicroPython libraries (`machine`, `time`, `json`).
 
-- **Firmware:** The official firmware is written in **MicroPython** for the ESP32-S3. The main entry point is `firmware/main.py`.
+> **Serial Communication:** The device sends JSON events over the Serial/USB port at **115200 baud**. You can use a host script or an automation tool like **n8n** (via Serial Trigger) to capture these events and execute your workflows.
 
-- **3D CAD Files:** The `hardware/3d_models/` directory contains all enclosure files, including the original **`.step`** file for modification and **`.stl`** files for 3D printing.
+### 📐 3D CAD & Enclosure
+The enclosure was designed in **OnShape** with strict tolerances for mechanical parts.
 
+- **Source File:** The primary source is the [**`the_nerve.step`**](hardware/3d_models/the_nerve.step) file. It contains the full assembly, including internal standoffs and ventilation slots.
+- **3D Printing:** Use the `.stl` files in `hardware/3d_models/` for printing.
+  - `the_nerve_case_main.stl`: Main body (printed face down).
+  - `the_nerve_case_bottom.stl`: Flush-inside bottom cover.
+- **Settings:** 0.2mm layer height, 15-20% infill, no supports needed for the main body if oriented correctly.
+
+### 📁 Project Structure
 The project is organized as follows:
 ```text
 .
