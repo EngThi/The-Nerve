@@ -1,5 +1,7 @@
 # 🧠 The Nerve – Modular Input Panel
 
+> [!NOTE]
+> **Reviewer's Note:** Major interfaces (Joystick, Encoders, Switches, OLED) are mounted in the enclosure and hand-wired to the PCB terminals. They are **not** surface-mounted to the board, which is why they are included in the cart but not fixed to the PCB render.
 
 > ![The Nerve Official Board Render](assets/renders/Board.png)
 
