@@ -3,6 +3,11 @@
 > [!NOTE]
 > **Reviewer's Note:** Major interfaces (Joystick, Encoders, Switches, OLED) are mounted in the enclosure and hand-wired to the PCB terminals. They are **not** surface-mounted to the board, which is why they are included in the cart but not fixed to the PCB render.
 
+### 🎨 Case Renders (Concept)
+![The Nerve Top View](assets/renders/tinkercad_top_view.png)
+![The Nerve Back View](assets/renders/tinkercad_back_view.png)
+
+### 🧩 PCB Layout
 > ![The Nerve Official Board Render](assets/renders/Board.png)
 
 ![The Nerve PCB](assets/renders/Frontal_View.png)
