@@ -18,20 +18,20 @@
 
 It bridges the gap between a macro pad and a fully programmable cyberdeck interface.
 
-## 💰 Real Project Cost (Actual Checkout Totals)
+## 💰 Real Project Cost (Component Totals)
 
-The table below reflects the **actual amounts paid at checkout per vendor** — not just component unit prices. Each subtotal includes the vendor's shipping fee, any applicable taxes, and minimum order quantities (MOQ) where they apply.
+The values below reflect the **base component prices** from our official [BOM](the_nerve_bom.csv). For the **Brazilian region**, the final checkout total is approximately **$179.27** due to mandatory import taxes (ICMS/Import Tax) and international freight, as detailed in our optimized [AliExpress Cart](assets/journal/AliExpress_Cart_New.png).
 
-| Vendor | Items Purchased | Checkout Total |
+| Vendor | Items Purchased | Base Subtotal |
 | :--- | :--- | ---: |
-| **Adafruit** | ESP32-S3 ProS3 + Illuminated Toggle Switch | $30.45 |
-| **Amazon** | Hall Joystick + Wire Kit + 2 Batteries | $38.94 |
-| **Waveshare** | 1.5" RGB OLED Display | $16.99 |
-| **Mouser** | Optical (Bourns) + Mechanical (Alps) Encoders | $47.10 |
-| **MechanicalKeyboards** | Cherry MX2A Blue Switch | $0.50 |
+| **Adafruit** | ESP32-S3 ProS3 + Toggle Switch | $30.45 |
+| **AliExpress** | Optical Encoder + Hall Joysticks + OLED + Switches | $52.74 |
+| **Amazon** | LiPo Battery | $9.99 |
 | **JLCPCB** | PCB Fabrication + PCBA Assembly | $36.04 |
-| **LCSC (Loose Parts)** | Screw & Expansion Connectors + Shipping/Fees | $17.45 |
-| | **TOTAL** | **$187.47** |
+| **LCSC** | Connectors + Terminals + Buzzer | $12.00 |
+| | **TOTAL (Base Parts)** | **$141.22** |
+
+> **Regional Note:** If you are ordering from Brazil, expect an additional **~$38.00** in combined freight and taxes for the AliExpress and LCSC components.
 
 ### 🛠️ Minimum Cost to Replicate (Hardware Only)
 If you want to build this project yourself, the pure cost of the hardware **without international shipping fees or MOQs** is roughly **~$142.60**. 
