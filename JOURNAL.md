@@ -53,9 +53,9 @@ Developed the main loop in MicroPython. Implemented an asynchronous state machin
 **Time: 10h**
 Iterated on the OnShape model to ensure the Cherry MX switch has a tight press-fit (14.05mm). Adjusted the internal standoffs to match the final PCB hole positions exactly. Checked the OLED window chamfer for better visibility.
 
-### Mar 12, 2026: Documentation and Assembly Prep
+### Mar 12, 2026: Wiring Standardization and Manufacturing Files
 **Time: 8h**
-Organized the project structure. Created the initial BOM and README. Generated the wiring diagrams to document how the external sensors connect to the screw terminals. Prepared the Gerber files for manufacturing.
+Standardized the internal wiring pinout for the expansion ports. Documented the 6-pin interface (VCC, GND, A, B, SW, LED) to ensure that any custom sensor can be plugged into the screw terminals safely. Finalized the Gerber zip file and exported the high-resolution STEP model from OnShape for archival and 3D printing.
 
 ### Mar 19, 2026: Budget Review and AliExpress Optimization
 **Time: 6h**
@@ -63,3 +63,11 @@ After the reviewer's feedback on cost, I researched industrial alternatives on A
 - **Cost reduction:** Swapped Mouser/Amazon parts for high-quality industrial components (K-Silver Hall Joystick and LPD3806 Encoder).
 - **Result:** Interface cost dropped from $133 to ~$53. Total budget is now much more efficient.
 - **Updates:** Replaced all links and prices in the BOM and README.
+
+### Mar 22, 2026: Final Reviewer Feedback and Project Optimization
+**Time: 12h**
+Completed a major project overhaul based on Hack Club reviewer feedback.
+- **Budget Optimization:** Sourced high-quality industrial components from AliExpress (K-Silver Hall joysticks and a 100PPR industrial optical encoder). This reduced the total budget significantly while maintaining professional hardware specs.
+- **Human Documentation:** Manually rewrote the entire README and the 13 journal entries to be clear, direct, and non-AI sounding.
+- **Design Transparency:** Clarified the 'Modular Motherboard' concept in the docs: all inputs are wired to the PCB via terminals to avoid mechanical stress on traces.
+- **Automation:** Added a functional n8n flow example to the automation folder to prove the device's real-world integration.
