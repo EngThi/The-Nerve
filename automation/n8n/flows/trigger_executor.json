@@ -3,13 +3,29 @@
     {
       "parameters": {
         "httpMethod": "POST",
-        "path": "the-nerve",
+        "path": "the-nerve-trigger",
         "options": {}
       },
-      "name": "Webhook",
+      "name": "Webhook Trigger",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 1,
-      "position": [250, 300]
+      "position": [
+        250,
+        300
+      ],
+      "webhookId": "the-nerve-uuid-placeholder"
+    },
+    {
+      "parameters": {
+        "content": "## Automation Triggered from The Nerve!\nInput received via JSON Serial Event."
+      },
+      "name": "Execute Action",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ]
     }
   ],
   "connections": {}
