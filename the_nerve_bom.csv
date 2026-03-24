@@ -2,7 +2,7 @@ ID,Name,Designator,Quantity,Manufacturer,Supplier,Supplier Part,Price,Link,Notes
 1,Capacitor 10uF 0805,C1,20,Samsung Electro-Mechanics,LCSC,C1713,0.0116,https://www.lcsc.com/product-detail/C1713.html,Decoupling Cap (Cut Tape Min 20)
 2,Resistor 220Ω,R1/R3/R7,3,Tyohm,LCSC,C410657,0.0097,https://jlcpcb.com/partdetail/TyoHM-RN_1_4W_220R_F_T_BA1/C410657,Current Limiting
 3,Resistor 330Ω,R5,1,YAGEO,LCSC,C105881,0.0014,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RC0603FR-07330RL_C105881.html,LED Resistor
-4,Resistor 2kΩ,R4,1,UNI-ROYAL,LCSC,C58680,0.0084,https://www.lcsc.com/product-detail/C58680.html,Pull-up (OUT OF STOCK)
+4,Resistor 2kΩ,R4,1,UNI-ROYAL,LCSC,C58680,0.0084,https://www.lcsc.com/product-detail/C58680.html,Pull-up
 5,Screw Terminal 6-Pin 2.54mm,U1-U4,4,KEFA,LCSC,C474924,0.6375,https://lcsc.com/product-detail/Pluggable-System-Terminal-Block_KEFA-KF128-2-54-6P_C474924.html,6-Pin 2.54mm pitch
 6,Conn JST PH 2.0mm 2-Pin,JST_2,50,JST,LCSC,C18185603,0.012,https://www.lcsc.com/product-detail/C131337.html,PH 2.0mm 2-Pin
 7,Conn PH 2.0mm 8-Pin,U5,10,Megastar,LCSC,C2908629,0.0454,https://www.lcsc.com/product-detail/C7429584.html,PH 2.0mm 8-Pin
@@ -11,11 +11,11 @@ ID,Name,Designator,Quantity,Manufacturer,Supplier,Supplier Part,Price,Link,Notes
 10,Capacitor 100uF Radial,C4,5,HONOR,LCSC,C48970442,0.1275,https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_HONOR-RYHG35V100UF6-8_C48970442.html,Radial Electrolytic
 11,LED RGB 5mm (Pack of 10),LED_RGB,10,XINGLIGHT,LCSC,C7371892,0.0566,https://www.lcsc.com/product-detail/C7371892.html,5mm 4-Pin RGB LED
 13,SPDT Slide Switch,SW1,1,SHOU HAN,LCSC,C49023767,0.0780,https://lcsc.com/product-detail/Slide-Switches_SHOU-HAN-MST-12D18G4-SPDT-SLIDE-SWITCH_C49023767.html,Power Switch
-14,LiPo Battery 3000mAh,BATT_A,1,Hiteuoms,Amazon,B0DP2JKFJG,9.99,https://www.amazon.com/dp/B0DP2JKFJG,Power Source (JST 1.25mm Type)
+14,LiPo Battery 3000mAh,BATT_A,1,Hiteuoms,Amazon,B0DP2JKFJG,9.99,https://www.amazon.com/dp/B0DP2JKFJG,Power Source (Enables Standalone Wireless Operation)
 16,Cherry MX Blue Switches (10pcs),SW_MECH,1,Cherry,AliExpress,1005008563463707,5.74,https://pt.aliexpress.com/item/1005008563463707.html,Mechanical Switches
 17,Illuminated Toggle Switch,SW_MISSILE,1,Adafruit,Adafruit,3306,3.95,https://www.adafruit.com/product/3306,Safety Arming Switch
 18,Hall Effect Joysticks (2pcs),JOY1,1,K-Silver,AliExpress,1005008656717678,7.39,https://pt.aliexpress.com/item/1005008656717678.html,Electromagnetic Joysticks
-19,ESP32-S3 ProS3,U_MCU,1,Unexpected Maker,Adafruit,6398,26.50,https://www.adafruit.com/product/6398,Main Controller
+19,ESP32-S3 ProS3,U_MCU,1,Unexpected Maker,Adafruit,6398,26.50,https://www.adafruit.com/product/6398,High-Quality MCU for Wi-Fi Webhooks
 20,1.5inch RGB OLED,DISP1,1,Waveshare,AliExpress,1005003754608099,11.93,https://pt.aliexpress.com/item/1005003754608099.html,SSD1351 Driver (128x128 SPI)
-22,Optical Encoder,ENC_OPT,1,Industrial,AliExpress,1005008717897010,27.68,https://pt.aliexpress.com/item/1005008717897010.html,High-Precision 61C221-04-02
+22,EC11 Quadrature Encoder,ENC_MECH,1,Generic,AliExpress,32902983574,1.50,https://www.aliexpress.com/item/32902983574.html,Low-cost 360-degree Quadrature Encoder
 24,JLCPCB PCBA Service,PCBA,1,JLCPCB,JLCPCB,N/A,36.04,N/A,Fabrication + SMT Assembly Fee

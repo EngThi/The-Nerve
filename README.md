@@ -1,67 +1,61 @@
-# 🧠 The Nerve – Custom Workflow Controller
+# 🧠 The Nerve – Custom Wireless Automation Controller
 
-**The Nerve** is a custom USB and Wi-Fi input device designed to trigger automations (n8n, Python scripts, or hotkeys). It uses an ESP32-S3 to act as a standalone controller that can send commands directly to webhooks or act as a standard USB HID keyboard/mouse.
+**The Nerve** is a **custom hardware** input device (Tier 3) designed for standalone workflow automation. Unlike standard macropads, it features an **integrated LiPo battery and Wi-Fi connectivity**, allowing it to trigger webhooks (n8n/API) and execute scripts without being tethered to a computer.
 
-### 🎨 Hardware Overview
+### 🎨 Design & Ergonomics
 ![The Nerve Top View](assets/renders/tinkercad_top_view.png)
 ![The Nerve Back View](assets/renders/tinkercad_back_view.png)
 
-### 🧩 PCB Design
+### 🧩 Custom PCB Layout
 ![The Nerve PCB](assets/renders/Frontal_View.png)
 
-> **Project Status:** Hardware Design Complete / Firmware in MicroPython.
+> **Project Status:** Hardware Design Complete (Custom PCB) / Firmware in MicroPython.
 
 ---
 
-## 💰 Project Cost & Components
+## 💰 Budget & Components (Tier 3 Optimized)
 
-The base cost for components is **$141.22**. For builders in **Brazil**, the total is **$179.27** due to local import taxes and international shipping (see [AliExpress Cart](assets/journal/AliExpress_Cart_New.png)).
+The total requested budget is **$115.12** (Base Component Cost). 
+*Note: Builders in Brazil should expect an additional ~$38 in regional taxes/freight, as shown in the [AliExpress Cart](assets/journal/AliExpress_Cart_New.png).*
 
-| Vendor | Items Purchased | Price | Purpose |
+| Component | Source | Price | Purpose |
 | :--- | :--- | :--- | :--- |
-| **Adafruit** | ESP32-S3 ProS3 | $26.50 | Main MCU with native USB and Wi-Fi. |
-| **AliExpress** | Optical Encoder | $27.68 | High-precision knob for timeline scrolling/zoom. |
-| **AliExpress** | 1.5" RGB OLED | $11.93 | Display for menus and API feedback. |
-| **AliExpress** | Hall Joysticks (2x) | $7.39 | Analog XY control for mouse/brush size. |
-| **AliExpress** | Cherry MX Switches | $5.74 | Mechanical execution button (Panic/Push). |
-| **Amazon** | LiPo Battery | $9.99 | 3000mAh for portable use. |
-| **JLCPCB** | PCB + PCBA | $36.04 | Custom board fabrication and SMD assembly. |
-| **LCSC** | Connectors/Parts | $12.00 | Terminals and JST headers for wiring. |
+| **LiPo Battery** | Amazon | $9.99 | **Mandatory:** Enables standalone Wi-Fi operation. |
+| **ESP32-S3 ProS3** | Adafruit | $26.50 | **MCU:** Native Wi-Fi for webhooks + USB HID. |
+| **EC11 Encoder** | AliExpress | $1.50 | **Input:** Quadrature encoder for timeline scrolling. |
+| **1.5" RGB OLED** | AliExpress | $11.93 | **Feedback:** UI for menus and API status. |
+| **Hall Joysticks** | AliExpress | $7.39 | **Input:** Electromagnetic XY control (No Drift). |
+| **Cherry MX Switches**| AliExpress | $5.74 | **Input:** Mechanical execution buttons. |
+| **JLCPCB PCBA** | JLCPCB | $36.04 | **PCBA:** Custom board fabrication + SMT assembly. |
+| **Screw Terminals** | LCSC | $12.00 | **Hardware:** Wire-to-board connectors. |
+| **Switch & Parts** | Adafruit/LCSC| $3.95 | **Misc:** Safety missile switch + buzzer. |
+
+---
+
+## 🔌 Wiring & Assembly
 
 ### 🛠️ Assembly Strategy
-This is **not** a devboard project. I designed the PCB and the case specifically for this use case.
-*   **Factory PCBA:** JLCPCB handles the SMT soldering of small passives (0603 resistors/capacitors) and the RGB status LED.
-*   **Manual Soldering:** I am hand-soldering all through-hole components, including the ESP32-S3, screw terminals, and JST headers. 
-*   **Case Assembly:** All inputs (Joystick, Encoders, OLED) are panel-mounted to the 3D-printed case and hand-wired to the PCB terminals to prevent mechanical stress on the board.
+This is a **Custom Hardware** project. I designed the PCB and the 3D enclosure from scratch.
+*   **Factory PCBA:** JLCPCB handles the SMT soldering of small 0603 passives and the status LED.
+*   **Hand-Wiring:** All major inputs (Joystick, Encoder, OLED) are **panel-mounted** to the 3D case and **hand-wired** to the PCB terminals to ensure mechanical durability.
+*   **Manual Soldering:** I am hand-soldering the ESP32-S3, all JST connectors, and screw terminals.
+
+### 📜 Wiring Diagram
+![Wiring Reference](assets/diagrams/Schematic.png)
+*Detailed wiring reference for hand-connecting external sensors to the motherboard.*
 
 ---
 
-## 🔌 Hardware Specs
-- **MCU:** ESP32-S3 (Dual-core 240MHz, 16MB Flash).
-- **Inputs:** 1x Optical Encoder, 1x Hall Effect Joystick, 1x Mechanical Switch, 1x Toggle Switch.
-- **Feedback:** 1.5" RGB OLED (128x128), 1x RGB LED, 1x Passive Buzzer.
-- **Connectivity:** USB-C (HID), Wi-Fi (HTTP/JSON), Bluetooth.
-
----
-
-## 📂 Installation & Structure
-
-### ⚡ Firmware
-The device runs **MicroPython**. 
-1. Flash the ESP32-S3 with the [MicroPython firmware](https://micropython.org/download/ESP32_GENERIC_S3/).
-2. Upload `firmware/main.py` using Thonny or ampy.
-3. The device will start sending JSON events over Serial and Wi-Fi.
-
-### 📁 Folders
+## 📂 Project Structure
 ```text
 .
-├── the_nerve_bom.csv        # Component list
+├── the_nerve_bom.csv        # Final Component List
 ├── hardware/
 │   ├── 3d_models/           # Case STL and STEP files
 │   ├── fabrication/         # Gerber and Pick&Place files
-│   └── schematics/          # Wiring and PDF Schematic
+│   └── schematics/          # Detailed Wiring & PDF Schematic
 └── firmware/
-    └── main.py              # MicroPython source code
+    └── main.py              # MicroPython core logic
 ```
 
-_Custom hardware for specific workflows._
+_Designed for standalone automation and tactile control._
