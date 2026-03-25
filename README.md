@@ -15,20 +15,21 @@
 
 ## 💰 Budget & Components (Tier 3 Optimized)
 
-The total requested budget is **$115.12** (Base Component Cost). 
-*Note: Builders in Brazil should expect an additional ~$38 in regional taxes/freight, as shown in the [AliExpress Cart](assets/journal/AliExpress_Cart_New.png).*
+The total requested base budget is **$122.27**. 
+*Note: Builders in Brazil should expect an additional ~$40 in regional taxes/freight, as shown in the [AliExpress Cart](assets/journal/AliExpress_Cart_New.png) and JLCPCB shipping screenshot.*
 
 | Component | Source | Price | Purpose |
 | :--- | :--- | :--- | :--- |
-| **LiPo Battery** | Amazon | $9.99 | **Mandatory:** Enables standalone Wi-Fi operation. |
+| **LiPo Battery** | AliExpress | $12.05 | **Mandatory:** Enables standalone Wi-Fi operation. |
 | **ESP32-S3 ProS3** | Adafruit | $26.50 | **MCU:** Native Wi-Fi for webhooks + USB HID. |
-| **EC11 Encoder** | AliExpress | $1.50 | **Input:** Quadrature encoder for timeline scrolling. |
+| **EC11 Encoder** | AliExpress | $1.23 | **Input:** Quadrature encoder for timeline scrolling. |
 | **1.5" RGB OLED** | AliExpress | $11.93 | **Feedback:** UI for menus and API status. |
-| **Hall Joysticks** | AliExpress | $7.39 | **Input:** Electromagnetic XY control (No Drift). |
+| **Hall Joysticks** | AliExpress | $7.38 | **Input:** Electromagnetic XY control (No Drift). |
 | **Cherry MX Switches**| AliExpress | $5.74 | **Input:** Mechanical execution buttons. |
-| **JLCPCB PCBA** | JLCPCB | $36.04 | **PCBA:** Custom board fabrication + SMT assembly. |
-| **Screw Terminals** | LCSC | $12.00 | **Hardware:** Wire-to-board connectors. |
-| **Switch & Parts** | Adafruit/LCSC| $3.95 | **Misc:** Safety missile switch + buzzer. |
+| **JLCPCB PCBA** | JLCPCB | $48.00 | **PCBA:** Custom board fabrication + SMT assembly. |
+| **Screw Terminals** | LCSC | $5.49 | **Hardware:** Wire-to-board connectors. |
+| **Misc Parts** | Adafruit | $3.95 | **Safety:** Missile switch. |
+
 
 ---
 
