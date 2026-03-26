@@ -13,7 +13,7 @@
 
 ---
 
-## 💰 Budget & Components (Tier 3 Optimized)
+## 💰 Budget & Components (Tier 2 Optimized)
 
 The total requested base budget is **$122.27**. 
 *Note: Builders in Brazil should expect an additional ~$40 in regional taxes/freight, as shown in the [AliExpress Cart](assets/journal/AliExpress_Cart_New.png) and JLCPCB shipping screenshot.*
