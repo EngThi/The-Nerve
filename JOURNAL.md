@@ -2,180 +2,282 @@
 
 ---
 
-**Feb 1** — *~4h*
-
-I've been wanting to build some kind of physical control panel for a while. Not a keyboard macro thing, something more serious. Started by testing a Hall Effect joystick I had sitting around. Wired it to a breadboard and read the analog values over serial. It works, but the output is noisy as hell without proper filtering. Already thinking about how to handle that on the PCB.
+**Feb 1** — *~2h*
+**Step 1: Concept & Prototyping**
+I've been wanting to build some kind of physical control panel. Not a keyboard macro thing, something more serious. Started by testing a Hall Effect joystick I had sitting around. Wired it to a breadboard to see if the analog values were stable.
 
 ---
 
-**Feb 5** — *~4h*
+**Feb 1** — *~2h*
+**Step 2: Serial Reading & Filtering**
+Read the analog values over serial using an RP2040. It works, but the output is noisy as hell without proper filtering. I spent some time writing a basic moving average filter in software to smooth out the jitter. Already thinking about how to handle that on the PCB with decoupling capacitors.
 
-Opened EasyEDA and started the schematic from scratch. The power rail took way longer than expected. I kept going back and forth between using an LDO regulator vs. just pulling 3.3V directly from the ESP32 pin. Went with the LDO in the end — the OLED and the analog joystick on the same rail without proper regulation would be asking for noise problems.
+---
 
+**Feb 5** — *~2h*
+**Step 1: EasyEDA Setup & Symbols**
+Opened EasyEDA and started the schematic from scratch. The standard terminal block footprints didn't match the KF128 connectors I plan to use, so I spent time drawing a custom footprint with a 2.54mm pitch.
+
+---
+
+**Feb 5** — *~2h*
+**Step 2: Power Rail Design**
+The power rail took way longer than expected. I kept going back and forth between using an LDO regulator vs. just pulling 3.3V directly from the ESP32 pin. Went with the LDO in the end — putting the OLED and the analog joystick on the same rail without proper regulation is asking for noise problems.
 ![Schematic](assets/diagrams/Schematic.png)
 
 ---
 
-**Feb 10** — *~5h*
+**Feb 10** — *~1h*
+**Step 1: The Crash**
+Browser crashed mid-session and I lost about an hour of routing work because there was no autosave. That was incredibly frustrating, but it gave me an idea.
 
-Browser crashed mid-session and I lost about an hour of routing work. No autosave. That was frustrating enough to make me actually think about the problem instead of just redoing it. If the whole point of this device is to help me work faster and not lose stuff, it should have a physical save button. That became the Panic Button — a Cherry MX switch wired to send a USB HID command that forces a git push. Sounds dumb but it makes sense for how I work.
+---
 
+**Feb 10** — *~2h*
+**Step 2: The "Panic Button" Concept**
+If the whole point of this device is to help me work faster and not lose stuff, it should have a physical save button. I wired up a Cherry MX switch on the breadboard to send a USB HID command that forces a `git push`. 
 ![Panic Button Concept](assets/journal/Panic.png)
 
 ---
 
-**Feb 11** — *~3h*
+**Feb 10** — *~2h*
+**Step 3: Battery Monitoring Circuit**
+Added a voltage divider circuit to the schematic so the ESP32 can monitor the LiPo battery level. Used high-value resistors to minimize current leakage.
 
-Switched the display from I2C to SPI. Was using I2C because it's simpler to wire, but the refresh rate was too slow for what I want to show on screen. SPI is faster and the Waveshare 1.5" handles it fine. Had to redo some of the schematic traces but it wasn't a big deal.
+---
 
+**Feb 11** — *~1.5h*
+**Step 1: Display Interface Switch**
+Switched the display from I2C to SPI in the schematic. I was originally using I2C because it requires fewer wires, but the refresh rate was too slow for what I want to show on screen. 
+
+---
+
+**Feb 11** — *~1.5h*
+**Step 2: SPI Testing**
+Wired up the Waveshare 1.5" OLED via SPI to test the new interface. It handles the faster refresh rate perfectly. Had to redo some of the schematic traces for the extra SPI pins (MOSI, CLK, CS, DC, RST) but it wasn't a big deal.
 ![OLED Upgrade](assets/journal/Oled.png)
 
 ---
 
-**Feb 12** — *~3h*
+**Feb 12** — *~1.5h*
+**Step 1: MCU Evaluation**
+Locked in the ESP32-S3 ProS3 as the main MCU. The regular ESP32 doesn't have native USB HID, which I need for the Panic Button to actually work as a keyboard. 
 
-Locked in the ESP32-S3 ProS3 as the main MCU. I looked at a few options. The regular ESP32 doesn't have native USB HID, which I need for the Panic Button to actually work as a keyboard. The S3 has it, plus it has a built-in LiPo charger which saves me from adding another IC to the board. More flash too.
+---
 
+**Feb 12** — *~1.5h*
+**Step 2: MCU Integration**
+Updated the schematic with the ESP32-S3 ProS3. It has a built-in LiPo charger, which saves me from adding a TP4056 IC to the board. It also has plenty of flash memory for future UI assets.
 ![ESP32-S3 ProS3](assets/journal/ProS3.jpg)
 
 ---
 
 **Feb 13** — *~2h*
-
-Decided not to solder the inputs directly to the PCB. The joystick, encoder, and switches are all going through screw terminals or JST connectors instead. I kept imagining having to desolder a Cherry MX switch because the firmware has a bug, and that was enough to convince me. The PCB is the brain. The inputs are modular.
-
+**Step 1: Modular Input Strategy**
+Decided not to solder the inputs directly to the PCB. The joystick, encoder, and switches are all going through screw terminals or JST connectors instead. I kept imagining having to desolder a Cherry MX switch because of a bad trace, and that was enough to convince me. The PCB is the brain; the inputs are modular.
 ![Screw Terminals](assets/journal/Terminais.png)
 
 ---
 
-**Feb 14** — *~6h*
+**Feb 14** — *~2h*
+**Step 1: Component Placement**
+Spent the morning organizing component placement on the board. Trying to keep the high-frequency SPI lines away from the sensitive analog joystick traces.
 
-Spent most of today on component placement. Keeping the SPI lines (going to the OLED) away from the analog joystick traces is annoying. They run almost parallel on the board and I'm worried about noise coupling. Added some ground traces between them and moved a few components around. Not perfect but better.
+---
 
+**Feb 14** — *~2h*
+**Step 2: Routing High-Speed Lines**
+Routed the SPI bus to the OLED connector. I made sure to keep the traces as short and direct as possible to prevent signal degradation.
+
+---
+
+**Feb 14** — *~2h*
+**Step 3: Noise Mitigation**
+Because the SPI lines and analog traces run somewhat parallel, I added ground traces between them (guard traces) and moved the passive buzzer components further away to prevent noise coupling into the ADC.
 ![PCB Routing](assets/journal/Trilhas.png)
 
 ---
 
-**Feb 15** — *~6h*
+**Feb 15** — *~2h*
+**Step 1: Finalizing 2-Layer Routing**
+Finished the general 2-layer routing. Connected all the pull-up resistors and decoupling capacitors to their respective ICs.
 
-Finished the 2-layer routing. Put a full ground pour on the bottom layer. Went back and checked every SMT pad size against the JLCPCB design rules — last time I ordered a board I had an annular ring violation that I only caught after submitting. Not doing that again. The board looks clean.
+---
 
+**Feb 15** — *~2h*
+**Step 2: Ground Pours**
+Added a full ground pour (copper fill) on the bottom layer, and stitched it to the top layer ground pour with vias. This should provide a solid reference plane and reduce EMI.
+
+---
+
+**Feb 15** — *~2h*
+**Step 3: DRC and Pad Verification**
+Ran the Design Rule Check (DRC). Went back and checked every SMT pad size against the JLCPCB manufacturing rules. Last time I ordered a board I had an annular ring violation. Fixed a few minor clearance issues. The board is ready for manufacturing.
 ![Final PCB Design](assets/journal/PCB_Branca.png)
 
 ---
 
-**Feb 18** — *~4h*
+**Feb 18** — *~2h*
+**Step 1: Exporting 3D Models**
+Started the enclosure in OnShape. Exported the finished PCB as a STEP file from EasyEDA. 
 
-Started the enclosure in OnShape. Exported the PCB as a STEP file from EasyEDA and imported it to check if the connector positions actually line up with the walls. They didn't — the USB-C port was about 1.5mm off from the cutout I had drawn. Fixed the wall opening. This is exactly why you model in 3D before printing.
+---
 
+**Feb 18** — *~2h*
+**Step 2: Mechanical Fit Check**
+Imported the PCB STEP file into OnShape to check if the connector positions actually line up with the enclosure walls. They didn't — the USB-C port was about 1.5mm off from the cutout I had drawn. Fixed the wall opening to match the board.
 ![3D Mockup](assets/journal/ViewBottom.png)
 
 ---
 
-**Feb 22** — *~5h*
+**Feb 22** — *~2h*
+**Step 1: Enclosure Ergonomics**
+Finalized the main case body. Went with a 15-degree wedge angle so the panel faces slightly upward when sitting on a desk, making the screen easier to read and the buttons more ergonomic to press.
 
-Finalized the case. Went with a 15-degree wedge angle so the panel faces slightly upward when sitting on a desk. Added vertical slots on the back wall for airflow — the ESP32-S3 gets warm under load and I'd rather not cook it inside a sealed box. Updated the BOM with some components I had been putting off.
+---
 
+**Feb 22** — *~3h*
+**Step 2: Thermal Management & BOM**
+Added vertical slots on the back wall for airflow — the ESP32-S3 gets warm under load (especially with Wi-Fi active) and I don't want it cooking inside a sealed plastic box. Updated the BOM spreadsheet with some mechanical components I had been putting off.
 ![Enclosure Render](assets/renders/the_nerve_full_enclosure_render.png)
 
 ---
 
-**Feb 23** — *~5h*
+**Feb 23** — *~2.5h*
+**Step 1: Manufacturing Files**
+Updated all the PCB hardware files to the latest revision. Generated the new Gerber files (ZIP) required by JLCPCB for fabrication.
 
-Big day. Updated all the PCB hardware files to the latest revision, generated the new Gerbers, fixed the PCBA BOM for JLCPCB, and corrected a few part URLs that were pointing to the wrong items. The 10uF capacitor was mapped to a part that's out of stock — swapped it to C1713 which is always available.
+---
+
+**Feb 23** — *~2.5h*
+**Step 2: PCBA Sourcing**
+Fixed the PCBA (assembly) BOM for JLCPCB. Corrected a few part URLs that were pointing to the wrong items. The 10uF capacitor was mapped to a part that's out of stock — swapped it to C1713 which is always available at LCSC.
 
 ---
 
 **Feb 24** — *~2h*
-
-Translated the whole journal to English and uploaded all the in-progress photos. The images were sitting on my phone since the first week of the build so it was about time.
+**Step 1: Translation & Upload**
+Translated my personal notes into English for the public journal. Uploaded all the in-progress photos from my phone to the repo's `assets/` folder to document the build process visually.
 
 ---
 
 **Feb 25** — *~1h*
-
-Added a banner and hero image to the README. Small stuff but it makes the project page look less empty when a reviewer opens it for the first time.
+**Step 1: Repo Aesthetics**
+Added a banner and hero image to the README. Small stuff, but it makes the project page look much more professional when a reviewer opens it.
 
 ---
 
-**Mar 5** — *~3h*
+**Mar 5** — *~1.5h*
+**Step 1: Switch Tolerances**
+Prep work for 3D printing. The Cherry MX cutout needed to be exactly 14.05mm for a snap-fit without glue. Anything looser and the switch wobbles when pressed. Went back into OnShape and refined the tolerance. 
 
-Prep work for when I eventually print this. The Cherry MX cutout needed to be exactly 14.05mm for a snap-fit without glue. Anything looser and the switch wobbles. Went back into OnShape and refined the tolerance. Also added an inner chamfer to the OLED window so the screen doesn't look recessed from the front.
+---
 
+**Mar 5** — *~1.5h*
+**Step 2: Screen Visibility**
+Added an inner 45-degree chamfer to the OLED window in the CAD model so the screen doesn't look deeply recessed from the front panel. It improves the viewing angle significantly.
 ![Chamfer Detail](assets/journal/Chanfro.png)
 
 ---
 
-**Mar 10** — *~4h*
-
-Big cleanup day. Added the actual MicroPython firmware file (`firmware/src/main.py`) and a wiring diagram for anyone who wants to hand-wire the inputs to the PCB headers. Also added the KiCad project file that was somehow missing from the repo. Embarrassing but fixed now.
-
----
-
-**Mar 11** — *~4h*
-
-Replaced all the old PCB files with the final EasyEDA version. The KiCad files I had before were from an earlier iteration and didn't match what I actually submitted to JLCPCB. Uploaded the correct Gerbers, BOM, and Pick & Place files. Updated the cost table with real checkout prices per vendor including shipping and MOQ. Should have done this earlier.
+**Mar 10** — *~2h*
+**Step 1: Firmware Commit**
+Big cleanup day. Committed the actual MicroPython firmware file (`firmware/main.py`) to the repository. 
 
 ---
 
-**Mar 12** — *~6h*
+**Mar 10** — *~2h*
+**Step 2: Wiring Documentation**
+Created a detailed wiring diagram (`WIRING_DIAGRAM.md`) for anyone who wants to replicate the project and needs to hand-wire the panel inputs to the PCB screw terminals. 
 
-Spent the day on the budget. Went through every item and pulled real checkout prices — not the unit price, the actual price you pay including MOQ and shipping. There's a big difference. The passive components come in packs of 20 or 50, so the real cost is higher than it looks on paper. Updated the BOM and the budget doc to reflect that. Total came out to $87.47 for the JLCPCB order. Also cleaned up the whole repo structure.
+---
+
+**Mar 11** — *~2h*
+**Step 1: File Sync**
+Replaced all the old PCB files with the final EasyEDA version. The initial files I had were from an earlier iteration. Uploaded the correct Gerbers, BOM, and Pick & Place files to the `hardware/fabrication/` folder. 
+
+---
+
+**Mar 11** — *~2h*
+**Step 2: Cost Tracking**
+Updated the cost table in the budget doc with real checkout prices per vendor, including shipping and MOQ requirements. 
+
+---
+
+**Mar 12** — *~3h*
+**Step 1: BOM Audit**
+Spent the morning auditing the budget. Went through every single item and pulled real checkout screenshots. The passive components come in packs of 20 or 50, so the real cost to build is higher than just adding unit prices. 
+
+---
+
+**Mar 12** — *~3h*
+**Step 2: Budget Finalization**
+Updated the official BOM CSV and the budget Markdown doc to reflect the real-world checkout totals. Cleaned up the whole repo structure to make the files easier to find.
 
 ---
 
 **Mar 13** — *~1h*
-
-Finished the README. Added firmware setup instructions, clarified the 3D source files situation, and verified the budget numbers one more time.
+**Step 1: Instructions**
+Finished writing the README. Added explicit firmware setup instructions and clarified where to find the 3D source files (STEP and OnShape link).
 
 ---
 
 **Mar 15** — *~1h*
-
-Added a note at the top of the README to help reviewers navigate the project quickly. The repo was getting dense enough that it wasn't obvious where to start.
+**Step 1: Navigation**
+Added a reviewer's note at the top of the README to help them navigate the project quickly. The repo is getting dense, so clear signposting is necessary.
 
 ---
 
 **Mar 17** — *~1h*
-
-Organized the image folders and added the case render photos to the README so reviewers can see the enclosure without having to dig through the repo.
+**Step 1: Visuals**
+Organized the image folders and embedded the final case render photos directly into the README so reviewers can see the finished enclosure without digging.
 
 ---
 
-**Mar 19** — *~4h*
+**Mar 19** — *~2h*
+**Step 1: Sourcing Cheaper Parts**
+Found that many of the external components (joystick, encoder) were way cheaper on AliExpress than on Mouser or Adafruit. Sourced a K-Silver Hall joystick and an industrial encoder.
 
-Found that a lot of the external components (joystick, encoder) were way cheaper on AliExpress than on Mouser or Adafruit. The quality on industrial sensors from AliExpress is fine as long as you check the seller. Updated the BOM with the new sources and added a cart screenshot as proof. Cleaned up the BOM file and moved freight/tax notes to the README.
+---
 
+**Mar 19** — *~2h*
+**Step 2: Budget Overhaul**
+Updated the BOM with the new AliExpress sources and added a cart screenshot as proof of the lower prices. This significantly drops the total cost.
 ![New Cart](assets/journal/AliExpress_Cart_New.png)
 
 ---
 
 **Mar 21** — *~2h*
-
-Full project overhaul for resubmission. Rewrote parts of the README to be more direct, tightened up the budget doc, and cleaned up the journal format.
+**Step 1: Prep for Resubmission**
+Full project overhaul for resubmission. Rewrote parts of the README to be more direct, tightened up the budget document, and ensured the journal format is clean.
 
 ---
 
-**Mar 22** — *~6h*
+**Mar 22** — *~2h*
+**Step 1: Reviewer Feedback Analysis**
+Received reviewer feedback. The main questions were about the necessity of the battery and why I specifically chose the ESP32-S3 over a cheaper microcontroller. 
 
-Got reviewer feedback and worked through it. The main questions were about the battery (whether it's necessary) and why specifically the ESP32-S3 and not something cheaper. Added an OnShape link to the README so they can actually see the 3D model. Answered everything in the docs.
+---
+
+**Mar 22** — *~4h*
+**Step 2: Addressing Concerns**
+Wrote detailed justifications in the README explaining that the battery is required for the device to operate as a standalone Wi-Fi automation trigger (sending webhooks without a PC). Added the public OnShape link so reviewers can inspect the CAD model natively.
 
 ---
 
 **Mar 24** — *~1h*
-
-Finalized Tier 3 cost optimization with a cheaper encoder option. Updated the wiring diagram terminology to be consistent. Rewrote the journal entries to raw engineering log format.
+**Step 1: Tier 3 Optimization**
+Finalized Tier 3 cost optimization by replacing the expensive optical encoder with a $1.23 standard EC11 Quadrature Encoder. Rewrote the journal entries to act as raw engineering logs.
 
 ---
 
 **Mar 25** — *~1h*
-
-Went through everything one more time. Verified the cart screenshots match the BOM quantities, double-checked the shipping method on the JLCPCB order, and made sure all the files in the repo are the right versions.
-
+**Step 1: Final Verification**
+Went through everything one last time. Verified that the cart screenshots match the BOM quantities exactly, double-checked the shipping method on the JLCPCB order, and made sure all the files in the repo are the latest versions.
 ![Shipping Verify](assets/journal/JLCPCB_Shipping_Verify.png)
 
 ---
 
 **Mar 26** — *~1h*
-
-Final pass on the engineering logs. Added image references throughout, standardized the format, and made sure every entry has enough context to stand on its own.
+**Step 1: Log Formatting**
+Final pass on the engineering logs. Added image references throughout, standardized the Step-by-Step format, and ensured every entry has enough technical context.
