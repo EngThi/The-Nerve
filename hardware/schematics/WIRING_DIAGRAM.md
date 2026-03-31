@@ -2,6 +2,8 @@
 
 Complete wiring reference for all components listed in `BOM.csv`. All signal levels are **3.3V** unless noted.
 
+![The Nerve External Wiring Guide](../../assets/diagrams/EXTERNAL_WIRING_GUIDE.png)
+
 ---
 
 ## MCU: ESP32-S3 ProS3 (U_MCU)
