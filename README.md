@@ -1,67 +1,77 @@
-# 🧠 The Nerve – Custom Wireless Automation Controller
+# The Nerve – ESP32-S3 Wireless Automation Node
 
-[![Hardware License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![GitHub release](https://img.shields.io/github/v/release/EngThi/The-Nerve?include_prereleases)](https://github.com/EngThi/The-Nerve/releases)
+**The Nerve** is a standalone hardware controller built to trigger webhooks and macros over Wi-Fi. It uses an ESP32-S3 to send commands directly to services like n8n or local APIs, and also works as a USB HID device (keyboard/mouse) for PC shortcuts.
 
-**The Nerve** is a custom hardware input device designed for standalone workflow automation. Powered by an ESP32-S3, it triggers webhooks (n8n/API) and executes complex macros via Wi-Fi or USB HID without requiring a host computer.
-
-[**Project Vision**](#vision) | [**Technical Specs**](#specs) | [**Manufacturing**](#production) | [**Build Logs**](JOURNAL.md) | [**BOM**](the_nerve_bom.csv)
+[Technical Specs](#specs) | [Build Logs](JOURNAL.md) | [Budget](BLUEPRINT_BUDGET.md) | [Wiring Diagram](hardware/schematics/WIRING_DIAGRAM.md)
 
 ---
 
-### 🎨 Design & Ergonomics
-![The Nerve Top View](assets/renders/tinkercad_top_view.png)
-![The Nerve Back View](assets/renders/tinkercad_back_view.png)
+![Top View](assets/renders/tinkercad_top_view.png)
+![Back View](assets/renders/tinkercad_back_view.png)
 
 ---
 
-## 🛠️ Technical Specifications <a name="specs"></a>
+## What it does
 
-| Component | Part / Protocol | Purpose |
+Most macro pads need a computer and background software running to do anything. I built The Nerve to be independent. It connects to Wi-Fi and talks to my automation server (n8n) directly.
+
+- **Standalone triggers:** Hit the mechanical switch to start a server-side pipeline.
+- **Hybrid control:** Hall Effect joystick for XY movement, encoder for precise scrolling.
+- **Portable:** Runs on a 3000mAh LiPo battery, so it works anywhere without a USB cable.
+
+---
+
+## Hardware Breakdown <a name="specs"></a>
+
+| Component | Choice | Why |
 | :--- | :--- | :--- |
-| **MCU** | **ESP32-S3 ProS3** (Dual-core 240MHz) | Native Wi-Fi for Webhooks + USB HID Keyboard/Mouse. |
-| **Quadrature Decoder** | **LS7183N-S** IC | Offloads high-speed pulse counting from the MCU. |
-| **Display** | **SSD1351** 1.5" RGB OLED (SPI) | High-speed UI for menus and API status feedback. |
-| **Primary Input** | **K-Silver JH16** Hall Effect Joystick | Zero-drift electromagnetic XY control. |
-| **Rotation** | **EC11** Quadrature Encoder | Precision scroll wheel for timeline/parameter control. |
-| **Execution** | **Cherry MX Blue** Mechanical Switch | Tactile feedback for critical command execution. |
-| **Power** | **3000mAh LiPo** (3.7V) | Mandatory for standalone wireless operation. |
+| **MCU** | ESP32-S3 ProS3 | Needed native USB HID for the Panic Button and built-in LiPo charging. |
+| **Joystick** | K-Silver JH16 Hall Effect | Analog joysticks drift badly over time; this one stays centered. |
+| **Display** | SSD1351 1.5" OLED (SPI) | SPI version for fast refreshes to show API feedback and battery level. |
+| **Encoder logic** | LS7183N-S IC | Dedicated chip to count encoder pulses so the ESP32 doesn't skip steps under load. |
+| **Main button** | Cherry MX Blue | The "Panic Button". Loud, tactile click for critical commands. |
+| **Power** | 3000mAh LiPo | Required for standalone wireless operation away from a desk. |
 
 ---
 
-## 💰 Budget & Cost (Tier 3 Optimized)
+## Assembly & Wiring
 
-The total requested base budget is **$122.27**. 
-*Note: Regional Brazilian import taxes (~$40) are documented in the [AliExpress Cart](assets/journal/AliExpress_Cart_New.png).*
+### Making the Board
 
-| Vendor | Price | Note |
+- **PCB:** 2-layer custom board from JLCPCB. Small 0603 passives are factory-soldered (PCBA). Through-hole parts (ESP32-S3, JST connectors, screw terminals) are hand-soldered by me.
+- **Connectors:** KF128 screw terminals and JST-PH headers. Nothing is permanently glued or soldered to the case, so individual parts can be swapped without desoldering the whole board.
+
+### Wiring Diagram
+
+The PCB is the central hub. All external inputs (joystick, screen, buttons) mount to the 3D-printed case and connect back to the board via wires.
+
+> [View the external wiring map](hardware/schematics/WIRING_DIAGRAM.md) — shows exactly which wire goes where for assembly.
+
+---
+
+## Budget
+
+Total build cost: **$122.27** (merchandise only).
+
+Tier 3 optimization: swapped boutique parts for LCSC/AliExpress alternatives (EC11 encoder, K-Silver joystick) to stay under the limit without compromising function. Full breakdown with cart screenshots in [BLUEPRINT_BUDGET.md](BLUEPRINT_BUDGET.md).
+
+| Vendor | Amount | What |
 | :--- | :--- | :--- |
-| **Adafruit** | $30.45 | ESP32-S3 ProS3 + Missile Switch. |
-| **AliExpress** | $38.33 | Encoder + OLED + Joystick + Cherry MX + Battery. |
-| **JLCPCB** | $48.00 | Custom PCB Fabrication + SMT PCBA Service. |
-| **LCSC** | $5.49 | Terminals, JST Connectors, and Passive components. |
+| Adafruit | $30.45 | ESP32-S3 ProS3 + Missile Switch |
+| AliExpress | $38.33 | Encoder, OLED, Joystick, Cherry MX, Battery |
+| JLCPCB | $48.00 | PCB fabrication + SMT assembly |
+| LCSC | $5.49 | Terminals, JST connectors, passives |
 
 ---
 
-## 🔌 Manufacturing & Assembly <a name="production"></a>
+## Project Structure
 
-### 📁 Production Files
-Ready-to-order files are located in [**`hardware/production/`**](hardware/production/):
-*   **Gerber:** `the_nerve_gerber.zip` (PCB Manufacturing).
-*   **Pick & Place:** `the_nerve_pickandplace.csv` (Automated Assembly).
-*   **BOM:** Full list in root [**`the_nerve_bom.csv`**](the_nerve_bom.csv).
-
-### 🛠️ Assembly Strategy
-*   **Factory PCBA:** JLCPCB handles the SMT soldering of small 0603 passives and the status LED.
-*   **Hand-Wiring:** All major inputs (Joystick, Encoder, OLED) are panel-mounted to the 3D case and hand-wired to the PCB terminals to ensure mechanical durability.
-*   **Manual Soldering:** Through-hole parts (ESP32-S3, JST connectors, terminals) are hand-soldered by the designer.
+- `/firmware` — MicroPython code for Wi-Fi webhooks and USB HID
+- `/hardware` — Gerber files, 3D STLs, wiring diagram, OnShape enclosure link
+- `/assets` — Renders, journal photos, cart screenshots
+- `JOURNAL.md` — Full build log with time spent per session
+- `BLUEPRINT_BUDGET.md` — Itemized budget with proof-of-purchase screenshots
 
 ---
 
-## 📜 Wiring Reference
-![Wiring Reference](assets/diagrams/Schematic.png)
-*Detailed wiring reference for hand-connecting external sensors to the motherboard.*
-
----
-
-_Designed for standalone automation and tactile control._
+_Developed for Hack Club Blueprint 2026. Designed by @EngThi._
