@@ -1,4 +1,4 @@
-# 🧠 The Nerve – Custom Wireless Automation Controller
+# The Nerve – Custom Wireless Automation Controller
 
 > [!IMPORTANT]
 > **Note to Reviewers:** This is a **custom hardware** project (Tier 3). I designed the PCB and the 3D enclosure from scratch. The components in the cart (Joystick, Encoder, OLED) are panel-mounted to the case and hand-wired to the motherboard terminals to prevent mechanical stress on the board. The 3000mAh battery is required for **standalone Wi-Fi automation** (sending webhooks without a host PC).
@@ -17,7 +17,7 @@
 
 ---
 
-## 🛠️ Technical Specifications <a name="specs"></a>
+## Technical Specifications <a name="specs"></a>
 
 | Component | Part / Protocol | Purpose |
 | :--- | :--- | :--- |
@@ -31,7 +31,7 @@
 
 ---
 
-## 💰 Budget & Cost (Tier 3 Optimized)
+## Budget & Cost (Tier 3 Optimized)
 
 The total requested base budget is **$122.27**. 
 *Note: Regional Brazilian import taxes (~$40) and international shipping are documented in the [BLUEPRINT_BUDGET.md](BLUEPRINT_BUDGET.md).*
@@ -45,7 +45,7 @@ The total requested base budget is **$122.27**.
 
 ---
 
-## 🔌 Assembly & Wiring
+## Assembly & Wiring
 
 ### Strategy
 This is a **Custom Hardware** project. I designed the PCB and the 3D enclosure specifically for this use case.
@@ -59,7 +59,7 @@ This is a **Custom Hardware** project. I designed the PCB and the 3D enclosure s
 
 ---
 
-## 📂 Manufacturing & Files <a name="production"></a>
+## Manufacturing & Files <a name="production"></a>
 
 Ready-to-order files and 3D models:
 *   **Production:** [Gerbers & Pick&Place](hardware/production/)
