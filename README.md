@@ -1,7 +1,7 @@
 # The Nerve – Custom Wireless Automation Controller
 
 > [!IMPORTANT]
-> **Note to Reviewers:** This is a **custom hardware** project (Tier 3). I designed the PCB and the 3D enclosure from scratch. The components in the cart (Joystick, Encoder, OLED) are panel-mounted to the case and hand-wired to the motherboard terminals to prevent mechanical stress on the board. The 3000mAh battery is required for **standalone Wi-Fi automation** (sending webhooks without a host PC).
+> **Note to Reviewers:** This is a **custom hardware** project (Tier 2). I designed the PCB and the 3D enclosure from scratch. The components in the cart (Joystick, Encoder, OLED) are panel-mounted to the case and hand-wired to the motherboard terminals to prevent mechanical stress on the board. The 3000mAh battery is required for **standalone Wi-Fi automation** (sending webhooks without a host PC).
 
 [![Hardware License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GitHub release](https://img.shields.io/github/v/release/EngThi/The-Nerve?include_prereleases)](https://github.com/EngThi/The-Nerve/releases)
