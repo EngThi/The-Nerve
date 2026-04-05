@@ -31,7 +31,7 @@
 
 ---
 
-## Budget & Cost (Tier 3 Optimized)
+## Budget & Cost (Tier 2 Optimized)
 
 The total requested base budget is **$122.27**. 
 *Note: Regional Brazilian import taxes (~$40) and international shipping are documented in the [BLUEPRINT_BUDGET.md](BLUEPRINT_BUDGET.md).*
