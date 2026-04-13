@@ -1,6 +1,6 @@
 # The Nerve — Build Budget
 
-This budget is optimized for Tier 3. I replaced expensive US-sourced components with industrial alternatives from AliExpress and LCSC.
+This budget is strictly optimized to stay under the $100 limit for Tier 3. I have removed the factory PCBA service and will be hand-soldering all components myself to reduce costs and demonstrate technical proficiency.
 
 ### 1. Main Components (Raw Prices)
 
@@ -12,12 +12,12 @@ This budget is optimized for Tier 3. I replaced expensive US-sourced components 
 | **Hall Joysticks (2x)** | AliExpress | $7.38 |
 | **Cherry MX Blue Switches** | AliExpress | $5.74 |
 | **3000mAh LiPo Battery** | AliExpress | $12.05 |
-| **PCB + SMT PCBA Service** | JLCPCB | $48.00 |
+| **PCB Manufacturing only** | JLCPCB | $4.00 |
 | **Connectors & Passives** | LCSC | $5.49 |
 
-**Total Merchandise Cost: $122.27**
+**Total Merchandise Cost: $78.27**
 
 ---
 
 ### 2. Shipping and Regional Taxes (Secondary)
-For reference, shipping this to Brazil adds ~$18.52 (JLCPCB) and ~$13.24 (AliExpress). Mandatory import taxes (ICMS) add another ~$15. These costs are documented in the repo screenshots but are separate from the core hardware value.
+Regional shipping to Brazil and import taxes are documented in the repo screenshots but are not included in the core hardware value above.

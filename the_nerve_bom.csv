@@ -1,4 +1,4 @@
-2ID,Name,Designator,Quantity,Manufacturer,Supplier,Supplier Part,Price,Link,Notes
+ID,Name,Designator,Quantity,Manufacturer,Supplier,Supplier Part,Price,Link,Notes
 1,Capacitor 10uF 0805,C1,20,Samsung Electro-Mechanics,LCSC,C1713,0.0116,https://www.lcsc.com/product-detail/C1713.html,Decoupling Cap (Cut Tape Min 20)
 2,Resistor 220Ω,R1/R3/R7,3,Tyohm,LCSC,C410657,0.0097,https://jlcpcb.com/partdetail/TyoHM-RN_1_4W_220R_F_T_BA1/C410657,Current Limiting
 3,Resistor 330Ω,R5,1,YAGEO,LCSC,C105881,0.0014,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RC0603FR-07330RL_C105881.html,LED Resistor
@@ -18,5 +18,4 @@
 19,ESP32-S3 ProS3,U_MCU,1,Unexpected Maker,Adafruit,6398,26.50,https://www.adafruit.com/product/6398,High-Quality MCU for Wi-Fi Webhooks
 20,1.5inch RGB OLED,DISP1,1,Waveshare,AliExpress,1005003754608099,11.93,https://pt.aliexpress.com/item/1005003754608099.html,SSD1351 Driver (128x128 SPI)
 22,EC11 Quadrature Encoder,ENC_MECH,1,Generic,AliExpress,32902983574,1.23,https://www.aliexpress.com/item/32902983574.html,Low-cost 360-degree Quadrature Encoder
-24,JLCPCB PCBA Service,PCBA,1,JLCPCB,JLCPCB,N/A,48.00,N/A,Fabrication + SMT Assembly Fee
-
+24,PCB Manufacturing only,PCB,1,JLCPCB,JLCPCB,N/A,4.00,N/A,Custom PCB Fabrication (No PCBA service to reduce costs)

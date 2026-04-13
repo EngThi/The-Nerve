@@ -1,10 +1,4 @@
-# 🧠 The Nerve — Standalone Automation Node
-
-> [!IMPORTANT]
-> **Note to Reviewers:** This is a **custom hardware** project (Tier 3). I designed the PCB and the 3D enclosure from scratch. The components in the cart (Joystick, Encoder, OLED) are panel-mounted to the case and hand-wired to the motherboard terminals to prevent mechanical stress on the board. The 3000mAh battery is required for **standalone Wi-Fi automation** (sending webhooks without a host PC).
-
-[![Hardware License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![GitHub release](https://img.shields.io/github/v/release/EngThi/The-Nerve?include_prereleases)](https://github.com/EngThi/The-Nerve/releases)
+# The Nerve — Standalone Automation Node
 
 The Nerve is a custom hardware controller I built to trigger webhooks and macros over Wi-Fi. It uses an ESP32-S3 to talk directly to n8n or local APIs without needing a PC turned on.
 
@@ -47,9 +41,9 @@ I designed the PCB in EasyEDA and the enclosure in OnShape. The board acts as a 
 
 ## Build & Budget
 
-The raw hardware cost is **$122.27**. 
+The hardware cost is **$78.27**. 
 
-I optimized the budget for Tier 3 by using industrial parts from AliExpress and LCSC. I am hand-soldering all connectors and the MCU, while JLCPCB handles the small SMT passives.
+I optimized the budget by removing the factory assembly service (PCBA). I will be hand-soldering every component myself—including the 0603 SMT resistors and capacitors—to demonstrate my technical skills and keep the project within the $100 limit.
 
 > [!NOTE]
 > **Wiring:** All inputs are panel-mounted and hand-wired to the PCB terminals to prevent mechanical stress on the traces. See the [Wiring Guide](assets/diagrams/EXTERNAL_WIRING_GUIDE.png).
