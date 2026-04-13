@@ -1,23 +1,18 @@
-# The Nerve — Build Budget
+# The Nerve — Hardware Budget (Optimized)
 
-This budget is strictly optimized to stay under the $100 limit for Tier 3. I have removed the factory PCBA service and will be hand-soldering all components myself to reduce costs and demonstrate technical proficiency.
+This budget is structured to stay under the $100 limit for Hack Club's Tier 3 grants. All components will be hand-soldered to demonstrate technical skill and manage costs effectively.
 
-### 1. Main Components (Raw Prices)
+### Core Component Costs (Excluding Shipping & Taxes)
 
-| Item | Source | Price |
+| Supplier | Items | Cost (USD) |
 | :--- | :--- | :--- |
-| **ESP32-S3 ProS3 + Switch** | Adafruit | $30.45 |
-| **Quadrature Encoder (EC11)** | AliExpress | $1.23 |
-| **1.5" RGB OLED (SSD1351)** | AliExpress | $11.93 |
-| **Hall Joysticks (2x)** | AliExpress | $7.38 |
-| **Cherry MX Blue Switches** | AliExpress | $5.74 |
-| **3000mAh LiPo Battery** | AliExpress | $12.05 |
-| **PCB Manufacturing only** | JLCPCB | $4.00 |
-| **Connectors & Passives** | LCSC | $5.49 |
-
-**Total Merchandise Cost: $78.27**
+| Adafruit | ESP32-S3 ProS3 MCU + Missile Switch | $30.45 |
+| JLCPCB | PCB Fabrication (2-Layer) | $4.00 |
+| LCSC | SMD Components (Connectors, Passives) | $14.18 |
+| AliExpress | UI & Power (Display, Joysticks, etc.) | $37.63 |
 
 ---
 
-### 2. Shipping and Regional Taxes (Secondary)
-Regional shipping to Brazil and import taxes are documented in the repo screenshots but are not included in the core hardware value above.
+| | **Total Estimated Hardware Cost** | **$86.26** |
+
+This total represents the direct cost of all hardware components only, excluding international shipping fees and import taxes.
