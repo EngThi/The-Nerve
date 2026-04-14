@@ -1,4 +1,4 @@
-# 🧠 The Nerve — Standalone Automation Node
+# The Nerve — Standalone Automation Node
 
 > [!IMPORTANT]
 > **Note to Reviewers:** This is a **custom hardware** project (Tier 3). I designed the PCB and the 3D enclosure from scratch. To keep the budget under $100, I removed the factory PCBA service—I will hand-solder everything myself, including the SMT passives. All sensors are panel-mounted and hand-wired to the motherboard to protect the PCB from mechanical stress. The 3000mAh battery is mandatory for standalone Wi-Fi operation.
