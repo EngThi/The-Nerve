@@ -1,6 +1,6 @@
 # The Nerve Automation Motherboard
 
-> ![ IMPORTANT]
+> ![IMPORTANT]
 > Reviewer, this project of mine is a custom board, I've placed it in Tier 3. And to fit within the $100 budget, I removed the PCBA service, so I'll solder everything by hand.
 
 [![Hardware License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
