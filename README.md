@@ -30,7 +30,13 @@ I designed the PCB in EasyEDA and the enclosure in OnShape. The board acts as a 
 | **ESP32-S3 ProS3** | Native USB HID + built-in LiPo charging. |
 | **K-Silver JH16** | Hall Effect sensor (no drift). |
 | **LS7183N-S IC** | Hardware quadrature decoder to offload the MCU. |
-| **3000mAh Battery** | Required for standalone wireless operation. |
+| **mAh Battery** | Required for standalone wireless operation. |
+
+---
+
+## Schematic
+
+![Schematic Diagram](assets/diagrams/Schematic.png)
 
 ---
 
