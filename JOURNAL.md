@@ -134,7 +134,8 @@ Today I did a final review of all costs and components. I updated the AliExpress
 - **LCSC total (merchandise only):** $14.18
 - **Final Estimated Hardware Cost:** $89.55 (well within the $100 Tier 3 limit)
 
-I also added the latest screenshot of the AliExpress cart and the final PCB layout design to the journal assets to document the current state of the project.
+I also added the latest screenshot of the AliExpress cart, the final PCB layout design (Bottom), and restored the colorful enclosure renders to the documentation to ensure the reviewer has the best visual representation of the final project.
 
 ![Final PCB Bottom Layout](assets/journal/PCB_Layout_Bottom.png)
+![Enclosure Hero Render](assets/renders/tinkercad_top_view.png)
 ![Final AliExpress Cart](assets/journal/AliExpress_Cart_May5.png)

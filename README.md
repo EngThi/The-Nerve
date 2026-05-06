@@ -1,6 +1,6 @@
 # The Nerve Automation Motherboard
 
-![The Nerve Full Enclosure](assets/renders/the_nerve_full_enclosure_render.png)
+![The Nerve Hero Render](assets/renders/tinkercad_top_view.png)
 
 > ![IMPORTANT]
 > Reviewer, this project of mine is a custom board, I've placed it in Tier 3. And to fit within the $100 budget, I removed the PCBA service, so I'll solder everything by hand.
@@ -21,6 +21,10 @@ I like modularity and preparing the groundwork for future upgrades and changes. 
 ## Hardware Design
 
 I designed the PCB in EasyEDA and the enclosure in OnShape. The board acts as a central hub for panel-mounted sensors and possible external components.
+
+### Enclosure Design
+![Enclosure Top View](assets/renders/tinkercad_top_view.png)
+![Enclosure Back View](assets/renders/tinkercad_back_view.png)
 
 ### PCB Layout
 ![PCB Bottom Layout](assets/journal/PCB_Layout_Bottom.png)
