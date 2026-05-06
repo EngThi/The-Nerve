@@ -116,3 +116,25 @@ Went through everything one last time. I checked and took screenshots for the su
 I rewrote the project docs and still need to find a new battery for it, because I think it's no longer available and I haven't checked if it will fit completely in the enclosure. Finding one that already has the `JST pins with a 2mm pitch`, as far as I remember, isn't easy.
 
 > I also need to remove the screenshots from the carts because I removed the PCBA service from JLCPCB (it was over $40!) to stay within tier 3. I think that's it. Prepare the screenshots, check the prices and if anything has changed in the services/marketplaces where I chose the products, and finally make sure everything is correct in the repo and in the Blueprint submission form.
+
+- It was pretty much from April 10th onwards (actually, I think I only worked on it for about 5 days. It was very little in each one).
+
+> It's been a while... Man, I got a little sad because I read and saw people talking about how HC doesn't cover shipping costs and fees. And because of that, the dollar is at its usual value (some days it was close to $1, which is equivalent to R$5. If it were here, or even less than that, because I remember hearing on the news that the dollar was at 4 and something). So I thought, man, will I be able to pay for this later? Is there no way, I don't know, for HC to write some kind of document proving that this is like a donation in the STEM field (because here it seems that taxes are lower for this kind of thing and student items).
+
+This usually takes time and I think I might not be able to. And because I had to study for exams and college stuff like Introduction to Calculus, Analytical Geometry, the programming part and household chores, I got too busy to finish things on Flavortown and because I thought the review deadline had already passed, I kind of put it aside.
+But I saw that the re-review button or the page didn't say anything about it being over or having any kind of block. So today, May 5th, I just had to take new screenshots of the carts and take a look at the repo. That's it! I decided to send it :D (again actually, several times...).
+
+---
+
+### May 5 — Final Budget Alignment & Technical Update
+
+Today I did a final review of all costs and components. I updated the AliExpress cart prices and synced everything with the LCSC merchandise values to ensure the documentation is 100% accurate for the grant submission.
+
+- **AliExpress total (merchandise only):** $40.92
+- **LCSC total (merchandise only):** $14.18
+- **Final Estimated Hardware Cost:** $89.55 (well within the $100 Tier 3 limit)
+
+I also added the latest screenshot of the AliExpress cart and the final PCB layout design to the journal assets to document the current state of the project.
+
+![Final PCB Bottom Layout](assets/journal/PCB_Layout_Bottom.png)
+![Final AliExpress Cart](assets/journal/AliExpress_Cart_May5.png)

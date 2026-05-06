@@ -1,5 +1,7 @@
 # The Nerve Automation Motherboard
 
+![The Nerve Full Enclosure](assets/renders/the_nerve_full_enclosure_render.png)
+
 > ![IMPORTANT]
 > Reviewer, this project of mine is a custom board, I've placed it in Tier 3. And to fit within the $100 budget, I removed the PCBA service, so I'll solder everything by hand.
 
@@ -21,6 +23,7 @@ I like modularity and preparing the groundwork for future upgrades and changes. 
 I designed the PCB in EasyEDA and the enclosure in OnShape. The board acts as a central hub for panel-mounted sensors and possible external components.
 
 ### PCB Layout
+![PCB Bottom Layout](assets/journal/PCB_Layout_Bottom.png)
 ![PCB Layers](assets/journal/Trilhas.png)
 ![PCB Render](assets/renders/Board.png)
 
@@ -30,7 +33,7 @@ I designed the PCB in EasyEDA and the enclosure in OnShape. The board acts as a 
 | **ESP32-S3 ProS3** | Native USB HID + built-in LiPo charging. |
 | **K-Silver JH16** | Hall Effect sensor (no drift). |
 | **LS7183N-S IC** | Hardware quadrature decoder to offload the MCU. |
-| **mAh Battery** | Required for standalone wireless operation. |
+| **1100mAh Battery** | Required for standalone wireless operation. |
 
 ---
 
@@ -42,7 +45,7 @@ I designed the PCB in EasyEDA and the enclosure in OnShape. The board acts as a 
 
 ## Build & Budget
 
-The hardware cost is **$**.
+The hardware cost is **$89.55**.
 
 I optimized the budget by removing the factory assembly service (PCBA). I will be hand-soldering every component myself—including the 0603 SMT resistors and capacitors—to demonstrate technical proficiency and keep the project within the $100 limit.
 

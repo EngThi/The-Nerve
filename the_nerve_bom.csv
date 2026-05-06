@@ -4,14 +4,20 @@ ID,Category,Name,Quantity,Supplier,Price,Link,Notes
 2,Switch,"Illuminated Toggle Switch",1,Adafruit,3.95,https://www.adafruit.com/product/3306,Safety arming switch ("Missile Switch")
 3,PCB,Custom PCB,1,JLCPCB,4.00,,2-layer PCB fabrication
 # User Interface (External)
-4,Switches,Cherry MX (10pcs),1,AliExpress,5.91,https://pt.aliexpress.com/item/1005008656717678.html,Mechanical keyboard switches
-5,Joystick,"K-Silver Hall Effect Joystick (2pcs)",1,AliExpress,6.92,https://pt.aliexpress.com/item/1005008563463707.html,High-precision analog input
+4,Switches,Cherry MX (10pcs),1,AliExpress,5.75,https://pt.aliexpress.com/item/1005008656717678.html,Mechanical keyboard switches
+5,Joystick,"K-Silver Hall Effect Joystick (2pcs)",1,AliExpress,9.45,https://pt.aliexpress.com/item/1005008563463707.html,High-precision analog input
 6,Encoder,EC11 Rotary Encoder,1,AliExpress,1.30,https://pt.aliexpress.com/item/1005005983134515.html,For precise rotational input
-7,Display,1.5inch RGB OLED Display,1,AliExpress,11.93,https://pt.aliexpress.com/item/1005003754608099.html,Visual feedback display
+7,Display,1.5inch RGB OLED Display,1,AliExpress,14.14,https://pt.aliexpress.com/item/1005003754608099.html,Visual feedback display
 # Power (External)
-8,Battery,Li-Po Battery 1100mAh,1,AliExpress,10.09,https://pt.aliexpress.com/item/1005011738492887.html,Main power source
+8,Battery,Li-Po Battery 1100mAh,1,AliExpress,10.28,https://pt.aliexpress.com/item/1005011738492887.html,Main power source
 # SMD Components (from LCSC)
-9,Connectors,"Screw Terminal 6-Pin (x4)",1,LCSC,2.55,https://lcsc.com/product-detail/C474924.html,4x terminals for modularity
-10,Connectors,"JST Connectors (Pack)",1,LCSC,1.06,https://www.lcsc.com/product-detail/C131337.html,Pack of JST PH 2mm connectors
-11,Passives,"Resistors & Capacitors (Pack)",1,LCSC,1.50,,Bulk order of required R/C values
-12,Misc,"Buzzer, Switch, LED (Pack)",1,LCSC,1.23,,Buzzer, Power Switch, RGB LED
+9,Connectors,"Screw Terminal 6-Pin (x4)",1,LCSC,2.56,https://lcsc.com/product-detail/C474924.html,4x terminals for modularity
+10,Connectors,"JST & PH Connectors",1,LCSC,2.50,,Various connectors for internal wiring
+11,Passives,"Resistors & Capacitors",1,LCSC,3.50,,SMD Passives kit
+12,Misc,"Other SMD Components & Misc",1,LCSC,5.62,,Buzzer, Switches, RGB LEDs, etc. (Total Merchandise)
+# --- SUBTOTAL POR SITE (Somente Peças) ---
+# Adafruit: $30.45
+# JLCPCB: $4.00
+# AliExpress: $40.92
+# LCSC: $14.18
+# TOTAL GERAL: $89.55
