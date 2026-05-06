@@ -23,7 +23,6 @@ I like modularity and preparing the groundwork for future upgrades and changes. 
 I designed the PCB in EasyEDA and the enclosure in OnShape. The board acts as a central hub for panel-mounted sensors and possible external components.
 
 ### Enclosure Design
-![Enclosure Top View](assets/renders/tinkercad_top_view.png)
 ![Enclosure Back View](assets/renders/tinkercad_back_view.png)
 
 ### PCB Layout
