@@ -13,6 +13,6 @@ This budget is structured to stay under the $100 limit for Hack Club's Tier 3 gr
 
 ---
 
-| | **Total Estimated Hardware Cost** | **$89.55** |
+| | **Total Estimated Hardware Cost** | **$89.79** |
 
 This total represents the direct cost of all hardware components only, excluding international shipping fees and import taxes.
