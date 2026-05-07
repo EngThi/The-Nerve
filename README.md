@@ -48,7 +48,7 @@ I designed the PCB in EasyEDA and the enclosure in OnShape. The board acts as a 
 
 ## Build & Budget
 
-The hardware cost is **$89.55**.
+The hardware cost is **$89.79**.
 
 I optimized the budget by removing the factory assembly service (PCBA). I will be hand-soldering every component myself—including the 0603 SMT resistors and capacitors—to demonstrate technical proficiency and keep the project within the $100 limit.
 
