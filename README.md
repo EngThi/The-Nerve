@@ -28,14 +28,21 @@ The PCB was designed in EasyEDA and the enclosure in OnShape.
 
 - [Project Link in the Editor](https://pro.easyeda.com/editor#id=794fe6f5b1b64e09b8597b022e057335)
 
-### Core Parts (Version A)
-| Part | Description |
-| :--- | :--- |
-| **ESP32-S3 Olimex** | Native USB HID and built-in LiPo charging. |
-| **K-Silver JH16** | Hall Effect joystick sensor. |
-| **LS7183N-S IC** | Hardware quadrature decoder. |
-| **GC9A01 Round TFT** | 1.28 inch SPI display. |
-| **1800mAh Battery** | Standalone power source. |
+### BOM (Version A - Round TFT)
+| Part | Description | Price | Link |
+| :--- | :--- | :--- | :--- |
+| **ESP32-S3-DevKit-LiPo** | Native USB HID and built-in LiPo charging. | $8.70 | [Olimex](https://www.olimex.com/Products/IoT/ESP32-S3/ESP32-S3-DevKit-Lipo.html) |
+| **Custom PCB (5pcs)** | 2-layer PCB fabrication. | $4.00 | JLCPCB |
+| **Toggle Switch Missile Cover** | Safety arming switch | $3.73 | [AliExpress](https://aliexpress.com/item/1005006733525021.html) |
+| **Outemu MX Switches (10pcs)** | Mechanical switches | $2.12 | [Shopee](https://shopee.com.br/product/23418702594.html) |
+| **K-Silver JH16 Hall Joystick (2x)**| Hall Effect analog stick | $8.12 | [AliExpress](https://aliexpress.com/item/1005008728261473.html) |
+| **EC11 Rotary Encoder (10pcs)** | Rotary input | $2.58 | [AliExpress](https://aliexpress.com/item/2001241262.html) |
+| **JST-PH 2.0mm 2P Connector** | Required for battery connection | $1.31 | [AliExpress](https://aliexpress.com/item/33024777806.html) |
+| **Round TFT GC9A01 Display** | 1.28 inch SPI display. | $1.38 | [AliExpress](https://aliexpress.com/item/1005008284550510.html) |
+| **LiPo 1800mAh 3.7V Battery** | Standalone power source. | $5.05 | [Shopee](https://shopee.com.br/product/55550251664.html) |
+| **SMD Components Batch** | LCSC Caps, Resistors, ICs (LS7183N-S) | $14.38 | LCSC |
+
+*(Full details and shipping/taxes breakdown in the [Hardware Budget](BLUEPRINT_BUDGET.md) and [BOM CSV](the_nerve_bom.csv))*
 
 ---
 
