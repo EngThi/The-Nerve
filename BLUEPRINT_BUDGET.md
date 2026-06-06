@@ -1,29 +1,30 @@
-# The Nerve — Hardware Budget (Optimized)
+# The Nerve Hardware Budget
 
-This budget is structured to stay under the $100 limit for Hack Club's Tier 3 grants. All components will be hand-soldered to demonstrate technical skill and manage costs effectively.
+This document outlines the hardware costs for The Nerve. Version A is the official submission for the Hack Club Tier 3 grant ($100 limit).
 
-### Versão C — The Nerve "Premium OLED" (Recommended)
+### Version A - Round TFT (Tier 3 Compliant)
 
-| Supplier | Items | Cost (USD) |
-| :--- | :--- | :--- |
-| Olimex | ESP32-S3-DevKit-LiPo MCU | $8.70 |
-| JLCPCB | PCB Fabrication (2-Layer) | $4.00 |
-| LCSC | SMD Components & LS7183N-S Decoder | $15.43 |
-| AliExpress | UI Components (Premium OLED, Joystick, etc.) | $24.77 |
-| Shopee BR | Mechanical Switches & LiPo Battery | $8.83 |
+| Vendor | Merchandise | Shipping | Total |
+| :--- | :--- | :--- | :--- |
+| Olimex | $8.70 | $0.00 | $8.70 |
+| JLCPCB | $4.00 | $13.05 | $17.05 |
+| LCSC | $14.38 | $31.17 | $45.55 |
+| Shopee | $7.17 | $0.00 | $7.17 |
+| AliExpress | $17.12 | $0.00 | $17.12 |
+| Regional Taxes (AliExpress) | -- | -- | $4.18 |
+| **GRAND TOTAL** | | | **$99.77** |
 
----
+### Proof of Costs (Final Carts)
+- [AliExpress Final Cart](assets/final_proofs/AliExpress_Final_Cart.png)
+- [JLCPCB Final Cart](assets/final_proofs/JLCPCB_Final_Cart.png)
+- [LCSC Final Cart](assets/final_proofs/LCSC_Final_Cart.png)
+- [Shopee Final Cart](assets/final_proofs/Shopee_Final_Cart.png)
 
-| | **Total Estimated Hardware Cost** | **$61.73** |
+### Other Versions (Reference Only)
+- Version B (Standard OLED): ~$119.40 (Exceeds Tier 3)
+- Version C (Premium OLED): ~$121.20 (Exceeds Tier 3)
 
-### Estimated Total Delivered (Including Shipping)
-- **LCSC (Global Direct Standard):** +$11.23
-- **JLCPCB (My DHL Account):** +$2.48
-- **AliExpress + Shopee (Est.):** +$5.00
-- **TOTAL ESTIMADO ENTREGUE:** **~$80.44** [OK]
-
-### Outras Versões
-- **Versão B (OLED Standard):** $54.68 (Peças) | ~$73.39 (Entregue)
-- **Versão A (Round TFT):** $44.06 (Peças) | ~$62.77 (Entregue)
-
-_This total represents the direct cost of all hardware components, excluding international shipping fees and import taxes unless specified._
+### Notes
+- JLCPCB Cart: The screenshot shows other projects; only the item "The Nerve" is selected and part of this budget.
+- LCSC Shipping: High shipping fees are due to Global Direct Standard and handling fees.
+- AliExpress: Prices reflect Choice bundle discounts and include calculated ICMS.
