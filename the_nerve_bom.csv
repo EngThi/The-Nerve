@@ -1,23 +1,27 @@
 ID,Category,Name,Quantity,Supplier,Price,Link,Notes
 # Core & Fabrication
-1,MCU,ESP32-S3 ProS3,1,Adafruit,26.50,https://www.adafruit.com/product/6398,Main processor with WiFi/BT
-2,Switch,"Illuminated Toggle Switch",1,Adafruit,3.95,https://www.adafruit.com/product/3306,Safety arming switch ("Missile Switch")
-3,PCB,Custom PCB,1,JLCPCB,4.00,,2-layer PCB fabrication
+1,MCU,ESP32-S3-DevKit-LiPo,1,Olimex,8.70,https://www.olimex.com/Products/IoT/ESP32-S3/ESP32-S3-DevKit-Lipo,Built-in LiPo charger
+2,Switch,"Toggle Switch Missile Cover LED",1,AliExpress,1.38,https://aliexpress.com/item/1005006733525021,Safety arming switch
+3,PCB,Custom PCB (5pcs),1,JLCPCB,4.00,,2-layer PCB fabrication
 # User Interface (External)
-4,Switches,Cherry MX (10pcs),1,AliExpress,5.75,https://pt.aliexpress.com/item/1005008656717678.html,Mechanical keyboard switches
-5,Joystick,"K-Silver Hall Effect Joystick (2pcs)",1,AliExpress,9.45,https://pt.aliexpress.com/item/1005008563463707.html,High-precision analog input
-6,Encoder,EC11 Rotary Encoder,1,AliExpress,1.30,https://pt.aliexpress.com/item/1005005983134515.html,For precise rotational input
-7,Display,1.5inch RGB OLED Display,1,AliExpress,14.14,https://pt.aliexpress.com/item/1005003754608099.html,Visual feedback display
+4,Switches,Outemu MX Switches (10pcs),1,Shopee BR,2.10,https://shopee.com.br/product/23418702594,Mechanical switches
+5,Joystick,K-Silver JH16 Hall Joystick,1,AliExpress,4.55,https://aliexpress.com/item/1005008728261473,Hall Effect analog stick
+6,Encoder,EC11 Rotary Encoder (10pcs),1,AliExpress,3.80,https://aliexpress.com/item/2001241262,Rotary input
+# Displays (Choose one version)
+7,Display,OLED 1.5" RGB SSD1351 (Standard),1,AliExpress,7.00,https://aliexpress.com/item/1005008974306385,Version B - Standard RGB OLED
+8,Display,OLED 1.5" RGB SSD1351 (Premium),1,AliExpress,14.05,https://pt.aliexpress.com/item/1005010156666540.html,Version C - Expansion board version
 # Power (External)
-8,Battery,Li-Po Battery 1100mAh,1,AliExpress,10.28,https://pt.aliexpress.com/item/1005011738492887.html,Main power source
+9,Battery,LiPo 1800mAh 3.7V,1,Shopee BR,6.73,https://shopee.com.br/product/55550251664,"NOTE: Connect Red (+) and Black (-) to JST-PH 2.0mm. Ignore Yellow wire."
+10,Connector,JST-PH 2.0mm 2P M+F,1,AliExpress,0.99,https://aliexpress.com/item/33024777806,Required for battery connection
 # SMD Components (from LCSC)
-9,Connectors,"Screw Terminal 6-Pin (x4)",1,LCSC,2.56,https://lcsc.com/product-detail/C474924.html,4x terminals for modularity
-10,Connectors,"JST & PH Connectors",1,LCSC,2.50,,Various connectors for internal wiring
-11,Passives,"Resistors & Capacitors",1,LCSC,3.50,,SMD Passives kit
-12,Misc,"Other SMD Components & Misc",1,LCSC,5.62,,Buzzer, Switches, RGB LEDs, etc. (Total Merchandise)
-# --- SUBTOTAL POR SITE (Somente Peças) ---
-# Adafruit: $30.45
+11,Components,SMD Components & LS7183N-S,1,LCSC,15.43,,Full cart for The Nerve (Caps, Resistors, Buzzer, LED, Decoder)
+# --- SUBTOTAL POR VERSÃO (Somente Peças) ---
+# Versão B (Standard OLED): $54.68
+# Versão C (Premium OLED): $61.73
+# --- SUBTOTAL POR SITE (Versão C) ---
+# Olimex: $8.70
+# AliExpress: $24.77
+# Shopee BR: $8.83
 # JLCPCB: $4.00
-# AliExpress: $40.92
-# LCSC: $14.18
-# TOTAL GERAL: $89.55
+# LCSC: $15.43
+# TOTAL GERAL (Versão C): $61.73

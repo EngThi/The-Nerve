@@ -7,7 +7,7 @@
 
 [![Hardware License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-I created The Nerve to control my automation and video systems/pipelines because keeping everything on the web was kind of **boring**, and also because I like n8n, I thought of using it to control my workflows from webhooks. Being an ESP32, it has native Wi-Fi and Bluetooth. And in the case of this S3 version, having more memory and better processing, I can orchestrate more complex pipelines and workflows. With the OLED I can get instant visual feedback on the things I'm working with, and being RGB I can test assets and different types of renderings without needing an external monitor, in addition to other modes. The HID interface via USB allows me to control and debug a server or homelab (I decided I'm going to have one soon, I don't know when, but I will). Testing and querying data with greater precision.
+I created The Nerve to control my automation and video systems/pipelines because keeping everything on the web was kind of boring, and also because I like n8n, I thought of using it to control my workflows from webhooks. Being an ESP32, it has native Wi-Fi and Bluetooth. And in the case of this S3 version, having more memory and better processing, I can orchestrate more complex pipelines and workflows. With the OLED I can get instant visual feedback on the things I'm working with, and being RGB I can test assets and different types of renderings without needing an external monitor, in addition to other modes. The HID interface via USB allows me to control and debug a server or homelab (I decided I'm going to have one soon, I don't know when, but I will). Testing and querying data with greater precision.
 
 The parts outside the PCB serve as physical and tactile nodes for different things: sending important things that need double confirmation (the Missile Switch), the Joystick and Encoder allow me to have fine control over video editing, control other hardware, and the mechanical feedback, which is cool. This last one is through the MX switch.
 
@@ -16,7 +16,7 @@ The parts outside the PCB serve as physical and tactile nodes for different thin
 ---
 ## What is this? 
 
-I like modularity and preparing the groundwork for future upgrades and changes. That's why I designed **The Nerve** as a modular node where, through JSTs and screw terminals, it's possible to replace components if they break or reach the end of their lifespan. Whether you're in a different mood at a certain time or simply want to experiment with variations of those parts (as long as they fit and are compatible with the main system's electrical system). The 3000mAh battery allows you to work on all of this without needing to be plugged into an outlet.
+I like modularity and preparing the groundwork for future upgrades and changes. That's why I designed The Nerve as a modular node where, through JSTs and screw terminals, it's possible to replace components if they break or reach the end of their lifespan. Whether you're in a different mood at a certain time or simply want to experiment with variations of those parts (as long as they fit and are compatible with the main system's electrical system). The 1800mAh battery allows you to work on all of this without needing to be plugged into an outlet.
 
 ## Hardware Design
 
@@ -33,10 +33,15 @@ I designed the PCB in EasyEDA and the enclosure in OnShape. The board acts as a 
 ### Parts
 | Part | Why |
 | :--- | :--- |
-| **ESP32-S3 ProS3** | Native USB HID + built-in LiPo charging. |
+| **ESP32-S3 Olimex** | Native USB HID + built-in LiPo charging + affordable. |
 | **K-Silver JH16** | Hall Effect sensor (no drift). |
 | **LS7183N-S IC** | Hardware quadrature decoder to offload the MCU. |
-| **1100mAh Battery** | Required for standalone wireless operation. |
+| **1800mAh Battery** | Required for standalone wireless operation. |
+
+---
+
+> [!CAUTION]
+> **Battery Wiring Note:** The Shopee battery (1800mAh) has 3 wires (Yellow is balance). When connecting to the JST-PH 2.0mm on the board, use only Red (+) and Black (-). Ignore the Yellow wire.
 
 ---
 
@@ -48,8 +53,7 @@ I designed the PCB in EasyEDA and the enclosure in OnShape. The board acts as a 
 
 ## Build & Budget
 
-The hardware cost is **$89.79** 
-- The cost varied by about $0.50 on the last day from what I saw, but it doesn't change much.
+The hardware cost for the recommended version (Premium OLED) is $61.73.
 
 I optimized the budget by removing the factory assembly service (PCBA). I will be hand-soldering every component myself—including the 0603 SMT resistors and capacitors—to demonstrate technical proficiency and keep the project within the $100 limit.
 
