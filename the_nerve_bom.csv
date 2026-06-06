@@ -10,8 +10,8 @@ ID,Category,Name,Quantity,Supplier,Price,Link,Notes
 7,Connector,JST-PH 2.0mm 2P M+F,1,AliExpress,1.31,https://aliexpress.com/item/33024777806.html,Required for battery connection
 # Displays (Choice determines Tier compliance)
 8,Display,Round TFT GC9A01 (Version A),1,AliExpress,1.38,https://aliexpress.com/item/1005008284550510.html,Primary version for Tier 3 compliance
-9,Display,OLED 1.5" RGB SSD1351 (Version B),1,AliExpress,12.89,https://aliexpress.com/item/1005008974306385.html,Alternative version
-10,Display,OLED 1.5" RGB SSD1351 Premium (Version C),1,AliExpress,14.05,https://pt.aliexpress.com/item/1005010156666540.html,Alternative version
+9,Display,OLED 1.5-inch RGB SSD1351 (Version B),1,AliExpress,12.89,https://aliexpress.com/item/1005008974306385.html,Alternative version
+10,Display,OLED 1.5-inch RGB SSD1351 Premium (Version C),1,AliExpress,14.05,https://pt.aliexpress.com/item/1005010156666540.html,Alternative version
 # Power
 11,Battery,LiPo 1800mAh 3.7V,1,Shopee BR,5.05,https://shopee.com.br/Bateria-Lipo-1800mah-3.7v-3-Fios-10x34x50-3-7v-Lithium-1s1p-i.389386479.55550251664?xptdk=ee7023c0-3a92-42a8-9799-b4aa47fd9676,Main power source
 # SMD Components
