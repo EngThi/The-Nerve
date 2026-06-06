@@ -1,27 +1,23 @@
 ID,Category,Name,Quantity,Supplier,Price,Link,Notes
 # Core & Fabrication
-1,MCU,ESP32-S3-DevKit-LiPo,1,Olimex,8.70,https://www.olimex.com/Products/IoT/ESP32-S3/ESP32-S3-DevKit-Lipo,Built-in LiPo charger
-2,Switch,"Toggle Switch Missile Cover LED",1,AliExpress,1.38,https://aliexpress.com/item/1005006733525021,Safety arming switch
-3,PCB,Custom PCB (5pcs),1,JLCPCB,4.00,,2-layer PCB fabrication
-# User Interface (External)
-4,Switches,Outemu MX Switches (10pcs),1,Shopee BR,2.10,https://shopee.com.br/product/23418702594,Mechanical switches
-5,Joystick,K-Silver JH16 Hall Joystick,1,AliExpress,4.55,https://aliexpress.com/item/1005008728261473,Hall Effect analog stick
-6,Encoder,EC11 Rotary Encoder (10pcs),1,AliExpress,3.80,https://aliexpress.com/item/2001241262,Rotary input
-# Displays (Choose one version)
-7,Display,OLED 1.5" RGB SSD1351 (Standard),1,AliExpress,7.00,https://aliexpress.com/item/1005008974306385,Version B - Standard RGB OLED
-8,Display,OLED 1.5" RGB SSD1351 (Premium),1,AliExpress,14.05,https://pt.aliexpress.com/item/1005010156666540.html,Version C - Expansion board version
-# Power (External)
-9,Battery,LiPo 1800mAh 3.7V,1,Shopee BR,6.73,https://shopee.com.br/product/55550251664,"NOTE: Connect Red (+) and Black (-) to JST-PH 2.0mm. Ignore Yellow wire."
-10,Connector,JST-PH 2.0mm 2P M+F,1,AliExpress,0.99,https://aliexpress.com/item/33024777806,Required for battery connection
-# SMD Components (from LCSC)
-11,Components,SMD Components & LS7183N-S,1,LCSC,15.43,,Full cart for The Nerve (Caps, Resistors, Buzzer, LED, Decoder)
-# --- SUBTOTAL POR VERSÃO (Somente Peças) ---
-# Versão B (Standard OLED): $54.68
-# Versão C (Premium OLED): $61.73
-# --- SUBTOTAL POR SITE (Versão C) ---
-# Olimex: $8.70
-# AliExpress: $24.77
-# Shopee BR: $8.83
-# JLCPCB: $4.00
-# LCSC: $15.43
-# TOTAL GERAL (Versão C): $61.73
+1,MCU,ESP32-S3-DevKit-LiPo,1,Olimex,8.70,https://www.olimex.com/Products/IoT/ESP32-S3/ESP32-S3-DevKit-Lipo.html,Built-in LiPo charger
+2,PCB,Custom PCB (5pcs),1,JLCPCB,4.00,,2-layer PCB fabrication. Cart includes other projects; only first item applies.
+# User Interface (Common Parts)
+3,Switch,"Toggle Switch Missile Cover LED",1,AliExpress,3.73,https://aliexpress.com/item/1005006733525021.html,Safety arming switch
+4,Switches,Outemu MX Switches (10pcs),1,Shopee BR,2.12,https://shopee.com.br/product/23418702594.html,Mechanical switches
+5,Joystick,K-Silver JH16 Hall Joystick,2,AliExpress,8.12,https://aliexpress.com/item/1005008728261473.html,Hall Effect analog stick
+6,Encoder,EC11 Rotary Encoder (10pcs),1,AliExpress,2.58,https://aliexpress.com/item/2001241262.html,Rotary input
+7,Connector,JST-PH 2.0mm 2P M+F,1,AliExpress,1.31,https://aliexpress.com/item/33024777806.html,Required for battery connection
+# Displays (Choice determines Tier compliance)
+8,Display,Round TFT GC9A01 (Version A),1,AliExpress,1.38,https://aliexpress.com/item/1005008284550510.html,Primary version for Tier 3 compliance
+9,Display,OLED 1.5" RGB SSD1351 (Version B),1,AliExpress,12.89,https://aliexpress.com/item/1005008974306385.html,Alternative version
+10,Display,OLED 1.5" RGB SSD1351 Premium (Version C),1,AliExpress,14.05,https://pt.aliexpress.com/item/1005010156666540.html,Alternative version
+# Power
+11,Battery,LiPo 1800mAh 3.7V,1,Shopee BR,5.05,https://shopee.com.br/product/55550251664.html,Main power source
+# SMD Components
+12,Components,LCSC SMD Components Batch,1,LCSC,14.38,,Full cart (Caps, Resistors, Buzzer, LED, LS7183N-S decoder)
+
+# --- TOTALS BY VERSION (Including estimated shipping and taxes) ---
+# Version A (Compliant): ~$99.77
+# Version B (Exceeds Tier): ~$119.40
+# Version C (Exceeds Tier): ~$121.20
