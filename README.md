@@ -25,6 +25,8 @@ The PCB was designed in EasyEDA and the enclosure in OnShape.
 ![PCB Bottom Layout](assets/journal/PCB_Layout_Bottom.png)
 ![PCB Render](assets/renders/Board.png)
 
+- [Project Link in the Editor](https://pro.easyeda.com/editor#id=794fe6f5b1b64e09b8597b022e057335)
+
 ### Core Parts (Version A)
 | Part | Description |
 | :--- | :--- |
