@@ -24,6 +24,7 @@ I designed the PCB in EasyEDA and the enclosure in OnShape. The board acts as a 
 
 ### Enclosure Design
 ![Enclosure Back View](assets/renders/tinkercad_back_view.png)
+- [OnShape Public Link](https://cad.onshape.com/documents/f5fe8f1a3f0d54ab7cd3f1d7/w/a16133ebbda184e0e50a9073/e/bf72140826f3054b8f947155?renderMode=0&uiState=6a2071693fc56d9f8f5e1dc7)
 
 ### PCB Layout
 ![PCB Bottom Layout](assets/journal/PCB_Layout_Bottom.png)
@@ -37,11 +38,6 @@ I designed the PCB in EasyEDA and the enclosure in OnShape. The board acts as a 
 | **K-Silver JH16** | Hall Effect sensor (no drift). |
 | **LS7183N-S IC** | Hardware quadrature decoder to offload the MCU. |
 | **1800mAh Battery** | Required for standalone wireless operation. |
-
----
-
-> [!CAUTION]
-> **Battery Wiring Note:** The Shopee battery (1800mAh) has 3 wires (Yellow is balance). When connecting to the JST-PH 2.0mm on the board, use only Red (+) and Black (-). Ignore the Yellow wire.
 
 ---
 
