@@ -1,23 +1,23 @@
-No.	Quantity	Comment	Designator	Footprint	Value	Manufacturer Part	Manufacturer	Supplier Part	Supplier	Link	3D Model Title	JLCPCB Price	LCSC Price	Category	Device	Notes
-1	1	2.7kHz	BUZZER1	BUZ-TH_BD9.0-P4.00-D0.6-FD	2.7kHz	QMB-09B-03	华能	C96256	LCSC	https://www.lcsc.com/product-detail/C96256.html	BUZ-TH_D9.0-H5.5-P4.0	0.0176		Audio Products:Buzzers	QMB-09B-03	
-2	1	10uF	C1	C0805	10uF	CL10A106KP8NNNC	SAMSUNG	C19702	LCSC	https://www.lcsc.com/product-detail/C19702.html	C0805_L2.0-W1.3-H1.3	0.0023		Capacitors:MLCC	CL10A106KP8NNNC	
-3	2	100nF	C2,C3	C0603	100nF	CL05B104KO5NNNC	SAMSUNG	C1525	LCSC	https://www.lcsc.com/product-detail/C1525.html	C0603_L1.6-W0.8-H0.8	0.0003		Capacitors:MLCC	CL05B104KO5NNNC	
-4	1	100uF	C4	CAP-TH_BD6.3-P2.5-D0.6-FD-RYHG35V100UF		RYHG35V100UF6*8	HONOR	C48970442	LCSC	https://www.lcsc.com/product-detail/C48970442.html	CAP-TH_BD6.3-P2.5-D0.6-FD-RYHG35V100UF	0.0196			100uF	
-5	1	2.0-2P ZZDK	JST_2	HDR-TH_2P-P2.00-V-F-2		2.0-2P ZZDK	SHOU HAN	C18185603	LCSC	https://www.lcsc.com/product-detail/C18185603.html	HDR-TH_2P-P2.00-V-F-2				2.0-2P ZZDK	
-6	1	RGB LED	LED_RGB	LED-TH_4P-BD5.8-P1.30		TJ-L5FYTXHMCSLCRGB-A5	TOGIALED	C330759	LCSC	https://www.lcsc.com/product-detail/C330759.html	LED-TH_4P-BD5.8-P1.30-RGB	0.0217		Optoelectronics:RGB LEDs	TJ-L5FYTXHMCSLCRGB-A5	
-7	1	LS7183N-S	LS7183N-S	SOIC-8_L4.9-W3.9-P1.27-LS6.0-TL		LS7183N-S	LSI/CSI	C3234982	LCSC	https://www.lcsc.com/product-detail/C3234982.html	SOIC-8_L4.9-W3.9-H1.7-LS6.0-P1.27	1.0406			LS7183N-S	Hardware quadrature decoder
-8	3	220Ω	R1,R2,R3	R0805	220Ω	RTT052200FTP	RALEC	C104105	LCSC	https://www.lcsc.com/product-detail/C104105.html	R0805_L2.0-W1.3-H0.6	0.0004		Resistors:Surface Mount	RTT052200FTP	
-9	1	2kΩ	R4	R0805	2kΩ	RS-05K2001FT	FH	C132365	LCSC	https://www.lcsc.com/product-detail/C132365.html	R0805_L2.0-W1.3-H0.6	0.0005		Resistors:Surface Mount	RS-05K2001FT	
-10	1	330Ω	R5	R0603	330Ω	RC0603FR-07330RL	YAGEO	C105881	LCSC	https://www.lcsc.com/product-detail/C105881.html	R0603	0.0003			R0603	
-11	1	ESP32 ProS3	S3	PROS3-SMD		ProS3	UnexpectedMaker	ESP32-S3-DevKit-Lipo	Olimex	https://www.olimex.com/Products/IoT/ESP32-S3/ESP32-S3-DevKit-Lipo.html			8.70	MCU	ESP32 ProS3	Built-in LiPo charger
-12	1	Power Switch	SW1	SW-SMD_MST-12D18G4-SPDT-SLIDE-SWITCH		MST-12D18G4	SHOU HAN	C49023767	LCSC	https://www.lcsc.com/product-detail/C49023767.html	SW-SMD_MST-12D18G4-SPDT-SLIDE-SWITCH	0.0123			MST-12D18G4 SPDT SLIDE SWITCH	
-13	4	6-Pin Terminal	U1,U2,U3,U4	CONN-TH_6P-P2.54_KF128-2.54-6P		KF128-2.54-6P	KEFA	C474924	LCSC	https://www.lcsc.com/product-detail/C474924.html	CONN-TH_6P-P2.54_KF128-2.54-6P	0.0955			KF128-2.54-6P	Pluggable System Terminal
-14	1	8-Pin Conn	U5	CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629		PH-8A	HCTL	C2908629	LCSC	https://www.lcsc.com/product-detail/C2908629.html	CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629	0.0068			PH-8A	
-15	1	Custom PCB	PCB	Custom	2-layer	The Nerve V1.0	JLCPCB	N/A	JLCPCB	https://jlcpcb.com/		4.00		Fabrication	PCB	Official project boards (5pcs)
-16	1	Toggle Switch	PANIC_SW	JST Port		Missile LED Switch	Generic	N/A	AliExpress	https://aliexpress.com/item/1005006733525021.html		3.73		User Interface	Safety Arm Switch	Panic Button Trigger
-17	1	Mechanical SW	MX_SW	JST Port		Outemu MX Switches	Outemu	N/A	Shopee	https://shopee.com.br/Switch-Outemu-Para-Teclado-Mec%C3%A2nico-Diversas-Cores-Blue-Red-Brown-Green-Purple-Frete-Gr%C3%A1tis-i.374734112.23418702594	5.0pcs	2.12		User Interface	Cherry MX Port	Execute trigger
-18	2	Hall Joystick	JOY_1,2	Terminal		JH16 Hall Stick	K-Silver	N/A	AliExpress	https://aliexpress.com/item/1005008728261473.html		8.12		User Interface	JH16 Hall Sensor	Hall Effect analog control
-19	1	Rotary Encoder	ENC_1	Terminal		EC11 Encoder	Generic	N/A	AliExpress	https://aliexpress.com/item/2001241262.html		2.58		User Interface	EC11 Rotary	Hype Dial control
-20	1	JST Connector	BATT_CONN	PH 2.0mm		JST-PH 2P M+F	Generic	N/A	AliExpress	https://aliexpress.com/item/33024777806.html		1.31		Power	JST-PH 2.0	Battery plug
-21	1	Round Display	DISP_A	SPI		GC9A01 1.28-inch	Generic	N/A	AliExpress	https://aliexpress.com/item/1005008284550510.html		1.38		Display	GC9A01 TFT	Primary Version A Display
-22	1	LiPo Battery	BATTERY	JST-PH		1800mAh 3.7V	Generic	N/A	Shopee	https://shopee.com.br/Bateria-Lipo-1800mah-3.7v-3-Fios-10x34x50-3-7v-Lithium-1s1p-i.389386479.55550251664		5.05		Power	1800mAh 1S	Main standalone power
+No.,Quantity,Comment,Designator,Footprint,Value,Manufacturer Part,Manufacturer,Supplier Part,Supplier,Link,3D Model Title,JLCPCB Price,LCSC Price,Category,Device,Notes
+1,1,2.7kHz,BUZZER1,BUZ-TH_BD9.0-P4.00-D0.6-FD,2.7kHz,QMB-09B-03,华能,C96256,LCSC,https://www.lcsc.com/product-detail/C96256.html,BUZ-TH_D9.0-H5.5-P4.0,176,,Audio Products:Buzzers,QMB-09B-03,
+2,1,10uF,C1,C0805,10uF,CL10A106KP8NNNC,SAMSUNG,C19702,LCSC,https://www.lcsc.com/product-detail/C19702.html,C0805_L2.0-W1.3-H1.3,23,,Capacitors:MLCC,CL10A106KP8NNNC,
+3,2,100nF,C2 C3,C0603,100nF,CL05B104KO5NNNC,SAMSUNG,C1525,LCSC,https://www.lcsc.com/product-detail/C1525.html,C0603_L1.6-W0.8-H0.8,3,,Capacitors:MLCC,CL05B104KO5NNNC,
+4,1,100uF,C4,CAP-TH_BD6.3-P2.5-D0.6-FD-RYHG35V100UF,,RYHG35V100UF6*8,HONOR,C48970442,LCSC,https://www.lcsc.com/product-detail/C48970442.html,CAP-TH_BD6.3-P2.5-D0.6-FD-RYHG35V100UF,196,,,100uF,
+5,1,2.0-2P ZZDK,JST_2,HDR-TH_2P-P2.00-V-F-2,,2.0-2P ZZDK,SHOU HAN,C18185603,LCSC,https://www.lcsc.com/product-detail/C18185603.html,HDR-TH_2P-P2.00-V-F-2,,,,2.0-2P ZZDK,
+6,1,RGB LED,LED_RGB,LED-TH_4P-BD5.8-P1.30,,TJ-L5FYTXHMCSLCRGB-A5,TOGIALED,C330759,LCSC,https://www.lcsc.com/product-detail/C330759.html,LED-TH_4P-BD5.8-P1.30-RGB,217,,Optoelectronics:RGB LEDs,TJ-L5FYTXHMCSLCRGB-A5,
+7,1,LS7183N-S,LS7183N-S,SOIC-8_L4.9-W3.9-P1.27-LS6.0-TL,,LS7183N-S,LSI/CSI,C3234982,LCSC,https://www.lcsc.com/product-detail/C3234982.html,SOIC-8_L4.9-W3.9-H1.7-LS6.0-P1.27,1.0406,,,LS7183N-S,Hardware quadrature decoder
+8,3,220Ω,R1 R2 R3,R0805,220Ω,RTT052200FTP,RALEC,C104105,LCSC,https://www.lcsc.com/product-detail/C104105.html,R0805_L2.0-W1.3-H0.6,4,,Resistors:Surface Mount,RTT052200FTP,
+9,1,2kΩ,R4,R0805,2kΩ,RS-05K2001FT,FH,C132365,LCSC,https://www.lcsc.com/product-detail/C132365.html,R0805_L2.0-W1.3-H0.6,5,,Resistors:Surface Mount,RS-05K2001FT,
+10,1,330Ω,R5,R0603,330Ω,RC0603FR-07330RL,YAGEO,C105881,LCSC,https://www.lcsc.com/product-detail/C105881.html,R0603,3,,,R0603,
+11,1,ESP32 S3,S3,,,S3,Olimex,ESP32-S3-DevKit-Lipo,Olimex,https://www.olimex.com/Products/IoT/ESP32-S3/ESP32-S3-DevKit-Lipo.html,,,(in this case is'nt LCSC) 8.70,MCU,ESP32 S3,Built-in LiPo charger
+12,1,Power Switch,SW1,SW-SMD_MST-12D18G4-SPDT-SLIDE-SWITCH,,MST-12D18G4,SHOU HAN,C49023767,LCSC,https://www.lcsc.com/product-detail/C49023767.html,SW-SMD_MST-12D18G4-SPDT-SLIDE-SWITCH,123,,,MST-12D18G4 SPDT SLIDE SWITCH,
+13,4,6-Pin Terminal,U1 U2 U3 U4,CONN-TH_6P-P2.54_KF128-2.54-6P,,KF128-2.54-6P,KEFA,C474924,LCSC,https://www.lcsc.com/product-detail/C474924.html,CONN-TH_6P-P2.54_KF128-2.54-6P,955,,,KF128-2.54-6P,Pluggable System Terminal
+14,1,8-Pin Conn,U5,CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629,,PH-8A,HCTL,C2908629,LCSC,https://www.lcsc.com/product-detail/C2908629.html,CONN-TH_8P-P2.00_HCTL_PH-8A_C2908629,68,,,PH-8A,
+15,1,Custom PCB,PCB,Custom,2-layer,The Nerve V1.0,JLCPCB,N/A,JLCPCB,https://jlcpcb.com/,,4.00,,Fabrication,PCB,Official project boards (5pcs)
+16,1,Toggle Switch,PANIC_SW,JST Port,,Missile LED Switch,Generic,N/A,AliExpress,https://aliexpress.com/item/1005006733525021.html,,3.73,,User Interface,Safety Arm Switch,Panic Button Trigger
+17,1,Mechanical SW,MX_SW,JST Port,,Outemu MX Switches,Outemu,N/A,Shopee,https://shopee.com.br/Switch-Outemu-Para-Teclado-Mec%C3%A2nico-Diversas-Cores-Blue-Red-Brown-Green-Purple-Frete-Gr%C3%A1tis-i.374734112.23418702594,5.0pcs,2.12,,User Interface,Cherry MX Port,Execute trigger
+18,2,Hall Joystick,JOY_1 2,Terminal,,JH16 Hall Stick,K-Silver,N/A,AliExpress,https://aliexpress.com/item/1005008728261473.html,,8.12,,User Interface,JH16 Hall Sensor,Hall Effect analog control
+19,1,Rotary Encoder,ENC_1,Terminal,,EC11 Encoder,Generic,N/A,AliExpress,https://aliexpress.com/item/2001241262.html,,2.58,,User Interface,EC11 Rotary,Hype Dial control
+20,1,JST Connector,BATT_CONN,PH 2.0mm,,JST-PH 2P M+F,Generic,N/A,AliExpress,https://aliexpress.com/item/33024777806.html,,1.31,,Power,JST-PH 2.0,Battery plug
+21,1,Round Display,DISP_A,SPI,,GC9A01 1.28-inch,Generic,N/A,AliExpress,https://aliexpress.com/item/1005008284550510.html,,1.38,,Display,GC9A01 TFT,Primary Version A Display
+22,1,LiPo Battery,BATTERY,JST-PH,,1800mAh 3.7V,Generic,N/A,Shopee,https://shopee.com.br/Bateria-Lipo-1800mah-3.7v-3-Fios-10x34x50-3-7v-Lithium-1s1p-i.389386479.55550251664,,05.05,,Power,1800mAh 1S,Main standalone power
