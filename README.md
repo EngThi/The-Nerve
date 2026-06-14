@@ -50,14 +50,14 @@ The PCB was designed in EasyEDA and the enclosure in OnShape.
 
 So, The Nerve works like a node or a kind of independent trigger that communicates with your computer (or server, those types of HID interfaces, etc) to run automated tasks. I like the part of triggering n8n/general webhooks or running FFmpeg video processing scripts, controlling something on your PC
 
-### 1. Hardware Setup and Firmware Flashing
+### Hardware Setup and Firmware Flashing
 1. **Wire the Panel:** Connect the Joystick to the `ADC1` pins (Pins 1 and 2), the Rotary Encoder to the Quadrature Decoder pins (Pins 15 and 16) and the Cherry MX Switch and the Missile Toggle to their respective JST ports, according to the [Wiring Diagram](assets/diagrams/EXTERNAL_WIRING_GUIDE.png) that is right below. This way you can swap ports but they have to be compatible with the type of signal and mechanics of that device you are going to use.
 
 2. **Flash the Firmware:** Connect the ESP32 via USB-C. Install MicroPython on the board and upload the `firmware/main.py` file (or whatever you develop for your own type of use). You can improve or change this entirely, since I developed it to be multi-use and very customizable. Use different types of components, parts, etc
 
 3. **Turn on:** You can turn it on through the USB-C cable or totally independently using the 1800mAh LiPo battery (the ProS3 and even the new one from Olimex has built-in charging) . Upon turning on, it plays a startup tone and the RGB LED turns blue.
 
-### 2. Operation
+### Operation
 - **Safety Switch (Safety Lock):** Before running any command, you must lift the switch cover and turn it on. The system will be armed and an LED indicator will light up.
 - **Intensity Selector (Rotary Encoder):** Turn the encoder to adjust the "Intensity Level" (0 to 100). The RGB LED changes from blue to red to visually represent the intensity level you are setting for your automation task.
 
